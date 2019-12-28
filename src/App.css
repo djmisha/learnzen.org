@@ -49,6 +49,11 @@ form {
 	color: #000;
 }
 
+form label {
+	position: absolute;
+	bottom: -9999px;
+}
+
 form input,
 form .button {
 	padding: 0 10px;

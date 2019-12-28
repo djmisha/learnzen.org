@@ -1,12 +1,9 @@
 import React from 'react';
 import data from './poems.json';
-
 import iconrandom from './images/icon-random.svg';
 import iconall from './images/icon-all.svg';
 import iconnext from './images/icon-next.svg';
 import iconprev from './images/icon-prev.svg';
-
-
 
 /* Get Our Data into an Array from JSON FORMAT*/
 let parsedData = data.poems;
@@ -15,8 +12,6 @@ const dataArray = [];
 for (let i = 0; i < parsedData.length; i++) {
   dataArray.push(parsedData[i]);
 }
-
-// console.log(dataArray.length);
 
 class SinglePoemRow extends React.Component {
   render() {
@@ -31,7 +26,6 @@ class SinglePoemRow extends React.Component {
       );
   }
 }
-
 
 class PoemsTable extends React.Component {
   render() {
@@ -75,7 +69,6 @@ class PoemsTable extends React.Component {
   }
 }
 
-
 class NavigationBar extends React.Component {
   constructor(props) {
     super(props);
@@ -109,13 +102,15 @@ class NavigationBar extends React.Component {
   render() {
     return (
       <form>
+        <label>
+          <span>Search</span>
         <input
           type="text"
           placeholder="Search Tao..."
           value={this.props.filterText}
           onChange={this.handleSearchFilterTextChange}
         />
-
+        </label>
         <div 
           onClick={this.handlePrevPoemChange}
           className=''
