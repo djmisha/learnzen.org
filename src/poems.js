@@ -116,16 +116,6 @@ class NavigationBar extends React.Component {
           onChange={this.handleSearchFilterTextChange}
         />
 
-         <div 
-          onClick={this.handleShowAllPoemChange}
-          className=''
-        ><img src={iconall} className="nav-icon" alt="All" /></div>
-      
-        <div 
-          onClick={this.handleRandomPoemChange}
-          className=''
-        ><img src={iconrandom} className="nav-icon" alt="Random" /></div>
-
         <div 
           onClick={this.handlePrevPoemChange}
           className=''
@@ -139,6 +129,16 @@ class NavigationBar extends React.Component {
           onClick={this.handleNextPoemChange}
           className=''
         ><img src={iconnext} className="nav-icon" alt="Next" /></div>
+
+         <div 
+          onClick={this.handleShowAllPoemChange}
+          className=''
+        ><img src={iconall} className="nav-icon" alt="All" /></div>
+      
+        <div 
+          onClick={this.handleRandomPoemChange}
+          className=''
+        ><img src={iconrandom} className="nav-icon" alt="Random" /></div>
 
       </form>
       )
