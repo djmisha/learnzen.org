@@ -1,3 +1,6 @@
+/*@import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css?family=Parisienne&display=swap');*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
 
 body {
 	padding-top: 20px;
@@ -32,11 +35,14 @@ ul.all-poems {
 .all-poems > li {
 	/*max-width: 500px;*/
 	/*margin: 0 auto;*/
-  /*border: 1px solid #eee;*/
-  margin: 10px;
-  padding: 80px 20px;
-  font-size: 20px;
-  position: relative;
+	/*border: 1px solid #eee;*/
+	margin: 10px;
+	padding: 80px 20px;
+	/*font-family: 'Parisienne', cursive;*/
+	font-family: 'Noto Serif JP', serif;
+	font-size: 22px;
+	position: relative;
+	color: #000 !important;
 }
 
 .all-poems > li span {
@@ -44,7 +50,8 @@ ul.all-poems {
 	top: 20px;
 	/*left: 50%;*/
 	right: 40px;
-	font-size: 30px;
+	font-size: 35px;
+	/*font-family: 'Great Vibes', cursive;*/
 	font-style: italic;
 	color: #ccc;
 }
