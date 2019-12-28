@@ -1,6 +1,12 @@
 import React from 'react';
 import data from './poems.json';
 
+import iconrandom from './images/icon-random.svg';
+import iconall from './images/icon-all.svg';
+import iconnext from './images/icon-next.svg';
+import iconprev from './images/icon-prev.svg';
+
+
 
 /* Get Our Data into an Array from JSON FORMAT*/
 let parsedData = data.poems;
@@ -113,26 +119,26 @@ class NavigationBar extends React.Component {
          <div 
           onClick={this.handleShowAllPoemChange}
           className=''
-        >All</div>
+        ><img src={iconall} className="nav-icon" alt="All" /></div>
       
         <div 
           onClick={this.handleRandomPoemChange}
           className=''
-        >Random </div>
+        ><img src={iconrandom} className="nav-icon" alt="Random" /></div>
 
         <div 
           onClick={this.handlePrevPoemChange}
           className=''
-        >&larr;</div>
+        ><img src={iconprev} className="nav-icon" alt="Prev" /></div>
 
-          <div 
+         {/* <div 
           className=''
-        >{this.props.visiblePoem}</div>
+        >{this.props.visiblePoem}</div>*/}
         
          <div 
           onClick={this.handleNextPoemChange}
           className=''
-        >&rarr;</div>
+        ><img src={iconnext} className="nav-icon" alt="Next" /></div>
 
       </form>
       )

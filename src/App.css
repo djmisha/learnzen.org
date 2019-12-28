@@ -14,7 +14,7 @@ form {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	color: #888;
+	color: #000;
 	font-family: 'Noto Serif JP', serif;
 }
 
@@ -53,3 +53,14 @@ ul.all-poems {
 }
 
 
+
+
+.nav-icon {
+	width: 30px;
+	height: 30px;
+
+}
+
+#icon-rand {
+	fill: #fff;
+}
