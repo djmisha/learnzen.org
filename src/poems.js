@@ -10,6 +10,7 @@ for (let i = 0; i < parsedData.length; i++) {
   dataArray.push(parsedData[i]);
 }
 
+// console.log(dataArray.length);
 
 class SinglePoemRow extends React.Component {
   render() {
@@ -76,6 +77,7 @@ class NavigationBar extends React.Component {
     this.handleRandomPoemChange = this.handleRandomPoemChange.bind(this);
     this.handleShowAllPoemChange = this.handleShowAllPoemChange.bind(this);
     this.handleNextPoemChange = this.handleNextPoemChange.bind(this);
+    this.handlePrevPoemChange = this.handlePrevPoemChange.bind(this);
   }
 
   handleRandomPoemChange() {
@@ -86,9 +88,12 @@ class NavigationBar extends React.Component {
     this.props.onShowAllButtonClick();
   }
 
+  handlePrevPoemChange() {
+    this.props.onPrevPoemButtonClick(this.props.visiblePoem);
+  }
+
   handleNextPoemChange() {
-    console.log(this.props.visiblePoem)
-    this.props.onNextPoemButtonClick();
+    this.props.onNextPoemButtonClick(this.props.visiblePoem);
   }
 
   handleSearchFilterTextChange(e) {
@@ -107,18 +112,27 @@ class NavigationBar extends React.Component {
 
          <div 
           onClick={this.handleShowAllPoemChange}
-          className='button'
+          className=''
         >All</div>
-
-  {/*       <div 
-          onClick={this.handleNextPoemChange}
-          className='button'
-        >Next</div>
-*/}
+      
         <div 
           onClick={this.handleRandomPoemChange}
-          className='button'
-        >Rand</div>
+          className=''
+        >Random </div>
+
+        <div 
+          onClick={this.handlePrevPoemChange}
+          className=''
+        >&larr;</div>
+
+          <div 
+          className=''
+        >{this.props.visiblePoem}</div>
+        
+         <div 
+          onClick={this.handleNextPoemChange}
+          className=''
+        >&rarr;</div>
 
       </form>
       )
@@ -130,12 +144,13 @@ class FileteredPoemsTable extends React.Component {
     super(props);
     this.state = {
       filterText: '',
-      visiblePoem: null,
+      visiblePoem: 1,
     };
     this.handleSearchFilterTextChange = this.handleSearchFilterTextChange.bind(this);
     this.handleRandomPoemChange = this.handleRandomPoemChange.bind(this);
     this.handleShowAllPoemChange = this.handleShowAllPoemChange.bind(this);
     this.handleNextPoemChange = this.handleNextPoemChange.bind(this);
+    this.handlePrevPoemChange = this.handlePrevPoemChange.bind(this);
   }
 
   handleSearchFilterTextChange(filterText) {
@@ -157,8 +172,27 @@ class FileteredPoemsTable extends React.Component {
     })
   }
 
+
   handleNextPoemChange(visiblePoem) {
-    console.log(visiblePoem)
+    if (visiblePoem === dataArray.length) {
+      visiblePoem = 1;
+    }    
+    else {
+      visiblePoem = visiblePoem + 1;
+    }
+    this.setState({
+      visiblePoem: visiblePoem
+    })
+  }
+
+
+  handlePrevPoemChange(visiblePoem) {
+    if (visiblePoem === 1) {
+      visiblePoem = dataArray.length;
+    }
+    else {
+      visiblePoem = visiblePoem - 1;
+    }
     this.setState({
       visiblePoem: visiblePoem
     })
@@ -174,6 +208,7 @@ class FileteredPoemsTable extends React.Component {
         onRandomButtonGenerate={this.handleRandomPoemChange}
         onShowAllButtonClick={this.handleShowAllPoemChange}
         onNextPoemButtonClick={this.handleNextPoemChange}
+        onPrevPoemButtonClick={this.handlePrevPoemChange}
       />
       <PoemsTable 
         poems={this.props.poems}
