@@ -4,6 +4,7 @@ body {
 	background: url('./images/background.webp') top left;
 	background-size: cover;
 	background-attachment: fixed;
+	min-height: 100vh;
 }
 
 .App {
