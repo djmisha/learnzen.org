@@ -18,7 +18,8 @@ class SinglePoemRow extends React.Component {
     const className = this.props.className;
     return (
       <li id={number} className={className}>
-      {number} {content}
+      <span>{number}</span>
+      {content}
       </li>
       );
   }
@@ -27,15 +28,36 @@ class SinglePoemRow extends React.Component {
 
 class PoemsTable extends React.Component {
   render() {
+    const filterText = this.props.filterText;
     const visiblePoem = this.props.visiblePoem;
     const poemRows = [];
 
     dataArray.forEach((poem) => {
-      poemRows.push(
+      /*Looks for matching Text*/
+      if (poem.content.indexOf(filterText) === -1) {
+        return;
+      }
+      /*Looks for visible Poem*/
+      // console.log(visiblePoem)
+      if (visiblePoem === poem.number ) {
+         poemRows.push(
         <SinglePoemRow number={poem.number} content={poem.content}
         key={poem.number} className='visiblePoem'
         />
         );
+      }
+      if (visiblePoem === null ) {
+         poemRows.push(
+        <SinglePoemRow number={poem.number} content={poem.content}
+        key={poem.number} className='visiblePoem'
+        />
+        );
+      }
+      // poemRows.push(
+      //   <SinglePoemRow number={poem.number} content={poem.content}
+      //   key={poem.number} className='visiblePoem'
+      //   />
+      //   );
     });
 
     return (
@@ -47,21 +69,58 @@ class PoemsTable extends React.Component {
 }
 
 
-class GenerateRandomPoemButton extends React.Component {
+class NavigationBar extends React.Component {
   constructor(props) {
     super(props);
-    this.handlePoemChange = this.handlePoemChange.bind(this);
+    this.handleSearchFilterTextChange = this.handleSearchFilterTextChange.bind(this);
+    this.handleRandomPoemChange = this.handleRandomPoemChange.bind(this);
+    this.handleShowAllPoemChange = this.handleShowAllPoemChange.bind(this);
+    this.handleNextPoemChange = this.handleNextPoemChange.bind(this);
   }
 
-  handlePoemChange() {
-    this.props.onFilterPoemChange();
+  handleRandomPoemChange() {
+    this.props.onRandomButtonGenerate();
+  }
+
+  handleShowAllPoemChange() {
+    this.props.onShowAllButtonClick();
+  }
+
+  handleNextPoemChange() {
+    console.log(this.props.visiblePoem)
+    this.props.onNextPoemButtonClick();
+  }
+
+  handleSearchFilterTextChange(e) {
+    this.props.onSearchFilterTextChange(e.target.value);
   }
 
   render() {
     return (
-      <div className='button' onClick={this.handlePoemChange}>
-       Change {this.props.visiblePoem}
-      </div>
+      <form>
+        <input
+          type="text"
+          placeholder="Search Tao..."
+          value={this.props.filterText}
+          onChange={this.handleSearchFilterTextChange}
+        />
+
+         <div 
+          onClick={this.handleShowAllPoemChange}
+          className='button'
+        >All</div>
+
+  {/*       <div 
+          onClick={this.handleNextPoemChange}
+          className='button'
+        >Next</div>
+*/}
+        <div 
+          onClick={this.handleRandomPoemChange}
+          className='button'
+        >Rand</div>
+
+      </form>
       )
   }
 }
@@ -70,24 +129,55 @@ class FileteredPoemsTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visiblePoem: 3,
+      filterText: '',
+      visiblePoem: null,
     };
-    this.handlePoemChange = this.handlePoemChange.bind(this);
+    this.handleSearchFilterTextChange = this.handleSearchFilterTextChange.bind(this);
+    this.handleRandomPoemChange = this.handleRandomPoemChange.bind(this);
+    this.handleShowAllPoemChange = this.handleShowAllPoemChange.bind(this);
+    this.handleNextPoemChange = this.handleNextPoemChange.bind(this);
   }
-  handlePoemChange(visiblePoem) {
+
+  handleSearchFilterTextChange(filterText) {
     this.setState({
-      visiblePoem: visiblePoem
+      filterText: filterText
     });
   }
+
+  handleRandomPoemChange(visiblePoem) {
+    const randNumber = Math.floor(Math.random() * dataArray.length) + 1;
+    this.setState({
+      visiblePoem: randNumber
+    });
+  }
+
+  handleShowAllPoemChange() {
+    this.setState({
+      visiblePoem: null
+    })
+  }
+
+  handleNextPoemChange(visiblePoem) {
+    console.log(visiblePoem)
+    this.setState({
+      visiblePoem: visiblePoem
+    })
+  }
+
   render() {
     return (
       <div>
-      <GenerateRandomPoemButton 
-        visiblePoem= {this.state.visiblePoem}
-        onFilterPoemChange={this.handlePoemChange} 
+      <NavigationBar 
+        visiblePoem={this.state.visiblePoem}
+        filterText={this.state.filterText}
+        onSearchFilterTextChange={this.handleSearchFilterTextChange}
+        onRandomButtonGenerate={this.handleRandomPoemChange}
+        onShowAllButtonClick={this.handleShowAllPoemChange}
+        onNextPoemButtonClick={this.handleNextPoemChange}
       />
       <PoemsTable 
         poems={this.props.poems}
+        filterText={this.state.filterText}
         visiblePoem={this.state.visiblePoem}
       />
       </div>
@@ -95,5 +185,17 @@ class FileteredPoemsTable extends React.Component {
   }
 }
 
+/* Final Render where we pass in our data as props of FilteredPoemsTable*/
 
-export default FileteredPoemsTable;
+class FinalRender extends React.Component {
+  render() {
+    return (
+      <div>
+        <FileteredPoemsTable poems={dataArray} />
+      </div>
+    )
+  }
+}
+
+
+export default FinalRender;
