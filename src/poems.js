@@ -110,7 +110,6 @@ class NavigationBar extends React.Component {
   }
 
   handleSearch() {
-    console.log('handle search');
     const change = this.state.searchClass === 'nav-search nav-hidden' ? 'nav-search nav-visible' : 'nav-search nav-hidden';
     
     this.setState({

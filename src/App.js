@@ -10,9 +10,9 @@ function App() {
   return (
     <div className="App">
       <header className="container">
-      	<img src={yinyang} className="logo" alt="Prev" />
-     	 <div>Tao Te Ching</div>
-     	 <div>by Lau Tzu</div>
+      <img src={yinyang} className="logo" alt="Logo" />
+     	  <div>Tao Te Ching</div>
+     	  <div>by Lau Tzu</div>
       </header>
       <main className="container">
         <FinalRender /> 

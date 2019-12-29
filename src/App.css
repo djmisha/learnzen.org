@@ -3,9 +3,14 @@
 body {
 	background: url('./images/background.webp') top left;
 	background-repeat: no-repeat;
-	background-size: cover;
+	/*background-size: cover;*/
+		background-size: auto 100%;
 	background-attachment: fixed;
 	min-height: 100vh;
+}
+
+.container {
+	max-width: none;
 }
 
 @media (min-width: 1000px) {
@@ -61,7 +66,7 @@ ul.all-poems {
 @media (min-width: 750px) {
 	.all-poems > li {
 		max-width: none;
-		padding: 120px 0px 80px 0px;
+		padding: 120px 22vw 80px 0px;
 		font-size: 2.6vw;
 	}
 }
@@ -94,6 +99,13 @@ form {
 	color: #000;
 }
 
+@media (min-width: 750px) {
+	form {
+		height: 60px;
+	}
+
+}
+
 .nav-search {
 	position: fixed;
 	font-family: 'Source Serif Pro', serif;
@@ -114,12 +126,16 @@ form {
 }
 
 form label {
-
+	position: relative;
 }
 
 form label span {
-	position: fixed;
-	bottom: -999px;
+	position: absolute;
+	font-size: 10px;
+	bottom: -4px;
+	right: calc(50% - 15px);
+	color: #888;
+	font-weight: normal;
 }
 
 .nav-count {
