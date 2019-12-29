@@ -11,8 +11,7 @@ function App() {
     <div className="App">
       <header className="container">
       <img src={yinyang} className="logo" alt="Logo" />
-     	  <div>Tao Te Ching</div>
-     	  <div>by Lau Tzu</div>
+     	  <div>Tao Te Ching<span>by Lau Tzu</span></div>
       </header>
       <main className="container">
         <FinalRender /> 

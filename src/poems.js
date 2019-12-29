@@ -1,15 +1,17 @@
 import React from 'react';
 import data from './poemData.json';
-import iconrandom from './images/icon-random.svg';
-import iconall from './images/icon-all.svg';
-import iconnext from './images/icon-next.svg';
-import iconprev from './images/icon-prev.svg';
-import iconsearch from './images/icon-search.svg';
+
+import NavIconSeach from './images/icon-search.js'
+import NavIconNext from './images/icon-next.js'
+import NavIconPrev from './images/icon-prev.js'
+import NavIconAll from './images/icon-all.js'
+import NavIconRandom from './images/icon-random.js'
 
 
 /* Get Our Data into an Array from JSON FORMAT*/
-let parsedData = data.poems;
-const dataArray = [];
+
+const parsedData = data.poems;
+let dataArray = [];
 
 for (let i = 0; i < parsedData.length; i++) {
   dataArray.push(parsedData[i]);
@@ -123,10 +125,12 @@ class NavigationBar extends React.Component {
     return (
       <form>
       <label>
+      <div 
+        className="nav-icon"
+        onClick={this.handleSearchOpen}>
+        <NavIconSeach />
       <span>Search</span>
-      <img src={iconsearch} className="nav-icon" alt="Search"
-      onClick={this.handleSearchOpen}
-      />
+      </div>
       <input
       type="text"
       placeholder="Search..."
@@ -138,16 +142,17 @@ class NavigationBar extends React.Component {
 
       <div 
       onClick={this.handleShowAllPoemChange}
-      className='nav-all'
-      ><img src={iconall} className="nav-icon" alt="All" />
+      className='nav-all nav-icon'
+      >
+      <NavIconAll />
       <span>See All</span>
       </div>
 
       <div 
       onClick={this.handlePrevPoemChange}
-      className='nav-prev'
+      className='nav-prev nav-icon'
       >
-      <img src={iconprev} className="nav-icon" alt="Prev" />
+      <NavIconPrev />
       </div>
 
       <div 
@@ -157,15 +162,16 @@ class NavigationBar extends React.Component {
 
       <div 
       onClick={this.handleNextPoemChange}
-      className='nav-next'
+      className='nav-next nav-icon'
       >
-      <img src={iconnext} className="nav-icon" alt="Next" /></div>
+      <NavIconNext />
+      </div>
 
       <div 
       onClick={this.handleRandomPoemChange}
-      className='nav-random'
+      className='nav-random nav-icon'
       >
-      <img src={iconrandom} className="nav-icon" alt="Random" />
+      <NavIconRandom />
       <span>Random</span>
       </div>
 
