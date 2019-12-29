@@ -8,6 +8,7 @@ body {
 	background-attachment: fixed;
 	min-height: 100vh;
 	max-height: 100vh;
+	border-top: 3px solid #000;
 }
 
 .container {
@@ -30,7 +31,6 @@ body {
 
 header {
 	font-family: 'Source Serif Pro', serif;
-	position: absolute;
 	top: 20px;
 	left: 0px;
 	font-size: .9em;
@@ -38,22 +38,41 @@ header {
 	color: #000;
 }
 
-
-header img.logo {
-	position: absolute;
-	width: 30px;
-	height: 30px;
+.the-logo {
+	width: 140px;
+	position: relative;
 }
 
-header div {
+header .logo {
+	position: absolute;
+}
+
+header .logo svg   {
+	transition: all .5s ease-in-out;
+	width: 33px;
+	height: 33px;
+	fill: #000;
+	transform: rotate(0deg);
+}
+
+header .logo svg:hover {
+	fill: #fff;
+	transform: rotate(360deg);
+}
+
+header .logo-tag {
+	margin-left: 40px;
 	width: 100px;
 	height: 35px;
 	transition: all .25s ease-in-out;
-	margin-left: 35px;
 	color: #000;
 }
 
-header div span {
+header .logo-tag:hover {
+	color: #fff;
+}
+
+header .logo-tag span {
 	display: block;
 }
 
@@ -67,7 +86,7 @@ ul.all-poems {
 	max-width: 400px;
 	padding: 80px 0px 80px 0px;
 	font-family: 'Source Serif Pro', serif;
-	font-size: 22px;
+	font-size: 20px;
 	position: relative;
 	color: #000 !important;
 }
@@ -151,11 +170,19 @@ form label span {
 	font-weight: normal;
 }
 
+.nav-movearound {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100px;
+	/*border: 1px solid red;*/
+}
+
 .nav-count {
 	width: 30px;
 	display: flex;
 	justify-content: center;
-	margin-top: -4px;
+	margin-top: 3px;
 	overflow: hidden;
 }
 
@@ -169,12 +196,20 @@ form label span {
 	width: 30px;
 	height: 30px;
 	fill: #fff;
+	transition: fill .1s ease-out;
+}
+
+.nav-icon svg:active {
+	fill: pink;
 }
 
 .nav-random, .nav-all {
 	position: relative;
 }
 
+.nav-icon span {
+	display: none;
+}
 
 .nav-random span {
 	position: absolute;

@@ -1,17 +1,17 @@
 import React from 'react';
 import FinalRender from './poems.js'
-
+import IconLogo from './images/icon-logo.js'
 import './css/App.css';
 import './css/skeleton.css';
-
-import yinyang from './images/yin-and-yang.svg';
 
 function App() {
   return (
     <div className="App">
       <header className="container">
-      <img src={yinyang} className="logo" alt="Logo" />
-     	  <div>Tao Te Ching<span>by Lau Tzu</span></div>
+        <div className="the-logo">
+          <div className="logo"><IconLogo /></div>
+       	  <div className="logo-tag">Tao Te Ching<span>by Lau Tzu</span></div>
+        </div>
       </header>
       <main className="container">
         <FinalRender /> 

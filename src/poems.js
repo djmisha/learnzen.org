@@ -148,6 +148,7 @@ class NavigationBar extends React.Component {
       <span>See All</span>
       </div>
 
+      <div className="nav-movearound">
       <div 
       onClick={this.handlePrevPoemChange}
       className='nav-prev nav-icon'
@@ -165,6 +166,7 @@ class NavigationBar extends React.Component {
       className='nav-next nav-icon'
       >
       <NavIconNext />
+      </div>
       </div>
 
       <div 
