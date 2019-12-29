@@ -4,6 +4,8 @@ import iconrandom from './images/icon-random.svg';
 import iconall from './images/icon-all.svg';
 import iconnext from './images/icon-next.svg';
 import iconprev from './images/icon-prev.svg';
+import iconsearch from './images/icon-search.svg';
+
 
 /* Get Our Data into an Array from JSON FORMAT*/
 let parsedData = data.poems;
@@ -34,24 +36,27 @@ class PoemsTable extends React.Component {
     const poemRows = [];
 
     dataArray.forEach((poem) => {
+
       /*Looks for matching Text*/
+
       if (poem.content.indexOf(filterText) === -1) {
         return;
       }
+
       /*Looks for visible Poem*/
-      // console.log(visiblePoem)
+
       if (visiblePoem === poem.number ) {
          poemRows.push(
-        <SinglePoemRow number={poem.number} content={poem.content}
-        key={poem.number} className='visiblePoem'
-        />
+          <SinglePoemRow number={poem.number} content={poem.content}
+          key={poem.number} className='visiblePoem'
+          />
         );
       }
       if (visiblePoem === null ) {
          poemRows.push(
-        <SinglePoemRow number={poem.number} content={poem.content}
-        key={poem.number} className='visiblePoem'
-        />
+          <SinglePoemRow number={poem.number} content={poem.content}
+          key={poem.number} className='visiblePoem'
+          />
         );
       }
       // poemRows.push(
@@ -77,6 +82,7 @@ class NavigationBar extends React.Component {
     this.handleShowAllPoemChange = this.handleShowAllPoemChange.bind(this);
     this.handleNextPoemChange = this.handleNextPoemChange.bind(this);
     this.handlePrevPoemChange = this.handlePrevPoemChange.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   handleRandomPoemChange() {
@@ -99,41 +105,58 @@ class NavigationBar extends React.Component {
     this.props.onSearchFilterTextChange(e.target.value);
   }
 
+  handleSearch() {
+    console.log('handle search');
+  }
+
   render() {
     return (
       <form>
         <label>
           <span>Search</span>
-        <input
-          type="text"
-          placeholder="Search Tao..."
-          value={this.props.filterText}
-          onChange={this.handleSearchFilterTextChange}
-        />
+          <img src={iconsearch} className="nav-icon" alt="Search"
+          onClick={this.handleSearch}
+           />
+          <input
+            type="text"
+            placeholder="Search Tao..."
+            value={this.props.filterText}
+            onChange={this.handleSearchFilterTextChange}
+            className='nav-search'
+          />
         </label>
+
         <div 
           onClick={this.handlePrevPoemChange}
-          className=''
-        ><img src={iconprev} className="nav-icon" alt="Prev" /></div>
+          className='nav-prev'
+          >
+          <img src={iconprev} className="nav-icon" alt="Prev" />
+        </div>
 
-         {/* <div 
-          className=''
-        >{this.props.visiblePoem}</div>*/}
+          <div 
+          className='nav-count'
+        >{this.props.visiblePoem}
+        </div>
         
          <div 
           onClick={this.handleNextPoemChange}
-          className=''
+          className='nav-next'
         ><img src={iconnext} className="nav-icon" alt="Next" /></div>
 
          <div 
           onClick={this.handleShowAllPoemChange}
-          className=''
-        ><img src={iconall} className="nav-icon" alt="All" /></div>
-      
+          className='nav-all'
+        ><img src={iconall} className="nav-icon" alt="All" />
+         <span>See All</span>
+         </div>
+
         <div 
           onClick={this.handleRandomPoemChange}
-          className=''
-        ><img src={iconrandom} className="nav-icon" alt="Random" /></div>
+          className='nav-random'
+        >
+          <img src={iconrandom} className="nav-icon" alt="Random" />
+          <span>Random</span>
+        </div>
 
       </form>
       )
@@ -188,7 +211,7 @@ class FileteredPoemsTable extends React.Component {
 
 
   handlePrevPoemChange(visiblePoem) {
-    if (visiblePoem === 1) {
+    if (visiblePoem === 1 || visiblePoem === null) {
       visiblePoem = dataArray.length;
     }
     else {

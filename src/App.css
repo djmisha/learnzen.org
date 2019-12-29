@@ -14,7 +14,7 @@ body {
 header {
 	font-family: 'Source Serif Pro', serif;
 	position: absolute;
-	top: 10px;
+	top: 20px;
 	left: 0px;
 	font-size: .9em;
 	line-height: 1em;
@@ -31,6 +31,41 @@ header div {
 	margin-left: 35px;
 }
 
+
+ul.all-poems {
+	list-style: none;
+	margin:0;
+	padding: 0;
+}
+
+.all-poems > li {
+	max-width: 400px;
+	padding: 80px 0px 80px 0px;
+	font-family: 'Source Serif Pro', serif;
+	font-size: 22px;
+	position: relative;
+	color: #000 !important;
+}
+
+@media (min-width: 750px) {
+	.all-poems > li {
+		max-width: 75%;
+		padding: 120px 0px 80px 0px;
+		font-size: 3vw;
+	}
+}
+
+.all-poems > li span {
+	position: absolute;
+	top: 0px;
+	right: 40px;
+	font-size: 35px;
+	font-style: italic;
+	color: #000;
+}
+
+
+/*Navigation*/
 
 form {
 	position: fixed;
@@ -50,8 +85,8 @@ form {
 }
 
 form label {
-	position: absolute;
-	bottom: -9999px;
+	/*position: absolute;*/
+	/*bottom: -9999px;*/
 }
 
 form input,
@@ -60,35 +95,59 @@ form .button {
 	margin-bottom: 0;
 }
 
-form input {
-	position: absolute;
+.nav-search {
+	position: fixed;
+	bottom: 50px;
+	/*left: 10px;*/
 	right: -9999px;
-}
-
-ul.all-poems {
-	list-style: none;
-}
-
-.all-poems > li {
-	max-width: 400px;
-	margin: 10px auto;
-	padding: 80px 0px 80px 0px;
+	width: 150px;
 	font-family: 'Source Serif Pro', serif;
-	font-size: 22px;
-	position: relative;
-	color: #000 !important;
+	color: #888;
+	font-size: 18px;
+	font-weight: normal;
 }
 
-.all-poems > li span {
-	position: absolute;
-	top: 20px;
-	right: 40px;
-	font-size: 35px;
-	font-style: italic;
-	color: #000;
+
+form label {
+
+}
+
+form label span {
+	/*display: none;*/
+	position: fixed;
+	bottom: -999px;
+}
+
+.nav-count {
+	width: 22px;
+	display: flex;
+	justify-content: center;
+	margin-top: -4px;
 }
 
 .nav-icon {
 	width: 30px;
 	height: 30px;
+}
+
+.nav-random, .nav-all {
+	position: relative;
+}
+
+.nav-random span {
+	position: absolute;
+	font-size: 10px;
+	bottom: -2px;
+	right: calc(50% - 20px);
+	color: #888;
+}
+
+.nav-all span {
+	position: absolute;
+	font-size: 10px;
+	bottom: -2px;
+	right: calc(50% - 20px);
+	color: #888;
+	/*border: 1px solid red;*/
+	width: 35px;
 }
