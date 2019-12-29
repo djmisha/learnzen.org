@@ -2,9 +2,20 @@
 
 body {
 	background: url('./images/background.webp') top left;
+	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	min-height: 100vh;
+}
+
+@media (min-width: 1000px) {
+	body {
+		background: url('./images/background.webp') top left;
+		background-repeat: no-repeat;
+		background-size: 160% auto;
+		background-attachment: fixed;
+		min-height: 100vh;
+	}
 }
 
 .App {
@@ -34,7 +45,7 @@ header div {
 
 ul.all-poems {
 	list-style: none;
-	margin:0;
+	margin: 0;
 	padding: 0;
 }
 
@@ -49,9 +60,9 @@ ul.all-poems {
 
 @media (min-width: 750px) {
 	.all-poems > li {
-		max-width: 75%;
+		max-width: none;
 		padding: 120px 0px 80px 0px;
-		font-size: 3vw;
+		font-size: 2.6vw;
 	}
 }
 
@@ -63,7 +74,6 @@ ul.all-poems {
 	font-style: italic;
 	color: #000;
 }
-
 
 /*Navigation*/
 
@@ -84,36 +94,30 @@ form {
 	color: #000;
 }
 
-form label {
-	/*position: absolute;*/
-	/*bottom: -9999px;*/
-}
-
-form input,
-form .button {
-	padding: 0 10px;
-	margin-bottom: 0;
-}
-
 .nav-search {
 	position: fixed;
-	bottom: 50px;
-	/*left: 10px;*/
-	right: -9999px;
-	width: 150px;
 	font-family: 'Source Serif Pro', serif;
+	bottom: 40px;
+	width: 180px;
 	color: #888;
 	font-size: 18px;
 	font-weight: normal;
+	transition: all .25s ease-in-out;
 }
 
+.nav-search.nav-visible {
+	left: 10px;
+}
+
+.nav-search.nav-hidden {
+	left: -190px;
+}
 
 form label {
 
 }
 
 form label span {
-	/*display: none;*/
 	position: fixed;
 	bottom: -999px;
 }
@@ -148,6 +152,5 @@ form label span {
 	bottom: -2px;
 	right: calc(50% - 20px);
 	color: #888;
-	/*border: 1px solid red;*/
 	width: 35px;
 }

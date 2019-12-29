@@ -52,6 +52,7 @@ class PoemsTable extends React.Component {
           />
         );
       }
+
       if (visiblePoem === null ) {
          poemRows.push(
           <SinglePoemRow number={poem.number} content={poem.content}
@@ -77,6 +78,9 @@ class PoemsTable extends React.Component {
 class NavigationBar extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      searchClass: "nav-search nav-hidden",
+    };
     this.handleSearchFilterTextChange = this.handleSearchFilterTextChange.bind(this);
     this.handleRandomPoemChange = this.handleRandomPoemChange.bind(this);
     this.handleShowAllPoemChange = this.handleShowAllPoemChange.bind(this);
@@ -107,6 +111,11 @@ class NavigationBar extends React.Component {
 
   handleSearch() {
     console.log('handle search');
+    const change = this.state.searchClass === 'nav-search nav-hidden' ? 'nav-search nav-visible' : 'nav-search nav-hidden';
+    
+    this.setState({
+      searchClass: change,
+    })
   }
 
   render() {
@@ -115,16 +124,23 @@ class NavigationBar extends React.Component {
         <label>
           <span>Search</span>
           <img src={iconsearch} className="nav-icon" alt="Search"
-          onClick={this.handleSearch}
+            onClick={this.handleSearch}
            />
           <input
             type="text"
             placeholder="Search Tao..."
             value={this.props.filterText}
             onChange={this.handleSearchFilterTextChange}
-            className='nav-search'
+            className={this.state.searchClass}
           />
         </label>
+
+         <div 
+          onClick={this.handleShowAllPoemChange}
+          className='nav-all'
+        ><img src={iconall} className="nav-icon" alt="All" />
+         <span>See All</span>
+         </div>
 
         <div 
           onClick={this.handlePrevPoemChange}
@@ -133,22 +149,16 @@ class NavigationBar extends React.Component {
           <img src={iconprev} className="nav-icon" alt="Prev" />
         </div>
 
-          <div 
+        <div 
           className='nav-count'
         >{this.props.visiblePoem}
         </div>
         
-         <div 
+        <div 
           onClick={this.handleNextPoemChange}
           className='nav-next'
-        ><img src={iconnext} className="nav-icon" alt="Next" /></div>
-
-         <div 
-          onClick={this.handleShowAllPoemChange}
-          className='nav-all'
-        ><img src={iconall} className="nav-icon" alt="All" />
-         <span>See All</span>
-         </div>
+        >
+          <img src={iconnext} className="nav-icon" alt="Next" /></div>
 
         <div 
           onClick={this.handleRandomPoemChange}
@@ -186,7 +196,8 @@ class FileteredPoemsTable extends React.Component {
   handleRandomPoemChange(visiblePoem) {
     const randNumber = Math.floor(Math.random() * dataArray.length) + 1;
     this.setState({
-      visiblePoem: randNumber
+      visiblePoem: randNumber,
+      filterText: '',
     });
   }
 
@@ -196,7 +207,6 @@ class FileteredPoemsTable extends React.Component {
     })
   }
 
-
   handleNextPoemChange(visiblePoem) {
     if (visiblePoem === dataArray.length) {
       visiblePoem = 1;
@@ -205,10 +215,10 @@ class FileteredPoemsTable extends React.Component {
       visiblePoem = visiblePoem + 1;
     }
     this.setState({
-      visiblePoem: visiblePoem
+      visiblePoem: visiblePoem,
+      filterText: '',
     })
   }
-
 
   handlePrevPoemChange(visiblePoem) {
     if (visiblePoem === 1 || visiblePoem === null) {
@@ -218,7 +228,8 @@ class FileteredPoemsTable extends React.Component {
       visiblePoem = visiblePoem - 1;
     }
     this.setState({
-      visiblePoem: visiblePoem
+      visiblePoem: visiblePoem,
+      filterText: '',
     })
   }
 
@@ -240,7 +251,7 @@ class FileteredPoemsTable extends React.Component {
         visiblePoem={this.state.visiblePoem}
       />
       </div>
-      )
+    )
   }
 }
 
@@ -255,6 +266,5 @@ class FinalRender extends React.Component {
     )
   }
 }
-
 
 export default FinalRender;
