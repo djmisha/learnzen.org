@@ -1,8 +1,8 @@
 import React from 'react';
 import FinalRender from './poems.js'
 
-import './App.css';
-import './skeleton.css';
+import './css/App.css';
+import './css/skeleton.css';
 
 import yinyang from './images/yin-and-yang.svg';
 

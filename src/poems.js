@@ -1,5 +1,5 @@
 import React from 'react';
-import data from './poems.json';
+import data from './poemData.json';
 import iconrandom from './images/icon-random.svg';
 import iconall from './images/icon-all.svg';
 import iconnext from './images/icon-next.svg';
@@ -127,7 +127,7 @@ class NavigationBar extends React.Component {
            />
           <input
             type="text"
-            placeholder="Search Tao..."
+            placeholder="Search..."
             value={this.props.filterText}
             onChange={this.handleSearchFilterTextChange}
             className={this.state.searchClass}

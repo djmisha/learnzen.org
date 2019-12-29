@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
 
 body {
-	background: url('./images/background.webp') top left;
+	background: url('../images/background.webp') top left;
 	background-repeat: no-repeat;
 	/*background-size: cover;*/
 		background-size: auto 100%;
@@ -15,7 +15,7 @@ body {
 
 @media (min-width: 1000px) {
 	body {
-		background: url('./images/background.webp') top left;
+		background: url('../images/background.webp') top left;
 		background-repeat: no-repeat;
 		background-size: 160% auto;
 		background-attachment: fixed;
@@ -73,8 +73,8 @@ ul.all-poems {
 
 .all-poems > li span {
 	position: absolute;
-	top: 0px;
-	right: 40px;
+	top: 10px;
+	right: 25px;
 	font-size: 35px;
 	font-style: italic;
 	color: #000;
@@ -115,6 +115,7 @@ form {
 	font-size: 18px;
 	font-weight: normal;
 	transition: all .25s ease-in-out;
+
 }
 
 .nav-search.nav-visible {
@@ -127,6 +128,9 @@ form {
 
 form label {
 	position: relative;
+	position: absolute;
+	left: -190px !important;
+
 }
 
 form label span {
