@@ -3,6 +3,7 @@ import IconLogo from './images/icon-logo.js'
 
 
 class Logo extends React.Component {
+  // let spinTheLogo = this.props.logoSpinClass;
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +25,7 @@ class Logo extends React.Component {
   }
   render() {
     return (
-      <div className={this.state.logoClass} onClick={this.handleLogoChange}>
+      <div className={this.state.logoClass} logospin={this.props.logoSpinClass} onClick={this.handleLogoChange}>
         <div className="logo"><IconLogo /></div>
         <div className="logo-tag">
           <div>{this.state.logoTitle}</div>

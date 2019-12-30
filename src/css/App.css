@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
 
 body {
-	background: url('../images/background.webp') top left;
+	background: #9adee9 url('../images/background.webp') top left;
 	background-repeat: no-repeat;
 	background-size: auto 100%;
 	background-attachment: fixed;
@@ -14,9 +14,9 @@ body {
 	max-width: none;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
 	body {
-		background: url('../images/background.webp') top left;
+		background: #9adee9 url('../images/background.webp') top left;
 		background-repeat: no-repeat;
 		background-size: 160% auto;
 		background-attachment: fixed;
@@ -38,6 +38,7 @@ header {
 }
 
 .the-logo {
+	padding-top: 20px;
 	display: block;
 	width: 200px;
 	position: relative;
@@ -52,12 +53,10 @@ header .logo svg   {
 	width: 33px;
 	height: 33px;
 	fill: #000;
-	transform: rotate(0deg);
 }
 
 header .logo-change .logo svg {
 	fill: #fff;
-	transform: rotate(360deg);
 }
 
 header .logo-tag {
@@ -75,6 +74,16 @@ header .logo-change .logo-tag {
 header .logo-tag span {
 	display: block;
 }
+
+
+header.spin .logo svg {
+	transform: rotate(180deg);
+}
+
+header.spin-more .logo svg {
+	transform: rotate(-180deg);
+}
+
 
 ul.all-poems {
 	list-style: none;
@@ -94,8 +103,16 @@ ul.all-poems {
 @media (min-width: 750px) {
 	.all-poems > li {
 		max-width: none;
-		padding: 120px 22vw 80px 0px;
+		padding: 80px 22vw 80px 0px;
 		font-size: 2.6vw;
+	}
+}
+
+@media (min-width: 1600px) {
+	.all-poems > li {
+		max-width: none;
+		padding: 80px 0px 80px 0px;
+		font-size: 40px;
 	}
 }
 
@@ -162,6 +179,16 @@ form label span {
 	font-weight: normal;
 }
 
+form label {
+	display: none;
+}
+
+@media (min-width: 750px) {
+	form label {
+		display: block;
+	}
+}
+
 .nav-movearound {
 	display: flex;
 	align-items: center;
@@ -177,11 +204,14 @@ form label span {
 	width: 40px;
 	height: 40px;
 	fill: #fff;
-	transition: fill .1s ease-out;
+	transition: fill .06s ease-in;
+	position: relative;
+	bottom: 0px;
 }
 
 .nav-icon svg:active {
 	fill: pink;
+	bottom: -1px;
 }
 
 .nav-random, .nav-all {
@@ -192,7 +222,7 @@ form label span {
 	display: none;
 }
 
-.nav-random span {
+/*.nav-random span {
 	position: absolute;
 	font-size: 10px;
 	bottom: -7px;
@@ -207,4 +237,4 @@ form label span {
 	right: calc(50% - 20px);
 	color: #fff;
 	width: 35px;
-}
+}*/

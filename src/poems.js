@@ -1,6 +1,9 @@
 import React from 'react';
 import data from './poemData.json';
 
+import Logo from './logo.js'
+
+
 import NavIconSeach from './images/icon-search.js'
 import NavIconNext from './images/icon-next.js'
 import NavIconPrev from './images/icon-prev.js'
@@ -149,24 +152,24 @@ class NavigationBar extends React.Component {
       </div>
 
       <div className="nav-movearound">
-      <div 
-      onClick={this.handlePrevPoemChange}
-      className='nav-prev nav-icon'
-      >
-      <NavIconPrev />
-      </div>
+        <div 
+        onClick={this.handlePrevPoemChange}
+        className='nav-prev nav-icon'
+        >
+        <NavIconPrev />
+        </div>
 
-      <div 
-      className='nav-count'
-      >{this.props.visiblePoem}
-      </div>
+        <div 
+        className='nav-count'
+        >{this.props.visiblePoem}
+        </div>
 
-      <div 
-      onClick={this.handleNextPoemChange}
-      className='nav-next nav-icon'
-      >
-      <NavIconNext />
-      </div>
+        <div 
+        onClick={this.handleNextPoemChange}
+        className='nav-next nav-icon'
+        >
+        <NavIconNext />
+        </div>
       </div>
 
       <div 
@@ -189,6 +192,7 @@ class FileteredPoemsTable extends React.Component {
     this.state = {
       filterText: '',
       visiblePoem: randNumber,
+      logoSpinClass: 'spin'
     };
     this.handleSearchFilterTextChange = this.handleSearchFilterTextChange.bind(this);
     this.handleRandomPoemChange = this.handleRandomPoemChange.bind(this);
@@ -224,9 +228,13 @@ class FileteredPoemsTable extends React.Component {
     else {
       visiblePoem = visiblePoem + 1;
     }
+
+    const changelogo = this.state.logoSpinClass === 'spin' ? 'spin-more' : 'spin';
+
     this.setState({
       visiblePoem: visiblePoem,
       filterText: '',
+      logoSpinClass: changelogo
     })
   }
 
@@ -237,15 +245,22 @@ class FileteredPoemsTable extends React.Component {
     else {
       visiblePoem = visiblePoem - 1;
     }
+
+    const changelogo = this.state.logoSpinClass === 'spin' ? 'spin-more' : 'spin';
+
     this.setState({
       visiblePoem: visiblePoem,
       filterText: '',
+      logoSpinClass: changelogo
     })
   }
 
   render() {
     return (
       <div>
+     <header className={this.state.logoSpinClass}>
+        <Logo />
+      </header>
       <NavigationBar 
       visiblePoem={this.state.visiblePoem}
       filterText={this.state.filterText}
