@@ -20,15 +20,20 @@ for (let i = 0; i < parsedData.length; i++) {
   dataArray.push(parsedData[i]);
 }
 
+
 class SinglePoemRow extends React.Component {
   render() {
     const number = this.props.number;
     const content = this.props.content;
     const className = this.props.className;
+    const visiblePoem = this.props.visiblePoem;
+
     return (
       <li id={number} className={className}>
       <span>{number}</span>
+      <p>
       {content}
+      </p>
       </li>
     );
   }
@@ -199,6 +204,9 @@ class FileteredPoemsTable extends React.Component {
     this.handleShowAllPoemChange = this.handleShowAllPoemChange.bind(this);
     this.handleNextPoemChange = this.handleNextPoemChange.bind(this);
     this.handlePrevPoemChange = this.handlePrevPoemChange.bind(this);
+    this.handleSpecifiedPoemChange = this.handleSpecifiedPoemChange.bind(this);
+
+
   }
 
   handleSearchFilterTextChange(filterText) {
@@ -255,6 +263,12 @@ class FileteredPoemsTable extends React.Component {
     })
   }
 
+  handleSpecifiedPoemChange(visiblePoem) {
+    this.setState({
+      visiblePoem: visiblePoem,
+    })
+  }
+
   render() {
     return (
       <div>
@@ -269,6 +283,7 @@ class FileteredPoemsTable extends React.Component {
       onShowAllButtonClick={this.handleShowAllPoemChange}
       onNextPoemButtonClick={this.handleNextPoemChange}
       onPrevPoemButtonClick={this.handlePrevPoemChange}
+      onSpecifiedPoemClick={this.handleSpecifiedPoemChange}
       />
       <PoemsTable 
       poems={this.props.poems}
