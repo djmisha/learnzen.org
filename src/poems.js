@@ -156,9 +156,10 @@ class NavigationBar extends React.Component {
 
     dataArray.forEach((poem) => {
       PoemsForNavigation.push(
-        <SinglePoemNavItem number={poem.number} key={poem.number}  visiblePoem={this.state.visiblePoem}
+        <SinglePoemNavItem number={poem.number} key={poem.number}  visiblePoem={this.state.visiblePoem}  onClick={this.handleRandomPoemChange}
          />
         );
+
     });
 
     // console.log(PoemsForNavigation);
@@ -218,7 +219,10 @@ class NavigationBar extends React.Component {
       <span>Random</span>
       </div>
 
-      <div className="all-navigation-row" >
+      <div className="all-navigation-row" 
+      visiblepoem={this.state.visiblePoem}
+     
+      >
         {PoemsForNavigation}
       </div>
 
