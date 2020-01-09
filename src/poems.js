@@ -30,7 +30,7 @@ class SinglePoemRow extends React.Component {
       <span>{number}</span>
       {content}
       </li>
-    );
+      );
   }
 }
 
@@ -78,7 +78,7 @@ class PoemsTable extends React.Component {
       <ul className='all-poems'>
       {poemRows}
       </ul>
-    );
+      );
   }
 }
 
@@ -129,9 +129,9 @@ class NavigationBar extends React.Component {
       <form>
       <label>
       <div 
-        className="nav-icon"
-        onClick={this.handleSearchOpen}>
-        <NavIconSeach />
+      className="nav-icon"
+      onClick={this.handleSearchOpen}>
+      <NavIconSeach />
       <span>Search</span>
       </div>
       <input
@@ -152,24 +152,24 @@ class NavigationBar extends React.Component {
       </div>
 
       <div className="nav-movearound">
-        <div 
-        onClick={this.handlePrevPoemChange}
-        className='nav-prev nav-icon'
-        >
-        <NavIconPrev />
-        </div>
+      <div 
+      onClick={this.handlePrevPoemChange}
+      className='nav-prev nav-icon'
+      >
+      <NavIconPrev />
+      </div>
 
-        <div 
-        className='nav-count'
-        >{this.props.visiblePoem}
-        </div>
+      <div 
+      className='nav-count'
+      >{this.props.visiblePoem}
+      </div>
 
-        <div 
-        onClick={this.handleNextPoemChange}
-        className='nav-next nav-icon'
-        >
-        <NavIconNext />
-        </div>
+      <div 
+      onClick={this.handleNextPoemChange}
+      className='nav-next nav-icon'
+      >
+      <NavIconNext />
+      </div>
       </div>
 
       <div 
@@ -181,7 +181,7 @@ class NavigationBar extends React.Component {
       </div>
 
       </form>
-    )
+      )
   }
 }
 
@@ -258,8 +258,10 @@ class FileteredPoemsTable extends React.Component {
   render() {
     return (
       <div>
-     <header className={this.state.logoSpinClass}>
-        <Logo />
+      <header 
+      className={this.state.logoSpinClass} 
+      >
+      <Logo />
       </header>
       <NavigationBar 
       visiblePoem={this.state.visiblePoem}
@@ -276,7 +278,7 @@ class FileteredPoemsTable extends React.Component {
       visiblePoem={this.state.visiblePoem}
       />
       </div>
-    )
+      )
   }
 }
 
@@ -288,7 +290,7 @@ class FinalRender extends React.Component {
       <div>
       <FileteredPoemsTable poems={dataArray} />
       </div>
-    )
+      )
   }
 }
 
