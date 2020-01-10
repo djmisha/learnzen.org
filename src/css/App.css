@@ -84,6 +84,54 @@ header.spin-more .logo svg {
 	transform: rotate(-180deg);
 }
 
+.the-info-icon {
+	position: fixed;
+	right: 15px;
+	top: 10px;
+}
+
+.the-info-icon.info-change .info svg {
+	fill: #fff;
+	z-index: 1;
+	position: relative;
+}
+
+header .info-overlay {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	padding-top: 80px;
+	text-align: center;
+	z-index: 9999;
+}
+
+header .info-overlay.info-hidden {
+	top: -9999px;
+}
+
+header .info-overlay.info-visible {
+	top: 0;
+}
+
+header .info-overlay span,
+header .info-overlay p {
+	padding: 20px 20px;
+	color: #fff;
+} 
+
+header .info-overlay span {
+	font-size: 30px;
+	display: block;
+}
+
+header .info-overlay p {
+	font-size: 18px;
+	line-height: 1.4em;
+}
 
 ul.all-poems {
 	list-style: none;
@@ -93,11 +141,12 @@ ul.all-poems {
 
 .all-poems > li {
 	max-width: 400px;
-	padding: 80px 0px 80px 0px;
+	padding: 80px 0px 40px 0px;
 	font-family: 'Source Serif Pro', serif;
 	font-size: 18px;
 	position: relative;
 	color: #000 !important;
+	z-index: -1;
 }
 
 @media (min-width: 750px) {
@@ -135,14 +184,15 @@ form {
 	width: 100%;
 	height: 60px;
 	background: #000;
-	z-index: 9999;
 	margin: 0 !important;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	color: #fff;
 	line-height: 0;
+	z-index: 799;
 }
+
 form label {
 	margin-bottom: 0;
 }
@@ -196,10 +246,6 @@ form label {
 	width: 110px;
 }
 
-.nav-count {}
-
-.nav-icon {}
-
 .nav-icon svg {
 	width: 40px;
 	height: 40px;
@@ -221,20 +267,3 @@ form label {
 .nav-icon span {
 	display: none;
 }
-
-/*.nav-random span {
-	position: absolute;
-	font-size: 10px;
-	bottom: -7px;
-	right: calc(50% - 20px);
-	color: #fff;
-}
-
-.nav-all span {
-	position: absolute;
-	font-size: 10px;
-	bottom: -7px;
-	right: calc(50% - 20px);
-	color: #fff;
-	width: 35px;
-}*/
