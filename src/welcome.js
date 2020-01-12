@@ -30,7 +30,7 @@ class WelcomeScene extends React.Component {
         <p>The Tao Te Ching it is the fundamental text for philosophical Taoism, it is traditionally credited to the 6th-century BC sage Laozi.
         <br />
         <br />
-        Explore the teaching of the Tao by using the navigation below, you can read all verses, view one at at time or get a random verse using the buttons.
+        Explore the teaching of the Tao with this app, you can read all verses, view one at at time or get a random verse.
         <br />
         <br />
         Ready to for enlightenment?<br /> Click on the Buddah...</p>
