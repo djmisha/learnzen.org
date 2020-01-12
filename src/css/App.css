@@ -121,6 +121,8 @@ header .info-overlay span,
 header .info-overlay p {
 	padding: 20px 20px;
 	color: #fff;
+	max-width: 600px;
+	margin: 0 auto;
 } 
 
 header .info-overlay span {
@@ -153,7 +155,7 @@ ul.all-poems {
 	.all-poems > li {
 		max-width: none;
 		padding: 80px 22vw 80px 0px;
-		font-size: 2.6vw;
+		font-size: 2.0vw;
 	}
 }
 
