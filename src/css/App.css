@@ -84,8 +84,14 @@ header.spin-more .logo svg {
 	transform: rotate(-180deg);
 }
 
+
+.buddah svg {
+	fill: #fff;
+	width: 100px;
+}
+
 .the-info-icon {
-	position: fixed;
+	position: absolute;
 	right: 15px;
 	top: 10px;
 }
@@ -143,7 +149,7 @@ ul.all-poems {
 
 .all-poems > li {
 	max-width: 400px;
-	padding: 80px 0px 40px 0px;
+	padding: 80px 0px 60px 0px;
 	font-family: 'Source Serif Pro', serif;
 	font-size: 18px;
 	position: relative;
@@ -192,7 +198,7 @@ form {
 	align-items: center;
 	color: #eee;
 	line-height: 0;
-	z-index: 799;
+	z-index: 1;
 }
 
 form label {
@@ -245,7 +251,8 @@ form label {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 120px;
+	width: 160px;
+	/*border: 1px solid white;*/
 }
 
 .nav-icon svg {

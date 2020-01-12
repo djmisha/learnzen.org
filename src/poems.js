@@ -2,7 +2,7 @@ import React from 'react';
 import data from './poemData.json';
 
 import Logo from './logo.js'
-import WelcomeScene from './appinfo.js'
+import WelcomeScene from './welcome.js'
 
 
 import NavIconSeach from './images/icon-search.js'
@@ -210,15 +210,19 @@ class FileteredPoemsTable extends React.Component {
 
   handleRandomPoemChange(visiblePoem) {
     const randNumber = Math.floor(Math.random() * dataArray.length) + 1;
+    const changelogo = this.state.logoSpinClass === 'spin' ? 'spin-more' : 'spin';
     this.setState({
       visiblePoem: randNumber,
       filterText: '',
+      logoSpinClass: changelogo
     });
   }
 
+
+
   handleShowAllPoemChange() {
     this.setState({
-      visiblePoem: 'all'
+      visiblePoem: 'all',
     })
   }
 
