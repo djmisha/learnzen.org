@@ -2,7 +2,7 @@ import React from 'react';
 import data from './poemData.json';
 
 import Logo from './logo.js'
-import Appinformation from './appinfo.js'
+import WelcomeScene from './appinfo.js'
 
 
 import NavIconSeach from './images/icon-search.js'
@@ -263,7 +263,7 @@ class FileteredPoemsTable extends React.Component {
       className={this.state.logoSpinClass} 
       >
       <Logo />
-      <Appinformation />
+      <WelcomeScene />
       </header>
       <NavigationBar 
       visiblePoem={this.state.visiblePoem}

@@ -1,7 +1,7 @@
 import React from 'react';
 import IconInfo from './images/icon-info.js'
 
-class Appinformation extends React.Component {
+class WelcomeScene extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,12 +23,12 @@ class Appinformation extends React.Component {
       <div className={this.state.infoClass} onClick={this.handleinfoChange}>
         <div className="info"><IconInfo /></div>
         <div className={this.state.overlayClass}>
-        <span>Tao Te Ching</span>
         <span>道德经</span>
-        <p>The Tao Te Ching is traditionally credited to the 6th-century BC sage Laozi. It is a fundamental text for both philosophical and religious Taoism. 
+        <span>Tao Te Ching</span>
+        <p>The Tao Te Ching is traditionally credited to the 6th-century BC sage Laozi, it is the fundamental text for philosophical Taoism. 
         <br />
         <br />
-        Explore the teaching of the Tao by using the navigation below, you can read all verses, view one at at time or pull a random verse using the buttons. </p>
+        Explore the teaching of the Tao by using the navigation below, you can read all verses, view one at at time or get a random verse using the buttons.</p>
         <p>Ready to explore? Click here to start...</p>
         </div>
       </div>
@@ -36,4 +36,4 @@ class Appinformation extends React.Component {
   }
 }
 
-export default Appinformation;
+export default WelcomeScene;
