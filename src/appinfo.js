@@ -28,8 +28,8 @@ class Appinformation extends React.Component {
         <p>The Tao Te Ching is traditionally credited to the 6th-century BC sage Laozi. It is a fundamental text for both philosophical and religious Taoism. 
         <br />
         <br />
-        Explore the teaching of the Tao verses by using the navigation below, uou can read all verses, view one at at time or read a random verse cliking the buttons.  Ready to learn?</p>
-        <p>Click here to start...</p>
+        Explore the teaching of the Tao by using the navigation below, you can read all verses, view one at at time or pull a random verse using the buttons. </p>
+        <p>Ready to explore? Click here to start...</p>
         </div>
       </div>
     )
