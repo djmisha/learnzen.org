@@ -1,6 +1,5 @@
 import React from 'react';
 import data from './poemData.json';
-
 import Logo from './logo.js'
 import WelcomeScene from './welcome.js'
 
@@ -21,15 +20,17 @@ for (let i = 0; i < parsedData.length; i++) {
   dataArray.push(parsedData[i]);
 }
 
+
 class SinglePoemRow extends React.Component {
   render() {
     const number = this.props.number;
     const content = this.props.content;
     const className = this.props.className;
+
     return (
       <li id={number} className={className}>
       <span>{number}</span>
-      {content}
+      <p>{content}</p>
       </li>
       );
   }
@@ -67,12 +68,6 @@ class PoemsTable extends React.Component {
         );
      }
 
-      // poemRows.push(
-      //   <SinglePoemRow number={poem.number} content={poem.content}
-      //   key={poem.number} className='visiblePoem'
-      //   />
-      //);
-
     });
 
     return (
@@ -83,7 +78,35 @@ class PoemsTable extends React.Component {
   }
 }
 
+
+
+
+class SinglePoemNavItem extends React.Component {
+    constructor(props) {
+    super(props);
+    this.handleSpecifiedPoemChange = this.handleSpecifiedPoemChange.bind(this);
+  }
+
+  handleSpecifiedPoemChange() {
+    console.log('test');
+    console.log(this.props.visiblePoem);
+  }
+
+  render() {
+    const number = this.props.number;
+    const className = this.props.className;
+
+    return (
+      <div id={number} className={className} onClick={this.handleSpecifiedPoemChange}>
+      <span>{number}</span>
+      </div>
+    );
+  }
+}
+
+
 class NavigationBar extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -95,6 +118,8 @@ class NavigationBar extends React.Component {
     this.handleNextPoemChange = this.handleNextPoemChange.bind(this);
     this.handlePrevPoemChange = this.handlePrevPoemChange.bind(this);
     this.handleSearchOpen = this.handleSearchOpen.bind(this);
+
+
   }
 
   handleRandomPoemChange() {
@@ -117,6 +142,8 @@ class NavigationBar extends React.Component {
     this.props.onSearchFilterTextChange(e.target.value);
   }
 
+
+
   handleSearchOpen() {
     const change = this.state.searchClass === 'nav-search nav-hidden' ? 'nav-search nav-visible' : 'nav-search nav-hidden';
     
@@ -126,6 +153,18 @@ class NavigationBar extends React.Component {
   }
 
   render() {
+    const PoemsForNavigation = []
+
+    dataArray.forEach((poem) => {
+      PoemsForNavigation.push(
+        <SinglePoemNavItem number={poem.number} key={poem.number}  visiblePoem={this.state.visiblePoem}  onClick={this.handleRandomPoemChange}
+         />
+        );
+
+    });
+
+    // console.log(PoemsForNavigation);
+
     return (
       <form>
       <label>
@@ -181,8 +220,15 @@ class NavigationBar extends React.Component {
       <span>Random</span>
       </div>
 
+      <div className="all-navigation-row" 
+      visiblepoem={this.state.visiblePoem}
+     
+      >
+        {PoemsForNavigation}
+      </div>
+
       </form>
-      )
+    )
   }
 }
 
@@ -200,6 +246,9 @@ class FileteredPoemsTable extends React.Component {
     this.handleShowAllPoemChange = this.handleShowAllPoemChange.bind(this);
     this.handleNextPoemChange = this.handleNextPoemChange.bind(this);
     this.handlePrevPoemChange = this.handlePrevPoemChange.bind(this);
+    this.handleSpecifiedPoemChange = this.handleSpecifiedPoemChange.bind(this);
+
+
   }
 
   handleSearchFilterTextChange(filterText) {
@@ -260,6 +309,12 @@ class FileteredPoemsTable extends React.Component {
     })
   }
 
+  handleSpecifiedPoemChange(visiblePoem) {
+    this.setState({
+      visiblePoem: visiblePoem,
+    })
+  }
+
   render() {
     return (
       <div>
@@ -277,6 +332,8 @@ class FileteredPoemsTable extends React.Component {
       onShowAllButtonClick={this.handleShowAllPoemChange}
       onNextPoemButtonClick={this.handleNextPoemChange}
       onPrevPoemButtonClick={this.handlePrevPoemChange}
+      
+      poems={this.props.poems}
       />
       <PoemsTable 
       poems={this.props.poems}
