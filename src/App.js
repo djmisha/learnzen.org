@@ -1,6 +1,6 @@
 import React from 'react';
 import FinalRender from './poems.js'
-import './css/App.css';
+import './sass/styles.scss';
 import './css/skeleton.css';
 
 function App() {

@@ -3,6 +3,8 @@ import data from './poemData.json';
 import Logo from './logo.js'
 import WelcomeScene from './welcome.js'
 
+import SinglePoemRow from './components/single-poem-row/'
+
 
 import NavIconSeach from './images/icon-search.js'
 import NavIconNext from './images/icon-next.js'
@@ -20,21 +22,6 @@ for (let i = 0; i < parsedData.length; i++) {
   dataArray.push(parsedData[i]);
 }
 
-
-class SinglePoemRow extends React.Component {
-  render() {
-    const number = this.props.number;
-    const content = this.props.content;
-    const className = this.props.className;
-
-    return (
-      <li id={number} className={className}>
-      <span>{number}</span>
-      <p>{content}</p>
-      </li>
-      );
-  }
-}
 
 class PoemsTable extends React.Component {
   render() {
@@ -78,9 +65,6 @@ class PoemsTable extends React.Component {
   }
 }
 
-
-
-
 class SinglePoemNavItem extends React.Component {
     constructor(props) {
     super(props);
@@ -118,8 +102,6 @@ class NavigationBar extends React.Component {
     this.handleNextPoemChange = this.handleNextPoemChange.bind(this);
     this.handlePrevPoemChange = this.handlePrevPoemChange.bind(this);
     this.handleSearchOpen = this.handleSearchOpen.bind(this);
-
-
   }
 
   handleRandomPoemChange() {
@@ -157,13 +139,15 @@ class NavigationBar extends React.Component {
 
     dataArray.forEach((poem) => {
       PoemsForNavigation.push(
-        <SinglePoemNavItem number={poem.number} key={poem.number}  visiblePoem={this.state.visiblePoem}  onClick={this.handleRandomPoemChange}
+        <SinglePoemNavItem 
+          number={poem.number} 
+          key={poem.number} 
+          visiblePoem={this.state.visiblePoem} 
          />
         );
-
     });
 
-    // console.log(PoemsForNavigation);
+    console.log(PoemsForNavigation);
 
     return (
       <form>
@@ -235,20 +219,18 @@ class NavigationBar extends React.Component {
 class FileteredPoemsTable extends React.Component {
   constructor(props) {
     super(props);
-    const randNumber = Math.floor(Math.random() * dataArray.length) + 1;
     this.state = {
       filterText: '',
-      visiblePoem: randNumber,
+      visiblePoem: 1,
       logoSpinClass: 'spin'
     };
+
     this.handleSearchFilterTextChange = this.handleSearchFilterTextChange.bind(this);
     this.handleRandomPoemChange = this.handleRandomPoemChange.bind(this);
     this.handleShowAllPoemChange = this.handleShowAllPoemChange.bind(this);
     this.handleNextPoemChange = this.handleNextPoemChange.bind(this);
     this.handlePrevPoemChange = this.handlePrevPoemChange.bind(this);
     this.handleSpecifiedPoemChange = this.handleSpecifiedPoemChange.bind(this);
-
-
   }
 
   handleSearchFilterTextChange(filterText) {
@@ -266,8 +248,6 @@ class FileteredPoemsTable extends React.Component {
       logoSpinClass: changelogo
     });
   }
-
-
 
   handleShowAllPoemChange() {
     this.setState({
@@ -341,7 +321,7 @@ class FileteredPoemsTable extends React.Component {
       visiblePoem={this.state.visiblePoem}
       />
       </div>
-      )
+    )
   }
 }
 
@@ -353,7 +333,7 @@ class FinalRender extends React.Component {
       <div>
       <FileteredPoemsTable poems={dataArray} />
       </div>
-      )
+    )
   }
 }
 
