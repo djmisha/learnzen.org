@@ -35,116 +35,125 @@ header {
 	font-size: .9em;
 	line-height: 1em;
 	color: #000;
+
+	.the-logo {
+		padding-top: 20px;
+		display: block;
+		width: 200px;
+		position: relative;
+	}
+
+	.logo {
+		position: absolute;
+	}
+
+	.logo svg   {
+		transition: all .25s ease-in-out;
+		width: 33px;
+		height: 33px;
+		fill: #000;
+	}
+
+	.logo-change .logo svg {
+		fill: #fff;
+	}
+
+	.logo-tag {
+		margin-left: 40px;
+		height: 35px;
+		transition: all .25s ease-in-out;
+		color: #000;
+	}
+
+	.logo-change .logo-tag {
+		color: #fff;
+		transition: all .25s ease-in-out;
+	}
+
+	.logo-tag span {
+		display: block;
+	}
+
+
+	spin .logo svg {
+		transform: rotate(180deg);
+	}
+
+	spin-more .logo svg {
+		transform: rotate(-180deg);
+	}
+
+	.buddah svg {
+		fill: #fff;
+		width: 80px;
+	}
+
+	.the-info-icon {
+		position: absolute;
+		right: 15px;
+		top: 10px;
+	}
+
+	.the-info-icon.info-change .info svg {
+		fill: #fff;
+		z-index: 1;
+		position: relative;
+	}
+
+	.info-overlay {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: black;
+		padding-top: 40px;
+		text-align: center;
+		z-index: 9999;
+	}
+
+	.info-overlay.info-hidden {
+		top: -9999px;
+	}
+
+	.info-overlay.info-visible {
+		top: 0;
+	}
+
+	.info-overlay span,
+	.info-overlay p {
+		padding: 20px 20px;
+		color: #fff;
+		max-width: 600px;
+		margin: 0 auto;
+	} 
+
+	.info-overlay span {
+		font-size: 30px;
+		display: block;
+	}
+
+	.info-overlay p {
+		font-size: 18px;
+		line-height: 1.4em;
+	}
+
 }
 
-.the-logo {
-	padding-top: 20px;
-	display: block;
-	width: 200px;
-	position: relative;
-}
-
-header .logo {
-	position: absolute;
-}
-
-header .logo svg   {
-	transition: all .5s ease-in-out;
-	width: 33px;
-	height: 33px;
-	fill: #000;
-}
-
-header .logo-change .logo svg {
-	fill: #fff;
-}
-
-header .logo-tag {
-	margin-left: 40px;
-	height: 35px;
-	transition: all .5s ease-in-out;
-	color: #000;
-}
-
-header .logo-change .logo-tag {
-	color: #fff;
-	transition: all .5s ease-in-out;
-}
-
-header .logo-tag span {
-	display: block;
-}
-
-
-header.spin .logo svg {
-	transform: rotate(180deg);
-}
-
-header.spin-more .logo svg {
-	transform: rotate(-180deg);
-}
-
-
-.buddah svg {
-	fill: #fff;
-	width: 100px;
-}
-
-.the-info-icon {
-	position: absolute;
-	right: 15px;
-	top: 10px;
-}
-
-.the-info-icon.info-change .info svg {
-	fill: #fff;
-	z-index: 1;
-	position: relative;
-}
-
-header .info-overlay {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: black;
-	padding-top: 40px;
-	text-align: center;
-	z-index: 9999;
-}
-
-header .info-overlay.info-hidden {
-	top: -9999px;
-}
-
-header .info-overlay.info-visible {
-	top: 0;
-}
-
-header .info-overlay span,
-header .info-overlay p {
-	padding: 20px 20px;
-	color: #fff;
-	max-width: 600px;
-	margin: 0 auto;
-} 
-
-header .info-overlay span {
-	font-size: 30px;
-	display: block;
-}
-
-header .info-overlay p {
-	font-size: 18px;
-	line-height: 1.4em;
-}
 
 ul.all-poems {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.hiddenPoem {
+	/*border: 1px solid pink;*/
+	display: inline-block;
+	padding: 5px;
 }
 
 .all-poems > li {
@@ -157,8 +166,19 @@ ul.all-poems {
 	z-index: -1;
 }
 
+.all-poems > li.hiddenPoem p {
+	/*display: none;*/
+}
+
+.all-poems > li.visiblePoem {
+	padding: 80px 0px 80px 0px;
+	position: relative;
+	color: #000 !important;
+	font-size: 20px;
+}
+
 @media (min-width: 750px) {
-	.all-poems > li {
+	.all-poems > li.visiblePoem {
 		max-width: none;
 		padding: 80px 22vw 80px 0px;
 		font-size: 2.0vw;
@@ -166,14 +186,14 @@ ul.all-poems {
 }
 
 @media (min-width: 1600px) {
-	.all-poems > li {
+	.all-poems > li.visiblePoem {
 		max-width: none;
 		padding: 80px 0px 80px 0px;
 		font-size: 40px;
 	}
 }
 
-.all-poems > li span {
+.all-poems > li.visiblePoem span {
 	position: absolute;
 	top: 10px;
 	right: 25px;
@@ -183,6 +203,22 @@ ul.all-poems {
 }
 
 /*Navigation*/
+
+.all-navigation-row {
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	border: 1px solid red;
+	bottom: 60px;
+	display: flex;
+	align-items: center;
+	overflow: scroll;
+	background: #000;
+}
+
+.all-navigation-row div {
+	padding: 5px;
+}
 
 form {
 	position: fixed;
@@ -252,13 +288,12 @@ form label {
 	align-items: center;
 	justify-content: space-between;
 	width: 160px;
-	/*border: 1px solid white;*/
 }
 
 .nav-icon svg {
-	width: 40px;
-	height: 40px;
-	fill: #eee;
+	width: 45px;
+	height: 45px;
+	fill: #fff;
 	transition: fill .06s ease-in;
 	position: relative;
 	bottom: 0px;
