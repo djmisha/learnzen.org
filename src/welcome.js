@@ -6,14 +6,20 @@ class WelcomeScene extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      infoClass: 'the-info-icon info-change',
-      overlayClass: 'info-overlay info-visible',
+        infoClass: "the-info-icon info-normal",
+        overlayClass: "info-overlay info-hidden",
     };
     this.handleinfoChange = this.handleinfoChange.bind(this);
   }
   handleinfoChange() {
-    const changeinfo = this.state.infoClass === 'the-info-icon info-change' ? 'the-info-icon info-normal' : 'the-info-icon info-change';
-    const changeOverlay = this.state.overlayClass === 'info-overlay info-visible' ? 'info-overlay info-hidden' : 'info-overlay info-visible';
+    const changeinfo =
+        this.state.infoClass === "the-info-icon info-normal"
+            ? "the-info-icon info-change"
+            : "the-info-icon info-normal";
+    const changeOverlay =
+        this.state.overlayClass === "info-overlay info-hidden"
+            ? "info-overlay info-visible"
+            : "info-overlay info-hidden";
     this.setState({
       infoClass: changeinfo,
       overlayClass: changeOverlay,

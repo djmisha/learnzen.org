@@ -65,28 +65,28 @@ class PoemsTable extends React.Component {
   }
 }
 
-class SinglePoemNavItem extends React.Component {
-    constructor(props) {
-    super(props);
-    this.handleSpecifiedPoemChange = this.handleSpecifiedPoemChange.bind(this);
-  }
+// class SinglePoemNavItem extends React.Component {
+//     constructor(props) {
+//     super(props);
+//     this.handleSpecifiedPoemChange = this.handleSpecifiedPoemChange.bind(this);
+//   }
 
-  handleSpecifiedPoemChange() {
-    console.log('test');
-    console.log(this.props.visiblePoem);
-  }
+//   handleSpecifiedPoemChange() {
+//     console.log('test');
+//     console.log(this.props.visiblePoem);
+//   }
 
-  render() {
-    const number = this.props.number;
-    const className = this.props.className;
+//   render() {
+//     const number = this.props.number;
+//     const className = this.props.className;
 
-    return (
-      <div id={number} className={className} onClick={this.handleSpecifiedPoemChange}>
-      <span>{number}</span>
-      </div>
-    );
-  }
-}
+//     return (
+//       <div id={number} className={className} onClick={this.handleSpecifiedPoemChange}>
+//       <span>{number}</span>
+//       </div>
+//     );
+//   }
+// }
 
 
 class NavigationBar extends React.Component {
@@ -135,19 +135,19 @@ class NavigationBar extends React.Component {
   }
 
   render() {
-    const PoemsForNavigation = []
+    // const PoemsForNavigation = []
 
-    dataArray.forEach((poem) => {
-      PoemsForNavigation.push(
-        <SinglePoemNavItem 
-          number={poem.number} 
-          key={poem.number} 
-          visiblePoem={this.state.visiblePoem} 
-         />
-        );
-    });
+    // dataArray.forEach((poem) => {
+    //   PoemsForNavigation.push(
+    //     <SinglePoemNavItem 
+    //       number={poem.number} 
+    //       key={poem.number} 
+    //       visiblePoem={this.state.visiblePoem} 
+    //      />
+    //     );
+    // });
 
-    console.log(PoemsForNavigation);
+    // console.log(PoemsForNavigation);
 
     return (
       <form>
@@ -204,12 +204,12 @@ class NavigationBar extends React.Component {
       <span>Random</span>
       </div>
 
-      <div className="all-navigation-row" 
+      {/* <div className="all-navigation-row" 
       visiblepoem={this.state.visiblePoem}
      
       >
         {PoemsForNavigation}
-      </div>
+      </div> */}
 
       </form>
     )
