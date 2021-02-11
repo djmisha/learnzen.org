@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    max-width: none;
+    // max-width: none;
 }
 
 @media (min-width: 1000px) {
@@ -165,7 +165,7 @@ ul.all-poems {
     font-size: 18px;
     position: relative;
     color: #000 !important;
-    z-index: -1;
+    // z-index: -1;
 }
 
 .all-poems > li {
@@ -178,16 +178,16 @@ ul.all-poems {
     overflow: hidden;
     width: 100%;
     p, span {
-        color:(rgba($color: #fff, $alpha: .5));
+        color:(rgba($color: #fff, $alpha: .3));
     }
     P {
         padding: 40px;
     }
     span {
         position: absolute;
-        top: 10px;
+        top: 0px;
         right: 25px;
-        font-size: 35px;
+        font-size: 30px;
         font-style: italic;
     }
 }
@@ -211,7 +211,11 @@ ul.all-poems {
         color:(rgba($color: #fff, $alpha: 1));
         max-width: 800px;
         margin: 0 auto;
-        padding-top: 100px;
+        padding-top: 40px;
+        @media (min-width: 750px) {
+            padding-top: 100px;
+
+        }
     }
 }
 
@@ -261,6 +265,7 @@ form {
     left: 0;
     width: 100%;
     height: 80px;
+    // border: 1px solid pink;
     background: #000;
     margin: 0 !important;
     display: flex;
@@ -278,7 +283,7 @@ form label {
 .nav-search {
     position: fixed;
     font-family: "Source Serif Pro", serif;
-    bottom: 60px;
+    bottom: 90px;
     width: 180px;
     color: #888;
     font-size: 18px;
@@ -325,8 +330,8 @@ form label {
 }
 
 .nav-icon svg {
-    width: 39px;
-    height: 39px;
+    width: 30px;
+    height: 30px;
     fill: #fff;
     transition: all 0.06s ease-in;
     position: relative;

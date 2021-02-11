@@ -10,12 +10,12 @@ class SinglePoemRow extends React.Component {
     }
         
     handlePoemClick() {
-        console.log(this.props.number, this.props.className);
         const changeClass =
         this.props.className === "visiblePoem"
-            ? ""
-            : "visiblePoem";
-            console.log(changeClass);
+        ? ""
+        : "visiblePoem";
+        console.log(this.props.number, this.props.className);
+        console.log(changeClass);
         this.setState({
             visible: changeClass,
         });
