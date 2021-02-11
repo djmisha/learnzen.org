@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap");
 
 body {
@@ -145,6 +149,7 @@ ul.all-poems {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .hiddenPoem {
@@ -154,8 +159,8 @@ ul.all-poems {
 }
 
 .all-poems > li {
-    max-width: 400px;
-    padding: 80px 0px 60px 0px;
+    // max-width: 400px;
+    // padding: 80px 20px;
     font-family: "Source Serif Pro", serif;
     font-size: 18px;
     position: relative;
@@ -163,30 +168,57 @@ ul.all-poems {
     z-index: -1;
 }
 
-.all-poems > li.hiddenPoem p {
-    /*display: none;*/
-}
 .all-poems > li {
-    opacity: 0;
-    height: 0;
-    padding: 0;
-    // width: 100vw;
-    position: absolute;
+    opacity: .2;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 100px;
+    overflow: hidden;
+    width: 100%;
+    p, span {
+        color:(rgba($color: #fff, $alpha: .5));
+    }
+    P {
+        padding: 40px;
+    }
+    span {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-style: italic;
+    }
 }
 
 .all-poems > li.visiblePoem {
-    padding: 40px 0px 80px 0px;
+    border-radius: 0px;
     position: relative;
-    color: #000 !important;
-    font-size: 24px;
-    transition: opacity 1.5s ease, height 0.5s ease;
+    transition: opacity 1.5s ease;
     opacity: 1;
+    height: auto;
+    color: #fff !important;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 69px;
+    overflow: scroll;
+    z-index: 99;
+    
+    p {
+        color:(rgba($color: #fff, $alpha: 1));
+        max-width: 800px;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
 }
 
 @media (min-width: 750px) {
     .all-poems > li.visiblePoem {
         max-width: none;
-        padding: 80px 22vw 80px 0px;
+        // padding: 80px 22vw 80px 0px;
         font-size: 2vw;
     }
 }
@@ -194,18 +226,14 @@ ul.all-poems {
 @media (min-width: 1600px) {
     .all-poems > li.visiblePoem {
         max-width: none;
-        padding: 80px 0px 80px 0px;
+        // padding: 80px 0px 80px 0px;
         font-size: 40px;
     }
 }
 
 .all-poems > li.visiblePoem span {
-    position: absolute;
-    top: -10px;
-    right: 25px;
-    font-size: 35px;
-    font-style: italic;
-    color: #000;
+
+   
 }
 
 /*Navigation*/

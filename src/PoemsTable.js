@@ -7,7 +7,10 @@ class PoemsTable extends React.Component {
         const filterText = this.props.filterText;
         const visiblePoem = this.props.visiblePoem;
         const poemRows = [];
-        console.log(poemRows);
+
+        // const currentURL = window.location.href;
+        // url.hash = newHash
+        // console.log(currentURL);
 
         dataArray.forEach((poem) => {
             /*Looks for matching Text*/
@@ -20,6 +23,15 @@ class PoemsTable extends React.Component {
 
             if (visiblePoem === poem.number) {
                 var visible = "visiblePoem";
+                // let currentURL =  window.location.href + '#' + poem.number;
+                // console.log(currentURL);
+                let hash = poem.number;
+                // location.assign(currentURL);
+                document.location.hash = hash;
+                // function scrollTo(hash) {
+                    // location.hash = "#" + hash;
+                // }
+                // scrollTo();
             }
             poemRows.push(
                 <SinglePoemRow
@@ -29,6 +41,8 @@ class PoemsTable extends React.Component {
                     className={visible}
                 />
             );
+
+
 
             if (visiblePoem === "all") {
                 poemRows.push(
