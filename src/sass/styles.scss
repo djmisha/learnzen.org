@@ -1,318 +1,348 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap");
 
 body {
-	background: #9adee9 url('../images/background.webp') top left;
-	background-repeat: no-repeat;
-	background-size: auto 100%;
-	background-attachment: fixed;
-	min-height: 100vh;
-	max-height: 100vh;
-	border-top: 3px solid #000;
+    background: #9adee9 url("../images/background.webp") top left;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-attachment: fixed;
+    min-height: 100vh;
+    max-height: 100vh;
+    border-top: 3px solid #000;
 }
 
 .container {
-	max-width: none;
+    max-width: none;
 }
 
 @media (min-width: 1000px) {
-	body {
-		background: #9adee9 url('../images/background.webp') top left;
-		background-repeat: no-repeat;
-		background-size: 160% auto;
-		background-attachment: fixed;
-		min-height: 100vh;
-	}
+    body {
+        background: #9adee9 url("../images/background.webp") top left;
+        background-repeat: no-repeat;
+        background-size: 160% auto;
+        background-attachment: fixed;
+        min-height: 100vh;
+    }
 }
 
 .App {
-	position: relative;
-} 
-
-header {
-	font-family: 'Source Serif Pro', serif;
-	top: 20px;
-	left: 0px;
-	font-size: .9em;
-	line-height: 1em;
-	color: #000;
-
-	.the-logo {
-		padding-top: 20px;
-		display: block;
-		width: 200px;
-		position: relative;
-	}
-
-	.logo {
-		position: absolute;
-	}
-
-	.logo svg   {
-		transition: all .25s ease-in-out;
-		width: 33px;
-		height: 33px;
-		fill: #000;
-	}
-
-	.logo-change .logo svg {
-		fill: #fff;
-	}
-
-	.logo-tag {
-		margin-left: 40px;
-		height: 35px;
-		transition: all .25s ease-in-out;
-		color: #000;
-	}
-
-	.logo-change .logo-tag {
-		color: #fff;
-		transition: all .25s ease-in-out;
-	}
-
-	.logo-tag span {
-		display: block;
-	}
-
-
-	spin .logo svg {
-		transform: rotate(180deg);
-	}
-
-	spin-more .logo svg {
-		transform: rotate(-180deg);
-	}
-
-	.buddah svg {
-		fill: #fff;
-		width: 80px;
-	}
-
-	.the-info-icon {
-		position: absolute;
-		right: 15px;
-		top: 10px;
-	}
-
-	.the-info-icon.info-change .info svg {
-		fill: #fff;
-		z-index: 1;
-		position: relative;
-	}
-
-	.info-overlay {
-		position: fixed;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: black;
-		padding-top: 40px;
-		text-align: center;
-		z-index: 9999;
-	}
-
-	.info-overlay.info-hidden {
-		top: -9999px;
-	}
-
-	.info-overlay.info-visible {
-		top: 0;
-	}
-
-	.info-overlay span,
-	.info-overlay p {
-		padding: 20px 20px;
-		color: #fff;
-		max-width: 600px;
-		margin: 0 auto;
-	} 
-
-	.info-overlay span {
-		font-size: 30px;
-		display: block;
-	}
-
-	.info-overlay p {
-		font-size: 18px;
-		line-height: 1.4em;
-	}
-
+    position: relative;
 }
 
+header {
+    font-family: "Source Serif Pro", serif;
+    top: 20px;
+    left: 0px;
+    font-size: 0.9em;
+    line-height: 1em;
+    color: #000;
+
+    .the-logo {
+        padding-top: 20px;
+        display: block;
+        width: 200px;
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+    }
+
+    .logo svg {
+        transition: all 0.8s ease-in-out;
+        width: 33px;
+        height: 33px;
+        fill: #000;
+    }
+
+    .logo-change .logo svg {
+        fill: #fff;
+    }
+
+    .logo-tag {
+        margin-left: 40px;
+        height: 35px;
+        transition: all 0.25s ease-in-out;
+        color: #000;
+    }
+
+    .logo-change .logo-tag {
+        color: #fff;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .logo-tag span {
+        display: block;
+    }
+
+    &.spin .logo svg {
+        transform: rotate(180deg);
+    }
+
+    &.spin-more .logo svg {
+        transform: rotate(-180deg);
+    }
+
+    .buddah svg {
+        fill: #fff;
+        width: 80px;
+    }
+
+    .the-info-icon {
+        position: fixed;
+        right: 15px;
+        bottom: 90px;
+    }
+
+    .the-info-icon.info-change .info svg {
+        fill: #fff;
+        z-index: 1;
+        position: relative;
+    }
+
+    .info-overlay {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        padding-top: 40px;
+        text-align: center;
+        z-index: 9999;
+    }
+
+    .info-overlay.info-hidden {
+        top: -9999px;
+    }
+
+    .info-overlay.info-visible {
+        top: 0;
+    }
+
+    .info-overlay span,
+    .info-overlay p {
+        padding: 20px 20px;
+        color: #fff;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .info-overlay span {
+        font-size: 30px;
+        display: block;
+    }
+
+    .info-overlay p {
+        font-size: 18px;
+        line-height: 1.4em;
+    }
+}
 
 ul.all-poems {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .hiddenPoem {
-	/*border: 1px solid pink;*/
-	display: inline-block;
-	padding: 5px;
+    /*border: 1px solid pink;*/
+    display: inline-block;
+    padding: 5px;
 }
 
 .all-poems > li {
-	max-width: 400px;
-	padding: 80px 0px 60px 0px;
-	font-family: 'Source Serif Pro', serif;
-	font-size: 18px;
-	position: relative;
-	color: #000 !important;
-	z-index: -1;
+    max-width: 400px;
+    padding: 80px 0px 60px 0px;
+    font-family: "Source Serif Pro", serif;
+    font-size: 18px;
+    position: relative;
+    color: #000 !important;
+    z-index: -1;
 }
 
 .all-poems > li.hiddenPoem p {
-	/*display: none;*/
+    /*display: none;*/
+}
+.all-poems > li {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    // width: 100vw;
+    position: absolute;
 }
 
 .all-poems > li.visiblePoem {
-	padding: 80px 0px 80px 0px;
-	position: relative;
-	color: #000 !important;
-	font-size: 20px;
+    padding: 40px 0px 80px 0px;
+    position: relative;
+    color: #000 !important;
+    font-size: 24px;
+    transition: opacity 1.5s ease, height 0.5s ease;
+    opacity: 1;
 }
 
 @media (min-width: 750px) {
-	.all-poems > li.visiblePoem {
-		max-width: none;
-		padding: 80px 22vw 80px 0px;
-		font-size: 2.0vw;
-	}
+    .all-poems > li.visiblePoem {
+        max-width: none;
+        padding: 80px 22vw 80px 0px;
+        font-size: 2vw;
+    }
 }
 
 @media (min-width: 1600px) {
-	.all-poems > li.visiblePoem {
-		max-width: none;
-		padding: 80px 0px 80px 0px;
-		font-size: 40px;
-	}
+    .all-poems > li.visiblePoem {
+        max-width: none;
+        padding: 80px 0px 80px 0px;
+        font-size: 40px;
+    }
 }
 
 .all-poems > li.visiblePoem span {
-	position: absolute;
-	top: 10px;
-	right: 25px;
-	font-size: 35px;
-	font-style: italic;
-	color: #000;
+    position: absolute;
+    top: -10px;
+    right: 25px;
+    font-size: 35px;
+    font-style: italic;
+    color: #000;
 }
 
 /*Navigation*/
 
 .all-navigation-row {
-	position: absolute;
-	width: 100%;
-	height: 40px;
-	border: 1px solid red;
-	bottom: 60px;
-	display: flex;
-	align-items: center;
-	overflow: scroll;
-	background: #000;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    border: 1px solid red;
+    bottom: 60px;
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+    background: #000;
 }
 
 .all-navigation-row div {
-	padding: 5px;
+    padding: 5px;
 }
 
 form {
-	position: fixed;
-	bottom: -1px;
-	right: 0;
-	left: 0;
-	width: 100%;
-	height: 60px;
-	background: #000;
-	margin: 0 !important;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	color: #eee;
-	line-height: 0;
-	z-index: 1;
+    position: fixed;
+    bottom: -1px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #000;
+    margin: 0 !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #eee;
+    line-height: 0;
+    z-index: 1;
 }
 
 form label {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .nav-search {
-	position: fixed;
-	font-family: 'Source Serif Pro', serif;
-	bottom: 60px;
-	width: 180px;
-	color: #888;
-	font-size: 18px;
-	font-weight: normal;
-	transition: all .25s ease-in-out;
+    position: fixed;
+    font-family: "Source Serif Pro", serif;
+    bottom: 60px;
+    width: 180px;
+    color: #888;
+    font-size: 18px;
+    font-weight: normal;
+    transition: all 0.25s ease-in-out;
 }
 
 .nav-search.nav-visible {
-	left: 10px;
+    left: 10px;
 }
 
 .nav-search.nav-hidden {
-	left: -190px;
+    left: -190px;
 }
 
 form label {
-	position: relative;
+    position: relative;
 }
 
 form label span {
-	position: absolute;
-	font-size: 10px;
-	bottom: -10px;
-	right: calc(50% - 15px);
-	color: #fff;
-	font-weight: normal;
+    position: absolute;
+    font-size: 10px;
+    bottom: -10px;
+    right: calc(50% - 15px);
+    color: #fff;
+    font-weight: normal;
 }
 
 form label {
-	display: none;
+    display: none;
 }
 
 @media (min-width: 750px) {
-	form label {
-		display: block;
-	}
+    form label {
+        display: block;
+    }
 }
 
 .nav-movearound {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 190px;
 }
 
 .nav-icon svg {
-	width: 45px;
-	height: 45px;
-	fill: #fff;
-	transition: fill .06s ease-in;
-	position: relative;
-	bottom: 0px;
+    width: 39px;
+    height: 39px;
+    fill: #fff;
+    transition: all 0.06s ease-in;
+    position: relative;
+    bottom: 0px;
 }
 
 .nav-icon svg:active {
-	fill: pink;
-	bottom: -1px;
+    fill: pink;
+    bottom: -2px;
 }
 
-.nav-random, .nav-all {
-	position: relative;
+.nav-random,
+.nav-all {
+    position: relative;
 }
 
 .nav-icon span {
-	display: none;
+    // display: none;
+    display: block;
+    font-size: 12px;
+    top: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.current-verse {
+    // display: bloc
+    text-align: center;
+    font-size: 12px;
 }
 
 .nav-count {
-	font-size: 30px;
-	text-transform: uppercase;
+    position: relative;
+    top: 20px;
+    // display: block;
+    width: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.nav-next svg {
+    transform: rotate(90deg);
+}
+
+.nav-prev svg {
+    transform: rotate(90deg);
 }
