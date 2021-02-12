@@ -71,7 +71,7 @@ class NavigationBar extends React.Component {
         return (
             <form>
                 <div className="nav-movearound">
-                    <label>
+                    {/* <label>
                         <div
                             className="nav-icon"
                             onClick={this.handleSearchOpen}
@@ -86,7 +86,7 @@ class NavigationBar extends React.Component {
                             onChange={this.handleSearchFilterTextChange}
                             className={this.state.searchClass}
                         />
-                    </label>
+                    </label> */}
                     <div
                         onClick={this.handleShowAllPoemChange}
                         className="nav-all nav-icon"
