@@ -1,6 +1,6 @@
 import React from "react";
 import WelcomeScene from "./welcome.js"
-import NavIconSeach from "./images/icon-search.js";
+// import NavIconSeach from "./images/icon-search.js";
 import NavIconNext from "./images/icon-next.js";
 import NavIconPrev from "./images/icon-prev.js";
 import NavIconAll from "./images/icon-all.js";
