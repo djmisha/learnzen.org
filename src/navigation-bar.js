@@ -1,5 +1,5 @@
 import React from "react";
-
+import WelcomeScene from "./welcome.js"
 import NavIconSeach from "./images/icon-search.js";
 import NavIconNext from "./images/icon-next.js";
 import NavIconPrev from "./images/icon-prev.js";
@@ -71,6 +71,7 @@ class NavigationBar extends React.Component {
         return (
             <form>
                 <div className="nav-movearound">
+                    <WelcomeScene></WelcomeScene>
                     {/* <label>
                         <div
                             className="nav-icon"
@@ -103,7 +104,7 @@ class NavigationBar extends React.Component {
                     </div>
 
                     <div className="current-verse">
-                        <span></span>
+                        <NavIconAll />
                         <div className="nav-count">
                             {this.props.visiblePoem}
                         </div>
