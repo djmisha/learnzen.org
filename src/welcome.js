@@ -1,6 +1,7 @@
 import React from "react";
-// import IconInfo from "./images/icon-info.js";
+import SignIn from "./localStorage"
 import IconBuddah from "./images/icon-buddah.js";
+
 
 class WelcomeScene extends React.Component {
     constructor(props) {
@@ -32,40 +33,27 @@ class WelcomeScene extends React.Component {
                     <IconBuddah />
                 </div>
                 <div className={this.state.overlayClass}>
+                  
+                    <p>Hello, may we call you by name?</p>
+                    <SignIn></SignIn>
                     <div onClick={this.handleinfoChange} className="buddah">
+                        <br />
+                        <br />
                         <IconBuddah />
-                    </div>
                     <span>道德经</span>
                     <span>Tao Te Ching</span>
                     <p>
+                         
                         The Tao Te Ching is the fundamental text for
                         philosophical Taoism, it is traditionally credited to
                         the 6th-century BC sage Laozi.
-                        {/* <br />
                         <br />
-                        Ready to for enlightenment? */}
+                        <br />
+                        Ready to for enlightenment? Click on the Budah to start exploring
                         <br /> <br />
                     </p>
-                    May we call you by name?
-                    {/* <form>
-                        <label>
-                            <span></span>
-                            <input
-                                type="text"
-                                placeholder="Your name..."
-                                value={this.props.filterText}
-                                onChange={this.handleSearchFilterTextChange}
-                                className={this.state.searchClass}
-                            />
-                        </label>
-                    </form> */}
                     <br />
-                    <div
-                        onClick={this.handleinfoChange}
-                        className=" button button-primary"
-                    >
-                        Lets Zen
-                    </div>
+                     </div>
                 </div>
             </div>
         );

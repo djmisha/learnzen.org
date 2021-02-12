@@ -1,5 +1,5 @@
 import React from 'react';
-import FinalRender from './poems.js'
+import FinalRender from './finalRender.js'
 import './sass/styles.scss';
 import './css/skeleton.css';
 

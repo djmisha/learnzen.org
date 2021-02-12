@@ -69,7 +69,7 @@ class NavigationBar extends React.Component {
         // console.log(PoemsForNavigation);
 
         return (
-            <form>
+            <form className="navbar">
                 <div className="nav-movearound">
                     <WelcomeScene></WelcomeScene>
                     {/* <label>

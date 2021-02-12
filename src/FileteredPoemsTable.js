@@ -1,7 +1,7 @@
 import React from "react";
 import dataArray from "./data";
 import Logo from "./logo.js";
-// import WelcomeScene from "./welcome.js";
+import Hello from "./hello.js";
 import NavigationBar from "./navigation-bar";
 import PoemsTable from "./PoemsTable";
 
@@ -94,7 +94,7 @@ class FileteredPoemsTable extends React.Component {
             <div>
                 <header className={this.state.logoSpinClass}>
                     <Logo />
-                    {/* <WelcomeScene /> */}
+                    <Hello />
                 </header>
                 <NavigationBar
                     visiblePoem={this.state.visiblePoem}

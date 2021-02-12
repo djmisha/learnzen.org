@@ -21,17 +21,21 @@ class SignIn extends React.Component {
         localStorage.setItem("user", rememberMe ? user : "");
     };
 
-    // componentDidMount() {
-    //     const rememberMe = localStorage.getItem("rememberMe") === "true";
-    //     const user = rememberMe ? localStorage.getItem("user") : "";
-    //     this.setState({ user, rememberMe });
-    // }
+    
+
+    componentDidMount() {
+        const rememberMe = localStorage.getItem("rememberMe") === "true";
+        const user = rememberMe ? localStorage.getItem("user") : "";
+        this.setState({ user, rememberMe });
+        console.log(user);
+    }
 
     render() {
         return (
-            <form onSubmit={this.handleFormSubmit}>
+            <form onSubmit={this.handleFormSubmit} className="call-by-name">
+                <label>{this.state.user}</label>
                 <label>
-                    User:{" "}
+                    Name:{" "}
                     <input
                         name="user"
                         value={this.state.user}
@@ -45,9 +49,9 @@ class SignIn extends React.Component {
                         onChange={this.handleChange}
                         type="checkbox"
                     />{" "}
-                    Remember me
+                    Zen me out
                 </label>
-                <button type="submit">Sign In</button>
+                <button type="submit button button-primary">Let's Zen</button>
             </form>
         );
     }

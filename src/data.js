@@ -5,7 +5,7 @@ import data from "./poemData.json";
 const parsedData = data.poems;
 // const parsedData = data.poems;
 // JSON.parse(this.responseText)
-console.log(parsedData);
+// console.log(parsedData);
 let dataArray = [];
 
 for (let i = 0; i < parsedData.length; i++) {
