@@ -10,7 +10,7 @@ class FileteredPoemsTable extends React.Component {
         super(props);
         this.state = {
             filterText: "",
-            visiblePoem: null,
+            visiblePoem: 1,
             logoSpinClass: "spin",
         };
 

@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
     max-height: 100vh;
     border-top: 3px solid #000;
+    padding-top: 10px;
 }
 
 .container {
@@ -52,7 +53,8 @@ header {
     }
 
     .logo svg {
-        transition: all 0.8s ease-in-out;
+        transition: fill 0.25s ease-in-out;
+        transition: rotate 0.8s ease-in-out;
         width: 33px;
         height: 33px;
         fill: #000;
@@ -93,10 +95,18 @@ header {
 
     .the-info-icon {
         position: fixed;
-        right: 15px;
-        bottom: 90px;
+        left: 20px;
+        z-index: 9999;
+        bottom: 5px;
+        svg {
+            fill: #ccc;
+            width: 25px;
+        }
     }
 
+    .info input {
+        color: black !important;
+    }
     .the-info-icon.info-change .info svg {
         fill: #fff;
         z-index: 1;
@@ -169,53 +179,36 @@ ul.all-poems {
 }
 
 .all-poems > li {
-    opacity: .2;
     border: 1px solid black;
     background-color: black;
     border-radius: 10px;
-    font-size: 20px;
-    height: 100px;
-    overflow: hidden;
+    font-size: 18px;
     width: 100%;
-    p, span {
-        color:(rgba($color: #fff, $alpha: .3));
+    padding: 50px 10px 30px 20px;
+    p,
+    span {
+        color: (rgba($color: #fff, $alpha: 0.3));
     }
     P {
-        padding: 40px;
+        transition: color 1s ease;
     }
     span {
         position: absolute;
-        top: 0px;
-        right: 25px;
-        font-size: 30px;
+        top: 5px;
+        right: 15px;
+        font-size: 25px;
         font-style: italic;
     }
 }
 
 .all-poems > li.visiblePoem {
-    border-radius: 0px;
-    position: relative;
     transition: opacity 1.5s ease;
     opacity: 1;
-    height: auto;
     color: #fff !important;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 69px;
-    overflow: scroll;
-    z-index: 99;
-    
     p {
-        color:(rgba($color: #fff, $alpha: 1));
+        color: (rgba($color: #fff, $alpha: 1));
         max-width: 800px;
-        margin: 0 auto;
-        padding-top: 40px;
-        @media (min-width: 750px) {
-            padding-top: 100px;
-
-        }
+        // margin: 0 auto;
     }
 }
 
@@ -236,8 +229,6 @@ ul.all-poems {
 }
 
 .all-poems > li.visiblePoem span {
-
-   
 }
 
 /*Navigation*/
@@ -265,15 +256,17 @@ form {
     left: 0;
     width: 100%;
     height: 80px;
-    // border: 1px solid pink;
+    // border-top: 1px solid lighten($color: #000000, $amount: 60%);
     background: #000;
     margin: 0 !important;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     color: #eee;
     line-height: 0;
     z-index: 1;
+    height: 45px;
+    > div {
+        position: relative;
+        top: 5px;
+    }
 }
 
 form label {
@@ -283,7 +276,7 @@ form label {
 .nav-search {
     position: fixed;
     font-family: "Source Serif Pro", serif;
-    bottom: 90px;
+    top: 30px;
     width: 180px;
     color: #888;
     font-size: 18px;
@@ -292,7 +285,7 @@ form label {
 }
 
 .nav-search.nav-visible {
-    left: 10px;
+    left: 150px;
 }
 
 .nav-search.nav-hidden {
@@ -327,11 +320,13 @@ form label {
     align-items: center;
     justify-content: space-between;
     width: 190px;
+    position: absolute;
+    right: 20px;
 }
 
 .nav-icon svg {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     fill: #fff;
     transition: all 0.06s ease-in;
     position: relative;
@@ -348,11 +343,13 @@ form label {
     position: relative;
 }
 
+.current-verse span,
 .nav-icon span {
     // display: none;
     display: block;
-    font-size: 12px;
-    top: 10px;
+    font-size: 10px;
+    top: 8px;
+    text-transform: uppercase;
     position: relative;
     text-align: center;
 }
@@ -365,7 +362,7 @@ form label {
 
 .nav-count {
     position: relative;
-    top: 20px;
+    // top: 20px;
     // display: block;
     width: 40px;
     font-size: 20px;

@@ -92,17 +92,17 @@ class NavigationBar extends React.Component {
                     <span>Scroll All</span>
                 </div> */}
 
-                <div
-                    onClick={this.handleRandomPoemChange}
-                    className="nav-random nav-icon"
-                >
-                    <NavIconRandom />
-                    <span>Random</span>
-                </div>
-
                 <div className="nav-movearound">
+                    <div
+                        onClick={this.handleRandomPoemChange}
+                        className="nav-random nav-icon"
+                    >
+                        <NavIconRandom />
+                        <span>Any</span>
+                    </div>
+
                     <div className="current-verse">
-                        Verse
+                        <span></span>
                         <div className="nav-count">
                             {this.props.visiblePoem}
                         </div>
