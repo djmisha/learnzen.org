@@ -3,7 +3,7 @@ import React from "react";
 // import NavIconSeach from "./images/icon-search.js";
 import NavIconNext from "./images/icon-next.js";
 import NavIconPrev from "./images/icon-prev.js";
-// import NavIconAll from "./images/icon-all.js";
+import NavIconAll from "./images/icon-all.js";
 import NavIconRandom from "./images/icon-random.js";
 
 class NavigationBar extends React.Component {
@@ -84,15 +84,14 @@ class NavigationBar extends React.Component {
                     />
                 </label> */}
 
-                {/* <div
-                    onClick={this.handleShowAllPoemChange}
-                    className="nav-all nav-icon"
-                >
-                    <NavIconAll />
-                    <span>Scroll All</span>
-                </div> */}
-
                 <div className="nav-movearound">
+                    <div
+                        onClick={this.handleShowAllPoemChange}
+                        className="nav-all nav-icon"
+                    >
+                        <NavIconAll />
+                        <span>All</span>
+                    </div>
                     <div
                         onClick={this.handleRandomPoemChange}
                         className="nav-random nav-icon"

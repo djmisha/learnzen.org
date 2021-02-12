@@ -25,24 +25,22 @@ class PoemsTable extends React.Component {
                 var visible = "visiblePoem";
                 // let currentURL =  window.location.href + '#' + poem.number;
                 // console.log(currentURL);
-                let hash = poem.number;
                 // location.assign(currentURL);
+                let hash = poem.number;
                 document.location.hash = hash;
                 // function scrollTo(hash) {
-                    // location.hash = "#" + hash;
+                // location.hash = "#" + hash;
                 // }
                 // scrollTo();
+                poemRows.push(
+                    <SinglePoemRow
+                        number={poem.number}
+                        content={poem.content}
+                        key={poem.number}
+                        className={visible}
+                    />
+                );
             }
-            poemRows.push(
-                <SinglePoemRow
-                    number={poem.number}
-                    content={poem.content}
-                    key={poem.number}
-                    className={visible}
-                />
-            );
-
-
 
             if (visiblePoem === "all") {
                 poemRows.push(
