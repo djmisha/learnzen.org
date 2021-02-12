@@ -1,6 +1,6 @@
 import React from "react";
 
-// import NavIconSeach from "./images/icon-search.js";
+import NavIconSeach from "./images/icon-search.js";
 import NavIconNext from "./images/icon-next.js";
 import NavIconPrev from "./images/icon-prev.js";
 import NavIconAll from "./images/icon-all.js";
@@ -70,21 +70,23 @@ class NavigationBar extends React.Component {
 
         return (
             <form>
-                {/* <label>
-                    <div className="nav-icon" onClick={this.handleSearchOpen}>
-                        <NavIconSeach />
-                        <span>Search</span>
-                    </div>
-                    <input
-                        type="text"
-                        placeholder="Search..."
-                        value={this.props.filterText}
-                        onChange={this.handleSearchFilterTextChange}
-                        className={this.state.searchClass}
-                    />
-                </label> */}
-
                 <div className="nav-movearound">
+                    <label>
+                        <div
+                            className="nav-icon"
+                            onClick={this.handleSearchOpen}
+                        >
+                            <NavIconSeach />
+                            <span>Search</span>
+                        </div>
+                        <input
+                            type="text"
+                            placeholder="Search..."
+                            value={this.props.filterText}
+                            onChange={this.handleSearchFilterTextChange}
+                            className={this.state.searchClass}
+                        />
+                    </label>
                     <div
                         onClick={this.handleShowAllPoemChange}
                         className="nav-all nav-icon"
