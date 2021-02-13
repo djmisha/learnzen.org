@@ -31,7 +31,6 @@ class FileteredPoemsTable extends React.Component {
             filterText: filterText,
         });
     }
-
     handleRandomPoemChange(visiblePoem) {
         const randNumber = Math.floor(Math.random() * dataArray.length) + 1;
         const changelogo =
@@ -55,6 +54,12 @@ class FileteredPoemsTable extends React.Component {
         } else {
             visiblePoem = visiblePoem + 1;
         }
+
+        // console.log(Number(localStorage.totalseenPoems 1));
+        let updatedPoemCount = Number(localStorage.totalseenPoems) + 1;
+        // let updatedPoemCount = 1 + 1;
+        // updatedPoemCount = updatedPoemCount + 1;
+        localStorage.setItem("totalseenPoems", updatedPoemCount);
 
         const changelogo =
             this.state.logoSpinClass === "spin" ? "spin-more" : "spin";
@@ -90,12 +95,15 @@ class FileteredPoemsTable extends React.Component {
     }
 
     render() {
+        let readcount = localStorage.totalseenPoems;
+
         return (
             <div>
                 <header className={this.state.logoSpinClass}>
                     <Logo />
                     <Hello />
                     <WelcomeScene />
+                    <div className="read-count">{readcount}</div>
                 </header>
                 <NavigationBar
                     visiblePoem={this.state.visiblePoem}

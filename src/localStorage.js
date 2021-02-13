@@ -5,7 +5,8 @@ import React from "react";
 class SignIn extends React.Component {
     state = {
         user: "",
-        // currentPoem: 1,
+        currentPoem: null,
+        totalseenPoems: 0,
         // rememberMe: false,
     };
 
@@ -17,12 +18,16 @@ class SignIn extends React.Component {
     };
 
     handleFormSubmit = () => {
-        const { user } = this.state;
+        const { user, currentPoem } = this.state;
         // localStorage.setItem("rememberMe", rememberMe);
         localStorage.setItem("user", user);
+        localStorage.setItem("totalseenPoems", 0);
+
+        if (currentPoem === null) {
+            localStorage.setItem("currentPoem", 1);
+        }
         // localStorage.setItem("user", rememberMe ? user : "");
     };
-
     // componentDidMount() {
     // const rememberMe = localStorage.getItem("rememberMe") === "true";
     // this.setState({ user, rememberMe });
@@ -37,7 +42,7 @@ class SignIn extends React.Component {
                 {/* <div className="call-by-name">{this.state.user}</div> */}
                 {/* <label>{this.state.user}</label> */}
                 <label>
-                    Name{" "}
+                    {/* Name{" "} */}
                     <input
                         name="user"
                         value={this.state.user}
@@ -53,7 +58,7 @@ class SignIn extends React.Component {
                         />{" "}
                         Zen me out
                     </label> */}
-                <button type="submit button button-primary">NOT DOING</button>
+                <button type="submit button">Start learning</button>
             </form>
         );
     }

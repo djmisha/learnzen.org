@@ -33,7 +33,7 @@ class SinglePoemRow extends React.Component {
 
         // Updates Current Poem
         localStorage.setItem("currentPoem", this.props.number);
-        console.log(localStorage.currentPoem);
+        // console.log(localStorage.currentPoem);
 
         return (
             <li

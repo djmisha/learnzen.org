@@ -1,5 +1,5 @@
 import React from "react";
-import SignIn from "./localStorage";
+// import SignIn from "./localStorage";
 import IconBuddah from "./images/icon-buddah.js";
 
 class WelcomeScene extends React.Component {
@@ -26,6 +26,8 @@ class WelcomeScene extends React.Component {
         });
     }
     render() {
+        let username = localStorage.user;
+
         return (
             <div className={this.state.infoClass}>
                 <div className="info" onClick={this.handleinfoChange}>
@@ -33,23 +35,25 @@ class WelcomeScene extends React.Component {
                 </div>
                 <div className={this.state.overlayClass}>
                     <p>Hello, Zen Master</p>
-                    <SignIn />
                     <div onClick={this.handleinfoChange} className="buddah">
-                        <br />
-                        <br />
                         <IconBuddah />
-                        {/* <span>道德经</span> */}
-                        {/* <span>Tao Te Ching</span> */}
-                        {/* <p>
+                    </div>
+                    <h2>{username}</h2>
+                    <div onClick={this.handleinfoChange}>
+                        <br />
+                        <span>道德经</span>
+                        <span>Tao Te Ching</span>
+                        <p>
                             The Tao Te Ching is the fundamental text for
                             philosophical Taoism, it is traditionally credited
                             to the 6th-century BC sage Laozi.
                             <br />
                             <br />
                             Ready to for enlightenment? Click on the Budah to
-                            start exploring
+                            continue exploring
                             <br /> <br />
-                        </p> */}
+                        </p>
+                        <div className="button">Return to Not Doing</div>
                         <br />
                     </div>
                 </div>
