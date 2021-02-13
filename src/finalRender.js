@@ -26,8 +26,8 @@ class FinalRender extends React.Component {
                     <br></br>
                     <br></br>
                     {/* <h1>Welcome</h1> */}
-                    <h2>Learn the Tao Te Ching</h2>
-                    <p>May we call you by name?</p>
+                    <h2>Learn to be Zen...</h2>
+                    <p>Greetings, may we call you by name?</p>
                     <SignIn />
                 </div>
             );

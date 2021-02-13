@@ -28,6 +28,7 @@ class SignIn extends React.Component {
         }
         // localStorage.setItem("user", rememberMe ? user : "");
     };
+
     // componentDidMount() {
     // const rememberMe = localStorage.getItem("rememberMe") === "true";
     // this.setState({ user, rememberMe });
@@ -58,7 +59,7 @@ class SignIn extends React.Component {
                         />{" "}
                         Zen me out
                     </label> */}
-                <button type="submit button">Start learning</button>
+                <button type="submit button">Begin journey</button>
             </form>
         );
     }
