@@ -4,6 +4,7 @@ import Logo from "./logo.js";
 import Hello from "./hello.js";
 import NavigationBar from "./navigation-bar";
 import PoemsTable from "./PoemsTable";
+import WelcomeScene from "./welcome";
 
 class FileteredPoemsTable extends React.Component {
     constructor(props) {
@@ -95,6 +96,7 @@ class FileteredPoemsTable extends React.Component {
                 <header className={this.state.logoSpinClass}>
                     <Logo />
                     <Hello />
+                    <WelcomeScene />
                 </header>
                 <NavigationBar
                     visiblePoem={this.state.visiblePoem}

@@ -11,8 +11,8 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
     max-height: 100vh;
-    border-top: 3px solid #000;
-    padding-top: 10px;
+    // border-top: 3px solid #000;
+    // padding-top: 10px;
 }
 
 .container {
@@ -86,7 +86,6 @@ header {
     &.spin-more .logo svg {
         transform: rotate(-180deg);
     }
-
 }
 
 .info-overlay {
@@ -105,14 +104,12 @@ header {
     }
 }
 
-.info input {
-    // color: black !important;
-}
-
-.the-info-icon.info-change .info svg {
-    fill: #fff;
+.the-info-icon .info svg {
+    fill: #000;
     z-index: 1;
-    position: relative;
+    position: absolute;
+    right: 20px;
+    top: 25px;
 }
 
 .info-overlay {
@@ -126,6 +123,7 @@ header {
     padding-top: 40px;
     text-align: center;
     z-index: 9999;
+    color: white;
 }
 
 .info-overlay.info-hidden {
@@ -251,7 +249,7 @@ ul.all-poems {
     padding: 5px;
 }
 
-form.navbar {
+.navbar {
     position: fixed;
     bottom: -1px;
     right: 0;
@@ -270,7 +268,7 @@ form.navbar {
     }
 }
 
-form.navbar label {
+.navbar label {
     margin-bottom: 0;
 }
 
@@ -293,11 +291,11 @@ form.navbar label {
     left: -190px;
 }
 
-form.navbar label {
+.navbar label {
     position: relative;
 }
 
-form.navbar label span {
+.navbar label span {
     position: absolute;
     font-size: 10px;
     bottom: -10px;
@@ -311,7 +309,7 @@ form label {
 }
 
 @media (min-width: 750px) {
-    form.navbar label {
+    .navbar label {
         display: block;
     }
 }
@@ -357,20 +355,24 @@ form label {
 }
 
 .current-verse {
-    position: fixed;
-    top: 35px;
-    right: 0px;
     text-align: center;
     font-size: 12px;
-    color: black;
+    position: relative;
+}
+
+.nav-count {
+    position: relative;
+    top: 10px;
 }
 
 .current-verse svg {
-    width: 25px;
-    height: 20px;
-    left: -15px;
-    top: -8px;
-    position: absolute;
+    display: none;
+    border: 1px solid pink;
+    width: 30px;
+    height: 25px;
+    path {
+        fill: #fff;
+    }
 }
 
 .nav-count {
@@ -390,14 +392,13 @@ form label {
     transform: rotate(90deg);
 }
 
-
 /* Name Form */
 form.call-by-name {
     display: flex;
     align-items: center;
     flex-direction: column;
     label {
-        height: 40px;;
+        height: 40px;
     }
     input {
         color: black !important;
@@ -407,5 +408,5 @@ form.call-by-name {
 .user-hello {
     top: 30px;
     position: absolute;
-    right: 80px;
+    right: 60px;
 }

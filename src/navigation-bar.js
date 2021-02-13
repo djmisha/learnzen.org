@@ -1,5 +1,4 @@
 import React from "react";
-import WelcomeScene from "./welcome.js"
 // import NavIconSeach from "./images/icon-search.js";
 import NavIconNext from "./images/icon-next.js";
 import NavIconPrev from "./images/icon-prev.js";
@@ -54,24 +53,9 @@ class NavigationBar extends React.Component {
     }
 
     render() {
-        // const PoemsForNavigation = []
-
-        // dataArray.forEach((poem) => {
-        //   PoemsForNavigation.push(
-        //     <SinglePoemNavItem
-        //       number={poem.number}
-        //       key={poem.number}
-        //       visiblePoem={this.state.visiblePoem}
-        //      />
-        //     );
-        // });
-
-        // console.log(PoemsForNavigation);
-
         return (
-            <form className="navbar">
+            <div className="navbar">
                 <div className="nav-movearound">
-                    <WelcomeScene></WelcomeScene>
                     {/* <label>
                         <div
                             className="nav-icon"
@@ -88,13 +72,13 @@ class NavigationBar extends React.Component {
                             className={this.state.searchClass}
                         />
                     </label> */}
-                    <div
+                    {/* <div
                         onClick={this.handleShowAllPoemChange}
                         className="nav-all nav-icon"
                     >
                         <NavIconAll />
                         <span>All</span>
-                    </div>
+                    </div> */}
                     <div
                         onClick={this.handleRandomPoemChange}
                         className="nav-random nav-icon"
@@ -126,14 +110,7 @@ class NavigationBar extends React.Component {
                         <span>Next</span>
                     </div>
                 </div>
-
-                {/* <div className="all-navigation-row" 
-      visiblepoem={this.state.visiblePoem}
-     
-      >
-        {PoemsForNavigation}
-      </div> */}
-            </form>
+            </div>
         );
     }
 }

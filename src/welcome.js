@@ -1,7 +1,6 @@
 import React from "react";
-import SignIn from "./localStorage"
+import SignIn from "./localStorage";
 import IconBuddah from "./images/icon-buddah.js";
-
 
 class WelcomeScene extends React.Component {
     constructor(props) {
@@ -33,27 +32,26 @@ class WelcomeScene extends React.Component {
                     <IconBuddah />
                 </div>
                 <div className={this.state.overlayClass}>
-                  
-                    <p>Hello, may we call you by name?</p>
-                    <SignIn></SignIn>
+                    <p>Hello, Zen Master</p>
+                    <SignIn />
                     <div onClick={this.handleinfoChange} className="buddah">
                         <br />
                         <br />
                         <IconBuddah />
-                    <span>道德经</span>
-                    <span>Tao Te Ching</span>
-                    <p>
-                         
-                        The Tao Te Ching is the fundamental text for
-                        philosophical Taoism, it is traditionally credited to
-                        the 6th-century BC sage Laozi.
+                        {/* <span>道德经</span> */}
+                        {/* <span>Tao Te Ching</span> */}
+                        {/* <p>
+                            The Tao Te Ching is the fundamental text for
+                            philosophical Taoism, it is traditionally credited
+                            to the 6th-century BC sage Laozi.
+                            <br />
+                            <br />
+                            Ready to for enlightenment? Click on the Budah to
+                            start exploring
+                            <br /> <br />
+                        </p> */}
                         <br />
-                        <br />
-                        Ready to for enlightenment? Click on the Budah to start exploring
-                        <br /> <br />
-                    </p>
-                    <br />
-                     </div>
+                    </div>
                 </div>
             </div>
         );

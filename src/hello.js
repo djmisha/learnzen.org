@@ -9,18 +9,27 @@ class Hello extends React.Component {
     };
 
     componentDidMount() {
-        const rememberMe = localStorage.getItem("rememberMe") === "true";
-        const user = rememberMe ? localStorage.getItem("user") : "";
-        this.setState({ user, rememberMe });
-        console.log(user);
+        // const rememberMe = localStorage.getItem("rememberMe") === "true";
+        const user = localStorage.getItem("user");
+        // const user = rememberMe ? localStorage.getItem("user") : "";
+        this.setState({ user });
+        // console.log(user);
     }
 
     render() {
-        return (
-            <div className="user-hello">
-                <span>{this.state.user}</span>
-            </div>
-        );
+        if (this.state.user) {
+            return (
+                <div className="user-hello">
+                    <span>Hi, {this.state.user}</span>
+                </div>
+            );
+        } else {
+            return (
+                <div className="user-hello">
+                    <span></span>
+                </div>
+            );
+        }
     }
 }
 
