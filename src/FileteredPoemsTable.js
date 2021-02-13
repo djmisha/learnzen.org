@@ -11,10 +11,9 @@ class FileteredPoemsTable extends React.Component {
         super(props);
         this.state = {
             filterText: "",
-            visiblePoem: 1,
+            visiblePoem: parseInt(localStorage.currentPoem),
             logoSpinClass: "spin",
         };
-
         this.handleSearchFilterTextChange = this.handleSearchFilterTextChange.bind(
             this
         );

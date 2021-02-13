@@ -9,7 +9,7 @@ const parsedData = data.poems;
 let dataArray = [];
 
 for (let i = 0; i < parsedData.length; i++) {
-    // console.log(parsedData[i]);
+    // console.log(parsedData[i].content);
     dataArray.push(parsedData[i]);
 }
 

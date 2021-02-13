@@ -18,8 +18,6 @@ class SinglePoemRow extends React.Component {
             changeClass = "visiblePoem";
         }
 
-        // console.log(this.props.number, this.props.className);
-
         console.log(changeClass);
 
         this.setState({
@@ -28,8 +26,14 @@ class SinglePoemRow extends React.Component {
     }
     render() {
         const number = this.props.number;
-        const content = this.props.content;
-        // const className = ;
+        let content = this.props.content;
+        content = content
+            .split("\n")
+            .map((str, index) => <p key={index}>{str}</p>);
+
+        // Updates Current Poem
+        localStorage.setItem("currentPoem", this.props.number);
+        console.log(localStorage.currentPoem);
 
         return (
             <li
@@ -38,7 +42,7 @@ class SinglePoemRow extends React.Component {
                 onClick={this.handlePoemClick}
             >
                 <span>{number}</span>
-                <p>{content}</p>
+                <div className="poem-content">{content}</div>
             </li>
         );
     }

@@ -15,10 +15,6 @@ body {
     // padding-top: 10px;
 }
 
-.container {
-    // max-width: none;
-}
-
 @media (min-width: 1000px) {
     body {
         background: #9adee9 url("../images/background.webp") top left;
@@ -161,20 +157,14 @@ ul.all-poems {
     margin-top: 20px;
 }
 
-.hiddenPoem {
-    /*border: 1px solid pink;*/
-    display: inline-block;
-    padding: 5px;
-}
-
 .all-poems > li {
-    // max-width: 400px;
-    // padding: 80px 20px;
     font-family: "Source Serif Pro", serif;
     font-size: 18px;
     position: relative;
     color: #000 !important;
-    // z-index: -1;
+    .poem-content p {
+        margin-bottom: 0;
+    }
 }
 
 .all-poems > li {
@@ -183,7 +173,7 @@ ul.all-poems {
     border-radius: 10px;
     font-size: 18px;
     width: 100%;
-    padding: 30px 10px 20px 20px;
+    padding: 30px 10px 80px 20px;
     p,
     span {
         color: (rgba($color: #fff, $alpha: 0.3));
@@ -197,7 +187,6 @@ ul.all-poems {
         right: 15px;
         font-size: 25px;
         font-style: italic;
-        // display: none;
     }
 }
 
@@ -208,27 +197,7 @@ ul.all-poems {
     p {
         color: (rgba($color: #fff, $alpha: 1));
         max-width: 800px;
-        // margin: 0 auto;
     }
-}
-
-@media (min-width: 750px) {
-    .all-poems > li.visiblePoem {
-        max-width: none;
-        // padding: 80px 22vw 80px 0px;
-        font-size: 2vw;
-    }
-}
-
-@media (min-width: 1600px) {
-    .all-poems > li.visiblePoem {
-        max-width: none;
-        // padding: 80px 0px 80px 0px;
-        font-size: 40px;
-    }
-}
-
-.all-poems > li.visiblePoem span {
 }
 
 /*Navigation*/
