@@ -26,8 +26,8 @@ class PoemsTable extends React.Component {
                 // let currentURL =  window.location.href + '#' + poem.number;
                 // console.log(currentURL);
                 // location.assign(currentURL);
-                // let hash = poem.number;
-                // document.location.hash = hash;
+                let hash = poem.number;
+                document.location.hash = hash;
                 // function scrollTo(hash) {
                 // location.hash = "#" + hash;
                 // }
