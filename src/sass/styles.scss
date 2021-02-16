@@ -5,7 +5,7 @@ html {
 @import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap");
 
 body {
-    // background: #9adee9 url("../images/background.webp") top left;
+    background: #9adee9 url("../images/background.webp") top left;
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-attachment: fixed;
@@ -15,7 +15,6 @@ body {
 
 @media (min-width: 1000px) {
     body {
-        // background: #9adee9 url("../images/background.webp") top left;
         background: #9adee9 url("../images/background.webp") top left;
         background-repeat: no-repeat;
         background-size: 160% auto;
