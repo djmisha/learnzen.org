@@ -54,6 +54,7 @@ header {
     font-size: 0.9em;
     line-height: 1em;
     color: #000;
+    z-index: 9999;
 
     .the-logo {
         padding-top: 20px;
@@ -190,7 +191,7 @@ ul.all-poems {
     background-color: rgba($color: #000, $alpha: 0.4);
     font-size: 17px;
     // width: 100%;
-    padding: 30px 10px 80px 20px;
+    padding: 70px 10px 0px 20px;
     opacity: 0.2;
     // visibility: hidden;
     p,
@@ -202,8 +203,8 @@ ul.all-poems {
     }
     span {
         position: absolute;
-        top: 5px;
-        right: 15px;
+        top: 20px;
+        left: 18px;
         font-size: 25px;
         font-style: italic;
     }
@@ -213,11 +214,11 @@ ul.all-poems {
     display: block;
     visibility: visible;
     position: absolute;
-    top: 80px;
+    top: 65px;
     bottom: 0;
     left: 5px;
     right: 5px;
-    height: calc(100vh - 260px);
+    height: calc(100vh - 186px);
     transition: opacity 1.5s ease;
     opacity: 1;
     color: #fff !important;
