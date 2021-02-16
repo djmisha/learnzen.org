@@ -1,6 +1,6 @@
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import React, { Fragment, useEffect, useState } from "react";
-import "./style.css";
+// import "./style.css";
 import { createApi } from "unsplash-js";
 
 const api = createApi({
@@ -14,10 +14,10 @@ const PhotoComp = ({ photo }) => {
 
   return (
     <Fragment>
-      <img className="img" src={urls.regular} />
+      <img className="img" src={urls.regular} alt="unsplash" />
       <a
         className="credit"
-        target="_blank"
+        // target="_blank"
         href={`https://unsplash.com/@${user.username}`}
       >
         {user.name}
@@ -31,7 +31,7 @@ const Body = () => {
 
   useEffect(() => {
     api.search
-      .getPhotos({ query: "zen", perPage: 1 })
+      .getPhotos({ query: "zen", perPage: 1, orientation: "portrait" })
       .then(result => {
         setPhotosResponse(result);
       })
@@ -51,25 +51,28 @@ const Body = () => {
     );
   } else {
     return (
-      <div className="feed">
-        <ul className="columnUl">
+      <div className="unsplash-feed">
+        {/* <ul className="columnUl"> */}
           {data.response.results.map(photo => (
-            <li key={photo.id} className="li">
+            <div key={photo.id} className="li">
               <PhotoComp photo={photo} />
-            </li>
+            </div>
           ))}
-        </ul>
+        {/* </ul> */}
       </div>
     );
   }
 };
 
-const Home = () => {
-  return (
-    <main className="root">
-      <Body />
-    </main>
-  );
-};
+// const Home = () => {
+//   return (
+//     <main className="root">
+//       <Body />
+//     </main>
+//   );
+// };
 
-ReactDOM.render(<Home />, document.getElementById("root"));
+
+export default Body;
+
+// ReactDOM.render(<Home />, document.getElementById("root"));

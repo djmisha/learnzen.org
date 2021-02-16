@@ -2,6 +2,7 @@ import React from "react";
 import dataArray from "./data";
 import FileteredPoemsTable from "./FileteredPoemsTable";
 import SignIn from "./localStorage";
+import Body from "./unsplash"
 // import WelcomeScene from "./welcome";
 // import SignIn from "./localStorage";
 // import Hello from "./hello"
@@ -16,6 +17,7 @@ class FinalRender extends React.Component {
             return (
                 <div>
                     <FileteredPoemsTable poems={dataArray} />
+                    <Body></Body>
                 </div>
             );
         } else {
