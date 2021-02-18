@@ -1,0 +1,4 @@
+export default function PlusZens(number) {
+    let updatedPoemCount = Number(localStorage.totalseenPoems) + number;
+    localStorage.setItem("totalseenPoems", updatedPoemCount);
+}

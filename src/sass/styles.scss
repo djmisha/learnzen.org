@@ -5,22 +5,7 @@ html {
 @import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap");
 
 body {
-    background: #9adee9 url("../images/background.webp") top left;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-attachment: fixed;
-    min-height: 100vh;
-    max-height: 100vh;
-}
-
-@media (min-width: 1000px) {
-    body {
-        background: #9adee9 url("../images/background.webp") top left;
-        background-repeat: no-repeat;
-        background-size: 160% auto;
-        background-attachment: fixed;
-        min-height: 100vh;
-    }
+    background: #9adee9;
 }
 
 .unsplash-feed {
@@ -31,13 +16,17 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100%;
+    height: 100vh;
     img {
         margin: 0 auto;
         max-height: 100%;
         left: 0;
         right: 0;
         position: absolute;
+        @media (min-width: 768px) {
+            width: 100vw;
+            max-height: none;
+        }
     }
 }
 
@@ -47,7 +36,6 @@ body {
 
 .onboarding {
     text-align: center;
-    // background-color: b;
 }
 
 .read-count {
@@ -121,14 +109,6 @@ header {
     }
 }
 
-.info-overlay {
-    .buddah svg {
-        margin-top: 40px;
-        fill: #fff;
-        width: 80px;
-    }
-}
-
 .info {
     svg {
         position: relative;
@@ -158,6 +138,11 @@ header {
     z-index: 9999;
     color: white;
     overflow: scroll;
+    .buddah svg {
+        margin-top: 40px;
+        fill: #fff;
+        width: 80px;
+    }
 }
 
 .info-overlay.info-hidden {
@@ -186,6 +171,8 @@ header {
     line-height: 1.4em;
 }
 
+/*  ALL POEMS  */
+
 ul.all-poems {
     list-style: none;
     margin: 0;
@@ -206,15 +193,25 @@ ul.all-poems {
 
 .all-poems > li {
     border: 1px solid black;
-    background-color: rgba($color: #000, $alpha: 0.4);
-    font-size: 17px;
+    background-color: rgba($color: #000, $alpha: 0.9);
+    font-size: 16px;
     // width: 100%;
     padding: 40px 10px 0px 20px;
-    opacity: 0.2;
+    opacity: 0.9;
     // visibility: hidden;
+    visibility: visible;
+    position: absolute;
+    top: 65px;
+    bottom: 0;
+    left: 5px;
+    right: 5px;
+    height: calc(100vh - 157px);
+    transition: all 0.5s ease;
+
     p,
     span {
-        color: (rgba($color: #fff, $alpha: 0.3));
+        // color: (rgba($color: #fff, $alpha: 0.3));
+        color: (rgba($color: #fff, $alpha: 1));
     }
     P {
         transition: color 1s ease;
@@ -229,6 +226,7 @@ ul.all-poems {
 }
 
 .all-poems > li.visiblePoem {
+    background-color: rgba($color: #000, $alpha: 0.4);
     display: block;
     visibility: visible;
     position: absolute;
@@ -236,8 +234,7 @@ ul.all-poems {
     bottom: 0;
     left: 5px;
     right: 5px;
-    height: calc(100vh - 157px);
-    transition: opacity 1.5s ease;
+    // height: calc(100vh - 157px);
     opacity: 1;
     color: #fff !important;
     overflow: scroll;
@@ -272,7 +269,6 @@ ul.all-poems {
     left: 0;
     width: 100%;
     height: 80px;
-    // border-top: 1px solid lighten($color: #000000, $amount: 60%);
     background: #000;
     margin: 0 !important;
     color: #eee;
@@ -318,10 +314,6 @@ ul.all-poems {
     right: calc(50% - 15px);
     color: #fff;
     font-weight: normal;
-}
-
-form label {
-    // display: none;
 }
 
 @media (min-width: 750px) {

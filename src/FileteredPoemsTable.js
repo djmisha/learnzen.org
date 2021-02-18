@@ -5,6 +5,7 @@ import Hello from "./hello.js";
 import NavigationBar from "./navigation-bar";
 import PoemsTable from "./PoemsTable";
 import WelcomeScene from "./welcome";
+// import PlusZens from "./countZens";
 
 class FileteredPoemsTable extends React.Component {
     constructor(props) {
@@ -60,6 +61,8 @@ class FileteredPoemsTable extends React.Component {
         // let updatedPoemCount = 1 + 1;
         // updatedPoemCount = updatedPoemCount + 1;
         localStorage.setItem("totalseenPoems", updatedPoemCount);
+
+        // PlusZens(0.1);
 
         const changelogo =
             this.state.logoSpinClass === "spin" ? "spin-more" : "spin";
