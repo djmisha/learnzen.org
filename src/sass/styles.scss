@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap");
+
 html {
     scroll-behavior: smooth;
 }
-
-@import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap");
 
 body {
     background: #9adee9;
@@ -22,12 +22,23 @@ body {
         max-height: 100%;
         left: 0;
         right: 0;
+        top: 0;
+        bottom: 0;
         position: absolute;
         @media (min-width: 768px) {
-            width: 100vw;
-            max-height: none;
+            // width: 100vw;
+            // max-height: none;
         }
     }
+}
+
+.unsplash-credit {
+    position: absolute;
+    bottom: 70px;
+    right: 10px;
+    font-size: 10px;
+    color: #fff;
+    z-index: 9999;
 }
 
 .App {
@@ -45,7 +56,7 @@ body {
     background: black;
     border-radius: 50%;
     color: lightskyblue;
-    font-size: 13px;
+    font-size: 11px;
     width: 20px;
     height: 20px;
     display: flex;

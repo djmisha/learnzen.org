@@ -1,5 +1,4 @@
 import React from "react";
-// import SignIn from "./localStorage";
 import IconBuddah from "./images/icon-buddah.js";
 
 class WelcomeScene extends React.Component {
@@ -27,6 +26,9 @@ class WelcomeScene extends React.Component {
     }
     render() {
         let username = localStorage.user;
+        // let seenPoems = localStorage.totalseenPoems;
+        let zenCount = localStorage.zenCount;
+        let currentPoem = localStorage.currentPoem;
 
         return (
             <div className={this.state.infoClass}>
@@ -39,6 +41,13 @@ class WelcomeScene extends React.Component {
                         <IconBuddah />
                     </div>
                     <h2>{username}</h2>
+                    <p>
+                        Achieved: {zenCount} ZENS
+                        {/* <br /> */}
+                        {/* Read: {seenPoems} Chapters */}
+                        <br />
+                        Current chapter: {currentPoem}
+                    </p>
                     <div onClick={this.handleinfoChange}>
                         <br />
                         <span>道德经</span>

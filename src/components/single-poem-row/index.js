@@ -18,12 +18,10 @@ class SinglePoemRow extends React.Component {
             changeClass = "visiblePoem";
         }
 
-        let updatedPoemCount = Number(localStorage.totalseenPoems) + 1;
-        // let updatedPoemCount = 1 + 1;
-        // updatedPoemCount = updatedPoemCount + 1;
-        localStorage.setItem("totalseenPoems", updatedPoemCount);
-
-        console.log(changeClass);
+        // Update Zen Count
+        let updatedPoemCount = Number(localStorage.zenCount) + 0.01;
+        updatedPoemCount = updatedPoemCount.toFixed(2);
+        localStorage.setItem("zenCount", updatedPoemCount);
 
         this.setState({
             visible: changeClass,

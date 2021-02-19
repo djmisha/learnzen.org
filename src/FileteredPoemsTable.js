@@ -5,7 +5,6 @@ import Hello from "./hello.js";
 import NavigationBar from "./navigation-bar";
 import PoemsTable from "./PoemsTable";
 import WelcomeScene from "./welcome";
-// import PlusZens from "./countZens";
 
 class FileteredPoemsTable extends React.Component {
     constructor(props) {
@@ -56,13 +55,10 @@ class FileteredPoemsTable extends React.Component {
             visiblePoem = visiblePoem + 1;
         }
 
-        // console.log(Number(localStorage.totalseenPoems 1));
-        let updatedPoemCount = Number(localStorage.totalseenPoems) + 1;
-        // let updatedPoemCount = 1 + 1;
-        // updatedPoemCount = updatedPoemCount + 1;
-        localStorage.setItem("totalseenPoems", updatedPoemCount);
-
-        // PlusZens(0.1);
+        // Update Zen Count
+        let updatedPoemCount = Number(localStorage.zenCount) + 0.01;
+        updatedPoemCount = updatedPoemCount.toFixed(2);
+        localStorage.setItem("zenCount", updatedPoemCount);
 
         const changelogo =
             this.state.logoSpinClass === "spin" ? "spin-more" : "spin";
@@ -98,7 +94,7 @@ class FileteredPoemsTable extends React.Component {
     }
 
     render() {
-        let readcount = localStorage.totalseenPoems;
+        let zenCount = localStorage.zenCount;
 
         return (
             <div>
@@ -106,7 +102,7 @@ class FileteredPoemsTable extends React.Component {
                     <Logo />
                     <Hello />
                     <WelcomeScene />
-                    <div className="read-count">{readcount}</div>
+                    <div className="read-count"> {zenCount}</div>
                 </header>
                 <NavigationBar
                     visiblePoem={this.state.visiblePoem}

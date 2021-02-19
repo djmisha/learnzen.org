@@ -7,7 +7,7 @@ class SignIn extends React.Component {
         user: "",
         currentPoem: null,
         totalseenPoems: 0,
-        // rememberMe: false,
+        zenCount: null,
     };
 
     handleChange = (event) => {
@@ -19,23 +19,15 @@ class SignIn extends React.Component {
 
     handleFormSubmit = () => {
         const { user, currentPoem } = this.state;
-        // localStorage.setItem("rememberMe", rememberMe);
+
         localStorage.setItem("user", user);
         localStorage.setItem("totalseenPoems", 0);
 
         if (currentPoem === null) {
+            localStorage.setItem("zenCount", 0.05);
             localStorage.setItem("currentPoem", 1);
         }
-        // localStorage.setItem("user", rememberMe ? user : "");
     };
-
-    // componentDidMount() {
-    // const rememberMe = localStorage.getItem("rememberMe") === "true";
-    // this.setState({ user, rememberMe });
-    // const user = localStorage.getItem("user");
-    // this.setState({ user });
-    // console.log(user);
-    // }
 
     render() {
         return (
@@ -59,7 +51,7 @@ class SignIn extends React.Component {
                         />{" "}
                         Zen me out
                     </label> */}
-                <button type="submit button">Begin journey</button>
+                <button type="submit button">Begin My Journey</button>
             </form>
         );
     }
