@@ -8,7 +8,7 @@ import Unsplash from "./unsplash";
 
 class FinalRender extends React.Component {
     render() {
-        localStorage.clear();
+        // localStorage.clear();
         if (localStorage.currentPoem) {
             return (
                 <div>
