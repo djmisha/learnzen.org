@@ -6,43 +6,42 @@ class SinglePoemRow extends React.Component {
         this.state = {
             visible: this.props.className,
         };
-        this.handlePoemClick = this.handlePoemClick.bind(this);
+        // this.handlePoemClick = this.handlePoemClick.bind(this);
     }
 
-    handlePoemClick() {
-        let changeClass = "";
+    // handlePoemClick() {
+    //     let changeClass = "";
 
-        if (this.state.visible === "visiblePoem") {
-            changeClass = "";
-        } else {
-            changeClass = "visiblePoem";
-        }
+    //     if (this.state.visible === "visiblePoem") {
+    //         changeClass = "";
+    //     } else {
+    //         changeClass = "visiblePoem";
+    //     }
 
-        // Update Zen Count
-        let updatedPoemCount = Number(localStorage.zenCount) + 0.01;
-        updatedPoemCount = updatedPoemCount.toFixed(2);
-        localStorage.setItem("zenCount", updatedPoemCount);
+    //     // Update Zen Count
+    //     let updatedPoemCount = Number(localStorage.zenCount) + 0.01;
+    //     updatedPoemCount = updatedPoemCount.toFixed(2);
+    //     localStorage.setItem("zenCount", updatedPoemCount);
 
-        this.setState({
-            visible: changeClass,
-        });
-    }
+    //     this.setState({
+    //         visible: changeClass,
+    //     });
+    // }
     render() {
-        const number = this.props.number;
+        let number = this.props.number;
         let content = this.props.content;
         content = content
             .split("\n")
             .map((str, index) => <p key={index}>{str}</p>);
 
-        // Updates Current Poem
+        // Updates Current Poem in Local Storage
         localStorage.setItem("currentPoem", this.props.number);
-        // console.log(localStorage.currentPoem);
 
         return (
             <li
                 id={number}
                 className={this.state.visible}
-                onClick={this.handlePoemClick}
+                // onClick={this.handlePoemClick}
             >
                 <span>{number}</span>
                 <div className="poem-content">{content}</div>

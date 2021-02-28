@@ -5,6 +5,7 @@ import Hello from "./hello.js";
 import NavigationBar from "./navigation-bar";
 import PoemsTable from "./PoemsTable";
 import WelcomeScene from "./welcome";
+import Unsplash from "./unsplash";
 
 class FileteredPoemsTable extends React.Component {
     constructor(props) {
@@ -108,6 +109,8 @@ class FileteredPoemsTable extends React.Component {
                     onPrevPoemButtonClick={this.handlePrevPoemChange}
                     poems={this.props.poems}
                 />
+                <Unsplash />
+
                 <PoemsTable
                     poems={this.props.poems}
                     filterText={this.state.filterText}

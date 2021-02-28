@@ -1,0 +1,24 @@
+@mixin media($args...) {
+    @if (length($args) > 1) {
+        @if nth($args, 2) == "max" {
+            $max: nth($args, 1);
+            @media only screen and (max-width: calculateMqSize($max)) {
+                @content;
+            }
+        } @else if nth($args, 2) == "notdevice" {
+            @media only screen and (min-width: nth($args, 1)) {
+                .not--device & {
+                    @content;
+                }
+            }
+        } @else {
+            @media only screen and (min-width: nth($args, 1)) and (max-width: nth($args, 2)) {
+                @content;
+            }
+        }
+    } @else {
+        @media only screen and (min-width: nth($args, 1)) {
+            @content;
+        }
+    }
+}

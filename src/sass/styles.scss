@@ -1,3 +1,5 @@
+@import "variables";
+@import "mixins";
 @import "poems";
 @import "navigation";
 @import "unsplash";
@@ -11,7 +13,7 @@ html {
 }
 
 body {
-    background: #9adee9;
+    background: #000;
 }
 .App {
     position: relative;

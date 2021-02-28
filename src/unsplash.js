@@ -38,7 +38,7 @@ const Unsplash = () => {
         api.collections
             .getPhotos({
                 collectionId: "904914",
-                perPage: 10,
+                perPage: 20,
                 // orientation: "portrait",
             })
             .then((result) => {

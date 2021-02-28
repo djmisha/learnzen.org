@@ -1,0 +1,8 @@
+/*  */
+
+$tablet: 768px;
+$ogDesktop: 980px;
+$ogFull: 1380px;
+
+$desktop: updateSize($ogDesktop);
+$full: updateSize($ogFull);
