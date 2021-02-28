@@ -98,12 +98,6 @@ class FileteredPoemsTable extends React.Component {
 
         return (
             <div>
-                <header className={this.state.logoSpinClass}>
-                    <Logo />
-                    <Hello />
-                    <WelcomeScene />
-                    <div className="read-count"> {zenCount}</div>
-                </header>
                 <NavigationBar
                     visiblePoem={this.state.visiblePoem}
                     filterText={this.state.filterText}
@@ -119,6 +113,12 @@ class FileteredPoemsTable extends React.Component {
                     filterText={this.state.filterText}
                     visiblePoem={this.state.visiblePoem}
                 />
+                <footer className={this.state.logoSpinClass}>
+                    <Logo />
+                    <Hello />
+                    <WelcomeScene />
+                    <div className="read-count"> {zenCount}</div>
+                </footer>
             </div>
         );
     }
