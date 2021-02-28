@@ -13,7 +13,7 @@ class FinalRender extends React.Component {
             return (
                 <div>
                     <FileteredPoemsTable poems={dataArray} />
-                    <Unsplash></Unsplash>
+                    <Unsplash />
                 </div>
             );
         } else {
@@ -24,7 +24,7 @@ class FinalRender extends React.Component {
                     <br></br>
                     <br></br>
                     {/* <h1>Welcome</h1> */}
-                    <h2>Learn how to be Zen...</h2>
+                    <h2>Learn the meaninig of Zen</h2>
                     <p>Hello, may we call you by name?</p>
                     <SignIn />
                 </div>

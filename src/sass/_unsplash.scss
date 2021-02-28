@@ -1,0 +1,25 @@
+.unsplash-feed {
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.unsplash-background {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.unsplash-credit {
+    position: absolute;
+    bottom: 120px;
+    right: 10px;
+    font-size: 10px;
+    color: #fff;
+    z-index: 9999;
+}

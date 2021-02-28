@@ -12,6 +12,10 @@ const PhotoComp = ({ photo }) => {
 
     return (
         <Fragment>
+            <div
+                style={{ backgroundImage: `url(${urls.regular})` }}
+                className="unsplash-background"
+            ></div>
             <img className="img" src={urls.regular} alt="unsplash" />
             <div className="unsplash-credit">
                 Photo by{" "}

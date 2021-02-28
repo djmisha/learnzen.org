@@ -1,0 +1,173 @@
+/*Navigation*/
+
+.all-navigation-row {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    border: 1px solid red;
+    bottom: 60px;
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+    background: #000;
+}
+
+.all-navigation-row div {
+    padding: 5px;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #000;
+    margin: 0 !important;
+    color: #eee;
+    line-height: 0;
+    z-index: 1;
+    height: 45px;
+    > div {
+        top: 5px;
+    }
+}
+
+.navbar label {
+    margin-bottom: 0;
+}
+
+.nav-search {
+    position: fixed;
+    font-family: "Source Serif Pro", serif;
+    top: 30px;
+    width: 180px;
+    color: #888;
+    font-size: 18px;
+    font-weight: normal;
+    transition: all 0.25s ease-in-out;
+}
+
+.nav-search.nav-visible {
+    left: 150px;
+}
+
+.nav-search.nav-hidden {
+    left: -190px;
+}
+
+.navbar label {
+    position: relative;
+}
+
+.navbar label span {
+    position: absolute;
+    font-size: 10px;
+    bottom: -10px;
+    right: calc(50% - 15px);
+    color: #fff;
+    font-weight: normal;
+}
+
+@media (min-width: 750px) {
+    .navbar label {
+        display: block;
+    }
+}
+
+.nav-movearound {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    // width: calc(100%);
+    position: absolute;
+    right: 20px;
+}
+
+.nav-icon svg {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    transition: all 0.06s ease-in;
+    position: relative;
+    bottom: 0px;
+}
+
+.nav-icon svg:active {
+    fill: pink;
+    bottom: -2px;
+}
+
+.nav-random,
+.nav-all {
+    position: relative;
+}
+
+.current-verse span,
+.nav-icon span {
+    // display: none;
+    display: block;
+    font-size: 10px;
+    top: 6px;
+    // text-transform: uppercase;
+    position: relative;
+    text-align: center;
+}
+
+.current-verse {
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+}
+
+.nav-count {
+    position: relative;
+    top: 10px;
+}
+
+.current-verse svg {
+    display: none;
+    border: 1px solid pink;
+    width: 30px;
+    height: 25px;
+    path {
+        fill: #fff;
+    }
+}
+
+.nav-count {
+    font-family: "Source Serif Pro", serif;
+    position: relative;
+    width: 40px;
+    font-size: 20px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.nav-next svg {
+    transform: rotate(90deg);
+}
+
+.nav-prev svg {
+    transform: rotate(90deg);
+}
+
+/* Name Form */
+
+form.call-by-name {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    label {
+        height: 40px;
+    }
+    input {
+        color: black !important;
+    }
+}
+
+.onboarding {
+    text-align: center;
+}

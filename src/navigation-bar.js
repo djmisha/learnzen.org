@@ -2,7 +2,7 @@ import React from "react";
 // import NavIconSeach from "./images/icon-search.js";
 import NavIconNext from "./images/icon-next.js";
 import NavIconPrev from "./images/icon-prev.js";
-import NavIconAll from "./images/icon-all.js";
+// import NavIconAll from "./images/icon-all.js";
 import NavIconRandom from "./images/icon-random.js";
 
 class NavigationBar extends React.Component {
@@ -87,12 +87,12 @@ class NavigationBar extends React.Component {
                         <span>Any</span>
                     </div>
 
-                    <div className="current-verse">
+                    {/* <div className="current-verse">
                         <NavIconAll />
                         <div className="nav-count">
                             {this.props.visiblePoem}
                         </div>
-                    </div>
+                    </div> */}
 
                     <div
                         onClick={this.handlePrevPoemChange}
