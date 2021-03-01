@@ -18,11 +18,11 @@ class FinalRender extends React.Component {
             return (
                 <div className="onboarding">
                     <br></br>
+                    <h1>Tao Te Ching</h1>
                     <br></br>
-                    <br></br>
-                    <br></br>
-                    {/* <h1>Welcome</h1> */}
-                    <h2>Welcome, student of Zen</h2>
+                    <h2>
+                        Welcome student. <br /> Discover the meaninig of Zen.
+                    </h2>
                     <p>What is your name?</p>
                     <SignIn />
                 </div>

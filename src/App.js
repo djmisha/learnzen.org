@@ -1,16 +1,13 @@
-import React from 'react';
-import FinalRender from './finalRender.js'
-import './sass/styles.scss';
-import './css/skeleton.css';
+import React from "react";
+import FinalRender from "./finalRender.js";
+import "./sass/styles.scss";
 
 function App() {
-  return (
-    <div className="App">
-      <main className="container">
-        <FinalRender /> 
-      </main>
-    </div>
-  );
+    return (
+        <main className="App">
+            <FinalRender />
+        </main>
+    );
 }
 
 export default App;

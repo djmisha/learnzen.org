@@ -80,7 +80,7 @@ footer {
     position: fixed;
     right: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     background: black;
@@ -89,7 +89,7 @@ footer {
     z-index: 9999;
     color: white;
     overflow: scroll;
-    transition: bottom 0.5s ease-in-out;
+    transition: right 0.5s ease-in-out;
     .buddah svg {
         margin-top: 40px;
         fill: #fff;
@@ -98,11 +98,12 @@ footer {
 }
 
 .info-overlay.info-hidden {
-    bottom: -200vh;
+    right: -100vw;
 }
 
 .info-overlay.info-visible {
-    bottom: 0;
+    // bottom: 0;
+    right: 0;
 }
 
 .info-overlay span,

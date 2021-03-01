@@ -47,7 +47,7 @@ class WelcomeScene extends React.Component {
                     <br />
                     <br />
                     <div onClick={this.handleinfoChange}>
-                        <div className="button">Return to Not Doing</div>
+                        <div className="button">Do, Not Doing</div>
                         <br />
                     </div>
                 </div>

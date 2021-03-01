@@ -36,6 +36,12 @@ class FileteredPoemsTable extends React.Component {
         const randNumber = Math.floor(Math.random() * dataArray.length) + 1;
         const changelogo =
             this.state.logoSpinClass === "spin" ? "spin-more" : "spin";
+
+        // Update Zen Count
+        let updatedPoemCount = Number(localStorage.zenCount) - 0.1;
+        updatedPoemCount = updatedPoemCount.toFixed(2);
+        localStorage.setItem("zenCount", updatedPoemCount);
+
         this.setState({
             visiblePoem: randNumber,
             filterText: "",
