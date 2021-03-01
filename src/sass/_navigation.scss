@@ -29,13 +29,13 @@
     line-height: 0;
     z-index: 1;
     height: 45px;
-    @include media($tablet) {
-        bottom: 0px;
-        right: 0;
-        left: auto;
-        width: 100px;
-        height: 100vh;
-    }
+    // @include media($tablet) {
+    //     bottom: 0px;
+    //     right: 0;
+    //     left: auto;
+    //     width: 100px;
+    //     height: 100vh;
+    // }
     > div {
         top: 5px;
     }
@@ -91,10 +91,11 @@
     position: absolute;
     right: 20px;
     @include media($desktop) {
+        // display: none !important;
         // border: 1px solid pink !important;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
+        // flex-direction: column;
+        // justify-content: center;
+        // flex-wrap: wrap;
     }
 }
 

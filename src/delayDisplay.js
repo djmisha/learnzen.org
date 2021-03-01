@@ -1,34 +1,25 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
-const useRecursiveTimeout = (callback, delay = 1000) => {
-    const ref = useRef();
-    useEffect(() => {
-        ref.current = callback;
-    });
-    useEffect(() => {
-        const tick = () => {
-            const ret = ref.current();
+class Delayed extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { hidden: true };
+    }
 
-            const nextDelay = Math.floor(Math.random() * (delay * 2)) + 1;
-            if (!ret) {
-                setTimeout(tick, nextDelay);
-            } else if (ret.constructor === Promise) {
-                ret.then(() => setTimeout(tick, nextDelay));
-            }
-        };
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({ hidden: false });
+        }, this.props.waitBeforeShow);
+    }
 
-        const timer = setTimeout(tick, delay);
+    render() {
+        return this.state.hidden ? "" : this.props.children;
+    }
+}
 
-        return () => clearTimeout(timer);
-    }, [delay]);
+Delayed.propTypes = {
+    waitBeforeShow: PropTypes.number.isRequired,
 };
 
-const Counter = () => {
-    const [count, setCount] = useState(0);
-
-    useRecursiveTimeout(() => setCount(count + 1), 1200);
-
-    return <div>{count}</div>;
-};
-
-export default Counter;
+export default Delayed;
