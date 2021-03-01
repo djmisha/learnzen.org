@@ -24,9 +24,7 @@ class SinglePoemRow extends React.Component {
         return (
             <li id={number} className={this.state.visible}>
                 <span>{number}</span>
-                {/* <Delayed waitBeforeShow={1500}> */}
                 <div className="poem-content">{content}</div>
-                {/* </Delayed> */}
             </li>
         );
     }

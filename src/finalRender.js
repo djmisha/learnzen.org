@@ -21,7 +21,7 @@ class FinalRender extends React.Component {
                     <h1>Tao Te Ching</h1>
                     <br></br>
                     <h2>
-                        Welcome student. <br /> Discover the meaninig of Zen.
+                        Welcome student. <br /> Discover the meaning of Zen.
                     </h2>
                     <p>What is your name?</p>
                     <SignIn />

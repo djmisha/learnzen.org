@@ -4,7 +4,6 @@ import NavIconNext from "./images/icon-next.js";
 import NavIconPrev from "./images/icon-prev.js";
 // import NavIconAll from "./images/icon-all.js";
 import NavIconRandom from "./images/icon-random.js";
-import Delayed from "./delayDisplay";
 
 class NavigationBar extends React.Component {
     constructor(props) {
@@ -84,10 +83,8 @@ class NavigationBar extends React.Component {
                         onClick={this.handleRandomPoemChange}
                         className="nav-random nav-icon"
                     >
-                        <Delayed waitBeforeShow={10000}>
-                            <NavIconRandom />
-                            <span>Any</span>
-                        </Delayed>
+                        <NavIconRandom />
+                        <span>Any</span>
                     </div>
 
                     {/* <div className="current-verse">
@@ -101,20 +98,16 @@ class NavigationBar extends React.Component {
                         onClick={this.handlePrevPoemChange}
                         className="nav-prev nav-icon"
                     >
-                        <Delayed waitBeforeShow={10000}>
-                            <NavIconPrev />
-                            <span>Prev</span>
-                        </Delayed>
+                        <NavIconPrev />
+                        <span>Prev</span>
                     </div>
 
                     <div
                         onClick={this.handleNextPoemChange}
                         className="nav-next nav-icon"
                     >
-                        <Delayed waitBeforeShow={10000}>
-                            <NavIconNext />
-                            <span>Next</span>
-                        </Delayed>
+                        <NavIconNext />
+                        <span>Next</span>
                     </div>
                 </div>
             </div>

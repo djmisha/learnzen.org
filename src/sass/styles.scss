@@ -18,12 +18,21 @@ body {
 .App {
     position: relative;
 }
-
+button,
 .button {
+    border: none;
     background-color: white;
     border-radius: 20px;
     padding: 10px 20px;
     display: inline;
     color: black;
     font-family: "Merienda One", cursive;
+    margin-top: 20px;
+}
+
+input {
+    display: block;
+    font-family: "Merienda One", cursive;
+    padding: 5px 10px;
+    font-size: 20px;
 }
