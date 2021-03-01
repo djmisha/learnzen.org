@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import Delayed from "../../delayDisplay";
 
 class SinglePoemRow extends React.Component {
