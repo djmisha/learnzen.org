@@ -26,6 +26,7 @@ class WelcomeScene extends React.Component {
     }
     render() {
         let username = localStorage.user;
+        // let seenPoems = localStorage.totalseenPoems;
         let zenCount = localStorage.zenCount;
         let currentPoem = localStorage.currentPoem;
 
@@ -35,18 +36,32 @@ class WelcomeScene extends React.Component {
                     <IconBuddah />
                 </div>
                 <div className={this.state.overlayClass}>
+                    <p>Hello, Zen Master</p>
                     <div onClick={this.handleinfoChange} className="buddah">
                         <IconBuddah />
                     </div>
-                    <p>Zen Master</p>
                     <h2>{username}</h2>
-                    <p>You have achieved</p>
-                    <h3> {zenCount} ZENS</h3>
-                    <p>You are studying chapter</p>
-                    <h3>{currentPoem}</h3>
-                    <br />
-                    <br />
+                    <p>
+                        Achieved: {zenCount} ZENS
+                        {/* <br /> */}
+                        {/* Read: {seenPoems} Chapters */}
+                        <br />
+                        Current chapter: {currentPoem}
+                    </p>
                     <div onClick={this.handleinfoChange}>
+                        <br />
+                        <span>道德经</span>
+                        <span>Tao Te Ching</span>
+                        <p>
+                            The Tao Te Ching is the fundamental text for
+                            philosophical Taoism, it is traditionally credited
+                            to the 6th-century BC sage Laozi.
+                            <br />
+                            <br />
+                            Ready to for enlightenment? Click on the Budah to
+                            continue exploring
+                            <br /> <br />
+                        </p>
                         <div className="button">Return to Not Doing</div>
                         <br />
                     </div>

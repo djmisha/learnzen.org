@@ -38,11 +38,7 @@ class SinglePoemRow extends React.Component {
         localStorage.setItem("currentPoem", this.props.number);
 
         return (
-            <li
-                id={number}
-                className={this.state.visible}
-                // onClick={this.handlePoemClick}
-            >
+            <li id={number} className={this.state.visible}>
                 <span>{number}</span>
                 <div className="poem-content">{content}</div>
             </li>

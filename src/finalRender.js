@@ -2,7 +2,6 @@ import React from "react";
 import dataArray from "./data";
 import FileteredPoemsTable from "./FileteredPoemsTable";
 import SignIn from "./localStorage";
-// import Unsplash from "./unsplash";
 
 /* Final Render where we pass in our data as props of FilteredPoemsTable*/
 
@@ -13,7 +12,6 @@ class FinalRender extends React.Component {
             return (
                 <div>
                     <FileteredPoemsTable poems={dataArray} />
-                    {/* <Unsplash /> */}
                 </div>
             );
         } else {
@@ -24,8 +22,8 @@ class FinalRender extends React.Component {
                     <br></br>
                     <br></br>
                     {/* <h1>Welcome</h1> */}
-                    <h2>Learn the meaninig of Zen</h2>
-                    <p>Hello, may we call you by name?</p>
+                    <h2>Welcome, student of Zen</h2>
+                    <p>What is your name?</p>
                     <SignIn />
                 </div>
             );
