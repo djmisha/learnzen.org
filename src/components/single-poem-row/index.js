@@ -1,4 +1,29 @@
-import React from "react";
+// import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+// import Counter from "../../delayDisplay";
+
+const useRecursiveTimeout = (callback, delay = 1000) => {
+    const ref = useRef();
+    useEffect(() => {
+        ref.current = callback;
+    });
+    useEffect(() => {
+        const tick = () => {
+            const ret = ref.current();
+
+            const nextDelay = Math.floor(Math.random() * (delay * 2)) + 1;
+            if (!ret) {
+                setTimeout(tick, nextDelay);
+            } else if (ret.constructor === Promise) {
+                ret.then(() => setTimeout(tick, nextDelay));
+            }
+        };
+
+        const timer = setTimeout(tick, delay);
+
+        return () => clearTimeout(timer);
+    }, [delay]);
+};
 
 class SinglePoemRow extends React.Component {
     constructor(props) {
@@ -6,39 +31,45 @@ class SinglePoemRow extends React.Component {
         this.state = {
             visible: this.props.className,
         };
-        // this.handlePoemClick = this.handlePoemClick.bind(this);
     }
 
-    // handlePoemClick() {
-    //     let changeClass = "";
-
-    //     if (this.state.visible === "visiblePoem") {
-    //         changeClass = "";
-    //     } else {
-    //         changeClass = "visiblePoem";
-    //     }
-
-    //     // Update Zen Count
-    //     let updatedPoemCount = Number(localStorage.zenCount) + 0.01;
-    //     updatedPoemCount = updatedPoemCount.toFixed(2);
-    //     localStorage.setItem("zenCount", updatedPoemCount);
-
-    //     this.setState({
-    //         visible: changeClass,
-    //     });
-    // }
     render() {
+        const Counter = () => {
+            const [count, setCount] = useState(0);
+
+            useRecursiveTimeout(() => setCount(count + 1), 2000);
+
+            return (
+                <div>
+                    <p>{count} sec</p>
+                    {/* {signleArray} */}
+
+                    {/* {console.log(
+                        content.map((str, index) => <p key={index}>{str}</p>)
+                    )} */}
+                </div>
+            );
+        };
+
+        localStorage.setItem("currentPoem", this.props.number);
+
         let number = this.props.number;
         let content = this.props.content;
+
         content = content
             .split("\n")
             .map((str, index) => <p key={index}>{str}</p>);
 
-        // Updates Current Poem in Local Storage
-        localStorage.setItem("currentPoem", this.props.number);
+        let signleArray = [];
+        for (let i = 0; i < content.length; i++) {
+            const element = content[i];
+            console.log(element);
+            signleArray.push(element);
+        }
 
         return (
             <li id={number} className={this.state.visible}>
+                <Counter></Counter>
                 <span>{number}</span>
                 <div className="poem-content">{content}</div>
             </li>
