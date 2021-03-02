@@ -7,7 +7,8 @@ import SignIn from "./localStorage";
 
 class FinalRender extends React.Component {
     render() {
-        localStorage.clear();
+        /* Use this to clear local storage */
+        // localStorage.clear();
         if (localStorage.currentPoem) {
             return (
                 <div>
