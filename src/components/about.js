@@ -1,4 +1,5 @@
 import React from "react";
+import ZenInfo from "./zenInfo";
 
 class About extends React.Component {
 
@@ -22,6 +23,8 @@ class About extends React.Component {
                     <p>
                         Check your progress by using the "My Zen" tab 
                     </p>
+                    <ZenInfo />
+
                 </div>
             </div>
         );
