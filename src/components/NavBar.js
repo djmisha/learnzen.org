@@ -1,7 +1,7 @@
 import React from "react";
-import Hello from "./hello.js";
-import IconLogo from "./images/icon-logo.js";
-import IconBuddah from "./images/icon-buddah.js";
+import Hello from "./greetUser.js";
+import IconLogo from "../images/icon-logo.js";
+import IconBuddah from "../images/icon-buddah.js";
 
 // import Logo from "./logo.js";
 

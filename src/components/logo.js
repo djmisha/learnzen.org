@@ -1,5 +1,5 @@
 import React from 'react';
-import IconLogo from './images/icon-logo.js'
+import IconLogo from '../images/icon-logo.js'
 
 
 class Logo extends React.Component {

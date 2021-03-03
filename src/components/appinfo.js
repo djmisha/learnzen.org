@@ -1,5 +1,5 @@
 import React from "react";
-import IconInfo from "./images/icon-info.js";
+import IconInfo from "../images/icon-info.js";
 
 class WelcomeScene extends React.Component {
     constructor(props) {

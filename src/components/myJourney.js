@@ -1,5 +1,5 @@
 import React from "react";
-import IconBuddah from "./images/icon-buddah.js";
+import IconBuddah from "../images/icon-buddah.js";
 
 class MyJourney extends React.Component {
     render() {

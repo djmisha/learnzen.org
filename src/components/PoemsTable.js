@@ -1,6 +1,6 @@
 import React from "react";
-import dataArray from "./data";
-import SinglePoemRow from "./components/single-poem-row/";
+import dataArray from "../data";
+import SinglePoemRow from "./singlePoemRow";
 
 class PoemsTable extends React.Component {
     render() {

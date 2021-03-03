@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import dataArray from "./data";
-import FileteredPoemsTable from "./FileteredPoemsTable";
+import dataArray from "../data";
+import FileteredPoemsTable from "./fileteredPoemsTable";
 import NavBar from "./NavBar";
 import MyJourney from "./myJourney";
-import "./sass/styles.scss";
+import "../sass/styles.scss";
 
 const TABS = {
     home: <MyJourney />,

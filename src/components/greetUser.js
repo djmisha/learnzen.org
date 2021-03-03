@@ -2,7 +2,7 @@ import React from "react";
 
 // https://programmingwithmosh.com/react/localstorage-react/
 
-class greetUser extends React.Component {
+class Hello extends React.Component {
     state = {
         user: "",
         rememberMe: false,
@@ -33,4 +33,4 @@ class greetUser extends React.Component {
     }
 }
 
-export default greetUser;
+export default Hello;

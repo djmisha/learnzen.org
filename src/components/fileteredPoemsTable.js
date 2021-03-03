@@ -1,11 +1,11 @@
 import React from "react";
-import dataArray from "./data";
-import NavigationBar from "./navigation-bar";
+import dataArray from "../data";
+import Logo from "./logo.js";
+import Hello from "./greetUser.js";
+import NavigationBar from "./navPoems";
 import PoemsTable from "./PoemsTable";
+import WelcomeScene from "./welcome";
 import Unsplash from "./unsplash";
-// import Logo from "./logo.js";
-// import Hello from "./hello.js";
-// import WelcomeScene from "./welcome";
 
 class FileteredPoemsTable extends React.Component {
     constructor(props) {
@@ -38,7 +38,7 @@ class FileteredPoemsTable extends React.Component {
             this.state.logoSpinClass === "spin" ? "spin-more" : "spin";
 
         // Update Zen Count
-        let updatedPoemCount = Number(localStorage.zenCount) - 0.02;
+        let updatedPoemCount = Number(localStorage.zenCount) - 0.1;
         updatedPoemCount = updatedPoemCount.toFixed(2);
         localStorage.setItem("zenCount", updatedPoemCount);
 
@@ -101,7 +101,7 @@ class FileteredPoemsTable extends React.Component {
     }
 
     render() {
-        // let zenCount = localStorage.zenCount;
+        let zenCount = localStorage.zenCount;
 
         return (
             <div>
@@ -116,17 +116,18 @@ class FileteredPoemsTable extends React.Component {
                     poems={this.props.poems}
                 />
                 <Unsplash />
+
                 <PoemsTable
                     poems={this.props.poems}
                     filterText={this.state.filterText}
                     visiblePoem={this.state.visiblePoem}
                 />
-                {/* <footer className={this.state.logoSpinClass}> */}
-                {/* <Logo /> */}
-                {/* <Hello /> */}
-                {/* <WelcomeScene /> */}
-                {/* <div className="zenzen-count"> {zenCount}</div> */}
-                {/* </footer> */}
+                <footer className={this.state.logoSpinClass}>
+                    <Logo />
+                    <Hello />
+                    <WelcomeScene />
+                    <div className="read-count"> {zenCount}</div>
+                </footer>
             </div>
         );
     }

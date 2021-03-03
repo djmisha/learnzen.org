@@ -1,5 +1,5 @@
 import React from "react";
-import FinalRender from "./finalRender.js";
+import FinalRender from "./components/finalRender.js";
 import "./sass/styles.scss";
 
 function App() {
