@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import dataArray from "../data";
-import FileteredPoemsTable from "./fileteredPoemsTable";
+import FileteredPoemsTable from "./FileteredPoemsTable";
 import NavBar from "./NavBar";
 import MyJourney from "./myJourney";
+import About from "./about";
+import Practice from "./practice";
 import "../sass/styles.scss";
 
 const TABS = {
-    home: <MyJourney />,
-    study: <FileteredPoemsTable poems={dataArray} />,
-    // 'contact': <Contact />
+    "home": <MyJourney />,
+    "study": <FileteredPoemsTable poems={dataArray} />,
+    "about": <About />,
+    "meditate": <Practice />
 };
 
 function MainApp() {

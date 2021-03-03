@@ -13,21 +13,21 @@ footer {
     z-index: 9999;
 }
 
-.info {
-    svg {
-        position: relative;
-        fill: #ccc;
-        width: 30px;
-    }
-}
+// .info {
+//     svg {
+//         position: relative;
+//         fill: #ccc;
+//         width: 30px;
+//     }
+// }
 
-.the-info-icon .info svg {
-    fill: #000;
-    z-index: 1;
-    position: absolute;
-    right: 35px;
-    bottom: 5px;
-}
+// .the-info-icon .info svg {
+//     fill: #000;
+//     z-index: 1;
+//     position: absolute;
+//     right: 35px;
+//     bottom: 5px;
+// }
 
 .info-overlay {
     position: fixed;
@@ -47,22 +47,20 @@ footer {
         margin-top: 20px;
         margin-bottom: 20px;
         fill: #fff;
-        width: 80px;
+        width: 60px;
     }
 }
 
 .info-overlay span,
 .info-overlay p {
     padding: 20px 20px;
-    color: #fff;
-    max-width: 600px;
     margin: 0 auto;
 }
 
-.info-overlay span {
-    font-size: 30px;
-    display: block;
-}
+// .info-overlay span {
+//     font-size: 30px;
+//     display: block;
+// }
 
 .info-overlay p {
     font-size: 18px;
@@ -93,7 +91,8 @@ footer {
     margin-top: 20px;
     margin-bottom: 30px;
     > div {
-        width: 49%;
+        width: calc(50% - 1px);
+        // border: 1px solid rgba(white, 0.2);
         border-top: 1px solid rgba(white, 0.2);
         border-bottom: 1px solid rgba(white, 0.2);
         &:nth-of-type(odd) {
@@ -117,7 +116,8 @@ footer > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // font-size: 13px;
+    padding-left: 5px;
+    padding-right: 5px;
     > div {
         text-align: center;
     }
@@ -125,4 +125,5 @@ footer > div {
 
 footer svg {
     width: 28px;
+    height: 28px;;
 }

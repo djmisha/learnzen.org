@@ -1,10 +1,7 @@
 import React from "react";
 import dataArray from "../data";
-import Logo from "./logo.js";
-import Hello from "./greetUser.js";
 import NavigationBar from "./navPoems";
 import PoemsTable from "./PoemsTable";
-import WelcomeScene from "./welcome";
 import Unsplash from "./unsplash";
 
 class FileteredPoemsTable extends React.Component {
@@ -101,7 +98,8 @@ class FileteredPoemsTable extends React.Component {
     }
 
     render() {
-        let zenCount = localStorage.zenCount;
+        /* reminder: add effeect where zen heart floats up with count +1 */
+        // let zenCount = localStorage.zenCount;
 
         return (
             <div>
@@ -116,18 +114,11 @@ class FileteredPoemsTable extends React.Component {
                     poems={this.props.poems}
                 />
                 <Unsplash />
-
                 <PoemsTable
                     poems={this.props.poems}
                     filterText={this.state.filterText}
                     visiblePoem={this.state.visiblePoem}
                 />
-                <footer className={this.state.logoSpinClass}>
-                    <Logo />
-                    <Hello />
-                    <WelcomeScene />
-                    <div className="read-count"> {zenCount}</div>
-                </footer>
             </div>
         );
     }
