@@ -28,7 +28,8 @@ class FinalRender extends React.Component {
                     <p>What is your name?</p>
                     <SignIn />
                     <br></br>
-
+                    <hr></hr>
+                    <br></br>
                     <h1>What is Zen?</h1>
                     <p>
                         Zen is something we are, our true nature expressing

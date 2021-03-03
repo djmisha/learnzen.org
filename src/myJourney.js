@@ -2,35 +2,13 @@ import React from "react";
 import IconBuddah from "./images/icon-buddah.js";
 
 class MyJourney extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            // infoClass: "the-info-icon info-hidden",
-            overlayClass: "info-overlay info-normal",
-        };
-        // this.handleinfoChange = this.handleinfoChange.bind(this);
-    }
-    // handleinfoChange() {
-    //     const changeinfo =
-    //         this.state.infoClass === "the-info-icon info-normal"
-    //             ? "the-info-icon info-change"
-    //             : "the-info-icon info-normal";
-    //     const changeOverlay =
-    //         this.state.overlayClass === "info-overlay info-hidden"
-    //             ? "info-overlay info-visible"
-    //             : "info-overlay info-hidden";
-    //     this.setState({
-    //         // infoClass: changeinfo,
-    //         // overlayClass: changeOverlay,
-    //     });
-    // }
     render() {
         let username = localStorage.user;
         let zenCount = localStorage.zenCount;
         let currentPoem = localStorage.currentPoem;
 
         return (
-            <div className={this.state.overlayClass}>
+            <div className="info-overlay info-normal">
                 <div className="buddah">
                     <IconBuddah />
                 </div>

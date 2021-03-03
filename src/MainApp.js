@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import FinalRender from "./finalRender.js";
 import dataArray from "./data";
 import FileteredPoemsTable from "./FileteredPoemsTable";
 import NavBar from "./NavBar";
@@ -23,13 +22,5 @@ function MainApp() {
         </div>
     );
 }
-
-// function App() {
-//     return (
-//         <main className="App">
-//             <FinalRender />
-//         </main>
-//     );
-// }
 
 export default MainApp;
