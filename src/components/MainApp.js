@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import dataArray from "../data";
-import FileteredPoemsTable from "./FileteredPoemsTable";
+import FileteredPoemsTable from "./fileteredPoemsTable";
 import NavBar from "./NavBar";
 import MyJourney from "./myJourney";
 import About from "./about";
