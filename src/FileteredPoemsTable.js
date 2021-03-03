@@ -38,7 +38,7 @@ class FileteredPoemsTable extends React.Component {
             this.state.logoSpinClass === "spin" ? "spin-more" : "spin";
 
         // Update Zen Count
-        let updatedPoemCount = Number(localStorage.zenCount) - 0.1;
+        let updatedPoemCount = Number(localStorage.zenCount) - 0.02;
         updatedPoemCount = updatedPoemCount.toFixed(2);
         localStorage.setItem("zenCount", updatedPoemCount);
 
@@ -116,7 +116,6 @@ class FileteredPoemsTable extends React.Component {
                     poems={this.props.poems}
                 />
                 <Unsplash />
-
                 <PoemsTable
                     poems={this.props.poems}
                     filterText={this.state.filterText}
@@ -126,7 +125,7 @@ class FileteredPoemsTable extends React.Component {
                     <Logo />
                     <Hello />
                     <WelcomeScene />
-                    <div className="read-count"> {zenCount}</div>
+                    <div className="zenzen-count"> {zenCount}</div>
                 </footer>
             </div>
         );

@@ -5,8 +5,8 @@ class WelcomeScene extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            infoClass: "the-info-icon info-normal",
-            overlayClass: "info-overlay info-hidden",
+            infoClass: "the-info-icon info-hidden",
+            overlayClass: "info-overlay info-normal",
         };
         this.handleinfoChange = this.handleinfoChange.bind(this);
     }
@@ -38,16 +38,30 @@ class WelcomeScene extends React.Component {
                     <div onClick={this.handleinfoChange} className="buddah">
                         <IconBuddah />
                     </div>
-                    <p>Zen Master</p>
-                    <h2>{username}</h2>
-                    <p>You have achieved</p>
-                    <h3> {zenCount} ZENS</h3>
-                    <p>You are studying chapter</p>
-                    <h3>{currentPoem}</h3>
+                    <h2>Hello, {username}</h2>
+                    <p>Your journey...</p>
+                    <div className="your-journey">
+                        <div>
+                            <p>ZenZens</p>
+                            <h3> {zenCount} </h3>
+                        </div>
+                        <div>
+                            <p>Studying chapter</p>
+                            <h3>{currentPoem}</h3>
+                        </div>
+                        <div>
+                            <p>Zen Meditations</p>
+                            <h3>soon...</h3>
+                        </div>
+                        <div>
+                            <p>Shares</p>
+                            <h3>soon...</h3>
+                        </div>
+                    </div>
                     <br />
                     <br />
                     <div onClick={this.handleinfoChange}>
-                        <div className="button">Do, Not Doing</div>
+                        <div className="button">Continue Journey</div>
                         <br />
                     </div>
                 </div>

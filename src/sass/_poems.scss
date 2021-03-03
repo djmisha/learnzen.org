@@ -10,12 +10,13 @@ ul.all-poems {
     right: 0px;
     overflow-x: scroll;
     background-color: rgba($color: #000, $alpha: 0.5);
+    z-index: 2;
 }
 
 .all-poems > li {
     font-family: "Merienda One", cursive;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 26px;
     padding: 20px 10px 60px 20px;
     transition: all 0.5s ease;
     opacity: 0;
@@ -27,8 +28,8 @@ ul.all-poems {
     @include media($tablet) {
         margin: 0 auto;
         max-width: 1120px;
-        font-size: 30px;
-        line-height: 48px;
+        font-size: 25px;
+        line-height: 38px;
         padding: 80px 10px 0px 20px;
     }
     p,

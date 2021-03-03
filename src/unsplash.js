@@ -16,7 +16,7 @@ const PhotoComp = ({ photo }) => {
                 style={{ backgroundImage: `url(${urls.regular})` }}
                 className="unsplash-background"
             ></div>
-            <img className="img" src={urls.regular} alt="unsplash" />
+            {/* <img className="img" src={urls.regular} alt="unsplash" /> */}
             <div className="unsplash-credit">
                 Photo by{" "}
                 <a
@@ -25,6 +25,15 @@ const PhotoComp = ({ photo }) => {
                     href={`https://unsplash.com/@${user.username}`}
                 >
                     {user.name}
+                </a>{" "}
+                from
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`https://unsplash.com/`}
+                >
+                    {" "}
+                    Unsplash
                 </a>
             </div>
         </Fragment>

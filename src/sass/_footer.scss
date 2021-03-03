@@ -91,7 +91,8 @@ footer {
     overflow: scroll;
     transition: right 0.5s ease-in-out;
     .buddah svg {
-        margin-top: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         fill: #fff;
         width: 80px;
     }
@@ -102,7 +103,6 @@ footer {
 }
 
 .info-overlay.info-visible {
-    // bottom: 0;
     right: 0;
 }
 
@@ -127,20 +127,38 @@ footer {
 .user-hello {
     bottom: 10px;
     position: absolute;
-    right: 70px;
+    right: 90px;
 }
 
-.read-count {
+.zenzen-count {
     position: absolute;
-    bottom: 10px;
+    bottom: 17px;
     right: 10px;
-    background: black;
-    border-radius: 50%;
-    color: lightskyblue;
-    font-size: 11px;
+    color: black;
+    font-size: 14px;
     width: 25px;
     height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.your-journey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    > div {
+        width: 49%;
+        border-top: 1px solid rgba(white, 0.2);
+        border-bottom: 1px solid rgba(white, 0.2);
+        &:nth-of-type(odd) {
+            border-right: 1px solid rgba(white, 0.2);
+        }
+        h3 {
+            margin-top: 0px;
+        }
+    }
 }

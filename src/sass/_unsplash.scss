@@ -1,5 +1,4 @@
 .unsplash-feed {
-    z-index: -1;
     position: fixed;
     top: 0px;
     left: 0;
@@ -8,6 +7,7 @@
 }
 
 .unsplash-background {
+    z-index: 1;
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -18,9 +18,8 @@
 
 .unsplash-credit {
     position: absolute;
-    top: 5px;
-    right: 10px;
+    bottom: 110px;
+    left: 12px;
     font-size: 8px;
     color: #fff;
-    z-index: 9999;
 }
