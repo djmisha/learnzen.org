@@ -59,7 +59,7 @@ class FileteredPoemsTable extends React.Component {
             visiblePoem = visiblePoem + 1;
         }
 
-        // Update Zen Count in Local Storage
+        // Update Zen Count in Local Stora ge
         let updatedPoemCount = Number(localStorage.zenCount) + 0.01;
         updatedPoemCount = updatedPoemCount.toFixed(2);
         localStorage.setItem("zenCount", updatedPoemCount);
