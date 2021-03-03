@@ -1,11 +1,11 @@
 import React from "react";
 import dataArray from "./data";
-import Logo from "./logo.js";
-import Hello from "./hello.js";
 import NavigationBar from "./navigation-bar";
 import PoemsTable from "./PoemsTable";
-import WelcomeScene from "./welcome";
 import Unsplash from "./unsplash";
+// import Logo from "./logo.js";
+// import Hello from "./hello.js";
+// import WelcomeScene from "./welcome";
 
 class FileteredPoemsTable extends React.Component {
     constructor(props) {
@@ -101,7 +101,7 @@ class FileteredPoemsTable extends React.Component {
     }
 
     render() {
-        let zenCount = localStorage.zenCount;
+        // let zenCount = localStorage.zenCount;
 
         return (
             <div>
@@ -121,12 +121,12 @@ class FileteredPoemsTable extends React.Component {
                     filterText={this.state.filterText}
                     visiblePoem={this.state.visiblePoem}
                 />
-                <footer className={this.state.logoSpinClass}>
-                    <Logo />
-                    <Hello />
-                    <WelcomeScene />
-                    <div className="zenzen-count"> {zenCount}</div>
-                </footer>
+                {/* <footer className={this.state.logoSpinClass}> */}
+                {/* <Logo /> */}
+                {/* <Hello /> */}
+                {/* <WelcomeScene /> */}
+                {/* <div className="zenzen-count"> {zenCount}</div> */}
+                {/* </footer> */}
             </div>
         );
     }

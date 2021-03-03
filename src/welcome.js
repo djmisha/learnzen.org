@@ -59,7 +59,6 @@ class WelcomeScene extends React.Component {
                         </div>
                     </div>
                     <br />
-                    <br />
                     <div onClick={this.handleinfoChange}>
                         <div className="button">Continue Journey</div>
                         <br />

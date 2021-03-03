@@ -1,6 +1,7 @@
 import React from "react";
-import dataArray from "./data";
-import FileteredPoemsTable from "./FileteredPoemsTable";
+// import dataArray from "./data";
+// import FileteredPoemsTable from "./FileteredPoemsTable";
+import MainApp from "./MainApp";
 import SignIn from "./localStorage";
 
 /* Final Render where we pass in our data as props of FilteredPoemsTable*/
@@ -12,7 +13,7 @@ class FinalRender extends React.Component {
         if (localStorage.currentPoem) {
             return (
                 <div>
-                    <FileteredPoemsTable poems={dataArray} />
+                    <MainApp />
                 </div>
             );
         } else {
