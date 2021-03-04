@@ -8,14 +8,14 @@ import Practice from "./practice";
 import "../sass/styles.scss";
 
 const TABS = {
-    "home": <MyJourney />,
-    "study": <FileteredPoemsTable poems={dataArray} />,
-    "about": <About />,
-    "meditate": <Practice />
+    home: <MyJourney />,
+    study: <FileteredPoemsTable poems={dataArray} />,
+    about: <About />,
+    meditate: <Practice />,
 };
 
 function MainApp() {
-    const [selectedTab, setSelectedTab] = useState("home");
+    const [selectedTab, setSelectedTab] = useState("meditate");
 
     return (
         <div>

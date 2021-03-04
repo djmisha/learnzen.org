@@ -1,15 +1,13 @@
 import React from "react";
+import Meditate from "../Meditate";
 
 class Practice extends React.Component {
-
     render() {
         return (
-            <div className="app-screen">
+            <div className="app-screen-meditate">
                 <div>
                     <h2>Practice Zen Meditation</h2>
-                    <p>
-                        coming soon, stay tuned...      
-                                      </p>
+                    <Meditate />
                 </div>
             </div>
         );
