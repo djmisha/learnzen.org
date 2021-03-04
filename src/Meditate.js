@@ -5,7 +5,7 @@ import Sound from "react-sound";
 import SoundComponent from "./playSound";
 import StyledSlider from "./StyledSlider";
 import "react-circular-progressbar/dist/styles.css";
-import "./App.css";
+import "./meditate.scss";
 
 const playButton = "svg/play.svg";
 const pauseButton = "svg/pause.svg";
@@ -163,7 +163,7 @@ class Meditate extends Component {
                     this.timeSelect({ duration });
                 }}
             >
-                {duration / 60} Minutes
+                {duration / 60} Mins
             </button>
         ));
 
@@ -186,6 +186,16 @@ class Meditate extends Component {
                 {audioName}
             </button>
         ));
+
+        // console.log(this.state.seekCurrentPosition);
+        // Update Mediation Count
+        // Update Zen Count in Local Stora ge
+        let updatedMeditation =
+            Number(localStorage.meditationCount) +
+            this.state.seekCurrentPosition;
+        updatedMeditation = updatedMeditation.toFixed(2);
+        localStorage.setItem("meditationCount", updatedMeditation);
+        console.log(updatedMeditation);
 
         return (
             <div className="Meditate">

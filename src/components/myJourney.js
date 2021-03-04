@@ -6,6 +6,7 @@ class MyJourney extends React.Component {
         let username = localStorage.user;
         let zenCount = localStorage.zenCount;
         let currentPoem = localStorage.currentPoem;
+        let meditationCount = localStorage.meditationCount;
 
         return (
             <div className="info-overlay info-normal">
@@ -25,7 +26,7 @@ class MyJourney extends React.Component {
                     </div>
                     <div>
                         <p>Zen Meditations</p>
-                        <h3>soon...</h3>
+                        <h3>{meditationCount}</h3>
                     </div>
                     <div>
                         <p>Shares</p>

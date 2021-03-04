@@ -8,6 +8,7 @@ class SignIn extends React.Component {
         currentPoem: null,
         totalseenPoems: 0,
         zenCount: null,
+        meditationCount: 0,
     };
 
     handleChange = (event) => {
@@ -26,6 +27,7 @@ class SignIn extends React.Component {
         if (currentPoem === null) {
             localStorage.setItem("zenCount", 0.05);
             localStorage.setItem("currentPoem", 1);
+            localStorage.setItem("meditationCount", 0.1);
         }
     };
 
