@@ -1,5 +1,5 @@
 import React from "react";
-import ZenInfo from "./zenInfo";
+// import ZenInfo from "./zenInfo";
 import Accordion from "./about/accordion";
 
 class About extends React.Component {
