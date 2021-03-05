@@ -29,7 +29,7 @@
         width: 70px;
         height: 70px;
         background-color: rgba(white, 0.3);
-        margin: 0 5px;
+        margin: 0 2px;
     }
 
     .active {
@@ -50,14 +50,10 @@
 
     .time-menu,
     .audio-menu {
-        /* flex: 1; */
         height: 80px;
-        margin-bottom: 80px;
+        margin-bottom: 40px;
         display: flex;
         justify-content: center;
-        /* justify-content: space-evenly; */
-        /* align-items: center; */
-        /* flex-direction: row; */
     }
 
     .player-container {
@@ -72,6 +68,7 @@
     .player-container {
         /* background-color: #afafff; */
         position: relative;
+        // border: 1px solid white;
     }
 
     .player-container .play,

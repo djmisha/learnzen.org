@@ -11,6 +11,8 @@ ul.all-poems {
     overflow-x: scroll;
     background-color: rgba($color: #000, $alpha: 0.5);
     z-index: 1;
+    height: calc(100vh - 95px);
+    // padding-bottom: 20px;
 }
 
 .all-poems > li {
@@ -25,6 +27,7 @@ ul.all-poems {
     bottom: 0px;
     left: 0px;
     right: 0px;
+    margin-bottom: 40px;
     @include media($tablet) {
         margin: 0 auto;
         max-width: 1120px;

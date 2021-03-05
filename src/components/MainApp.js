@@ -15,7 +15,7 @@ const TABS = {
 };
 
 function MainApp() {
-    const [selectedTab, setSelectedTab] = useState("meditate");
+    const [selectedTab, setSelectedTab] = useState("study");
 
     return (
         <div>

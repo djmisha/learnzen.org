@@ -111,17 +111,17 @@ class Meditate extends Component {
         }
     }
 
-    handleTimeHover() {
-        this.setState({
-            timeHovered: !this.state.timeHovered,
-        });
-    }
+    // handleTimeHover() {
+    //     this.setState({
+    //         timeHovered: !this.state.timeHovered,
+    //     });
+    // }
 
-    handleAudioHover() {
-        this.setState({
-            audioHovered: !this.state.audioHovered,
-        });
-    }
+    // handleAudioHover() {
+    //     this.setState({
+    //         audioHovered: !this.state.audioHovered,
+    //     });
+    // }
 
     volumeChange = (value) => {
         this.setState({
@@ -151,8 +151,8 @@ class Meditate extends Component {
         const timeOptions = this.state.timeValues.map((duration) => (
             <button
                 key={duration}
-                onMouseEnter={this.handleTimeHover.bind(this)}
-                onMouseLeave={this.handleTimeHover.bind(this)}
+                // onMouseEnter={this.handleTimeHover.bind(this)}
+                // onMouseLeave={this.handleTimeHover.bind(this)}
                 className={
                     !this.state.timeHovered &&
                     duration === this.state.desiredTime
@@ -170,8 +170,8 @@ class Meditate extends Component {
         const audioOptions = this.state.audioNames.map((audioName) => (
             <button
                 key={audioName}
-                onMouseEnter={this.handleAudioHover.bind(this)}
-                onMouseLeave={this.handleAudioHover.bind(this)}
+                // onMouseEnter={this.handleAudioHover.bind(this)}
+                // onMouseLeave={this.handleAudioHover.bind(this)}
                 className={
                     !this.state.audioHovered &&
                     this.state.audioUrl ===
