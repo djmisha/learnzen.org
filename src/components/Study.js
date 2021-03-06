@@ -1,10 +1,10 @@
 import React from "react";
 import dataArray from "../data";
-import NavigationBar from "./navPoems";
-import PoemsTable from "./PoemsTable";
-import Unsplash from "./unsplash";
+import NavigationBar from "./study/navPoems";
+import PoemsTable from "./study/PoemsTable";
+import Unsplash from "./study/unsplash";
 
-class FileteredPoemsTable extends React.Component {
+class Study extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -124,4 +124,4 @@ class FileteredPoemsTable extends React.Component {
     }
 }
 
-export default FileteredPoemsTable;
+export default Study;

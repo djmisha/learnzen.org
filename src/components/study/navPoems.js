@@ -1,9 +1,9 @@
 import React from "react";
 // import NavIconSeach from "./images/icon-search.js";
-import NavIconNext from "../images/icon-next.js";
-import NavIconPrev from "../images/icon-prev.js";
+import NavIconNext from "../../images/icon-next.js";
+import NavIconPrev from "../../images/icon-prev.js";
 // import NavIconAll from "./images/icon-all.js";
-import NavIconRandom from "../images/icon-random.js";
+import NavIconRandom from "../../images/icon-random.js";
 
 class NavigationBar extends React.Component {
     constructor(props) {

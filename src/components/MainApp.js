@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import dataArray from "../data";
-import FileteredPoemsTable from "./fileteredPoemsTable";
+import Study from "./Study";
 import NavBar from "./NavBar";
 import MyJourney from "./myJourney";
 import About from "./about";
@@ -9,7 +9,7 @@ import "../sass/styles.scss";
 
 const TABS = {
     home: <MyJourney />,
-    study: <FileteredPoemsTable poems={dataArray} />,
+    study: <Study poems={dataArray} />,
     about: <About />,
     meditate: <Practice />,
 };

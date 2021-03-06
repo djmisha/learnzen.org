@@ -17,16 +17,16 @@ class MyJourney extends React.Component {
                 <p>Your journey...</p>
                 <div className="your-journey">
                     <div>
-                        <p>ZenZens</p>
-                        <h3> {zenCount} </h3>
-                    </div>
-                    <div>
                         <p>Studying chapter</p>
                         <h3>{currentPoem}</h3>
                     </div>
                     <div>
                         <p>Zen Meditations</p>
-                        <h3>{meditationCount}</h3>
+                        <h3>{meditationCount / 20}</h3>
+                    </div>
+                    <div>
+                        <p>ZenZens</p>
+                        <h3> {zenCount} </h3>
                     </div>
                     <div>
                         <p>Shares</p>

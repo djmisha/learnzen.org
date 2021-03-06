@@ -1,5 +1,5 @@
 import React from "react";
-import Delayed from "./delayDisplay";
+import Delayed from "../delayDisplay";
 
 class SinglePoemRow extends React.Component {
     constructor(props) {
