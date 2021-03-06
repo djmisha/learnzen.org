@@ -4,6 +4,7 @@
 @import "poems";
 @import "navigation";
 @import "unsplash";
+@import "chat";
 @import "footer";
 
 @import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap");
@@ -28,7 +29,6 @@ button,
     display: inline;
     color: black;
     font-family: "Merienda One", cursive;
-    margin-top: 20px;
 }
 
 input {
