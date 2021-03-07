@@ -17,9 +17,9 @@ class SinglePoemRow extends React.Component {
         let content = this.props.content;
 
         content = content.split("\n").map((str, index) => (
-            // <Delayed waitBeforeShow={1500 * index} key={index}>
-            <p>{str}</p>
-            // </Delayed>
+            <Delayed waitBeforeShow={1500 * index} key={index}>
+                <p>{str}</p>
+            </Delayed>
         ));
 
         return (

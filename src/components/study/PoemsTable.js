@@ -4,7 +4,7 @@ import SinglePoemRow from "./singlePoemRow";
 
 class PoemsTable extends React.Component {
     render() {
-        const filterText = this.props.filterText;
+        // const filterText = this.props.filterText;
         const visiblePoem = this.props.visiblePoem;
         const poemRows = [];
 
