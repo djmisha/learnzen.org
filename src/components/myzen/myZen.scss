@@ -2,14 +2,16 @@
     // padding-top: 40px;
     position: fixed;
     right: 0;
-    bottom: 60px;
+    // bottom: 60px;
     top: 0;
     width: 100%;
-    height: calc(100% - 60px);
+    height: calc(100vh - 60px);
+    // border: 10px solid pink;
     text-align: left;
     z-index: 9999;
     color: white;
     transition: right 0.5s ease-in-out;
+    // overflow: hidden;
     h2 {
         padding-top: 40px;
         padding-left: 20px;
@@ -44,5 +46,8 @@
                 margin-top: 0px;
             }
         }
+    }
+    .unsplash-background {
+        opacity: 0.6;
     }
 }
