@@ -11,7 +11,7 @@ import IconChat from "../images/icon-chat.js";
 
 function NavBar({ setSelectedTab }) {
     return (
-        <footer>
+        <nav>
             {/* <div>
                 <Hello />
             </div> */}
@@ -45,7 +45,7 @@ function NavBar({ setSelectedTab }) {
                 </div>
                 <div>Chat</div>
             </div>
-        </footer>
+        </nav>
     );
 }
 

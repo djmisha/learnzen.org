@@ -30,7 +30,7 @@ const data = [
     {
         title: "What Zen is Not",
         paragraph:
-            "  There are many common misconceptions ZenInfo Zen. It is important to know that Zen practice is not religion, is not a belief system, is not a dogma or doctrine. One does not have to be buddist to achieve a zen state of mind.",
+            "  There are many common misconceptions about Zen. It is important to know that Zen practice is not religion, is not a belief system, is not a dogma or doctrine. One does not have to be buddist to achieve a zen state of mind.",
     },
 ];
 

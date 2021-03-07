@@ -1,0 +1,48 @@
+.screen-myzen {
+    // padding-top: 40px;
+    position: fixed;
+    right: 0;
+    bottom: 60px;
+    top: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    text-align: left;
+    z-index: 9999;
+    color: white;
+    transition: right 0.5s ease-in-out;
+    h2 {
+        padding-top: 40px;
+        padding-left: 20px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 1.4em;
+    }
+    span,
+    p {
+        padding: 20px 20px;
+        margin: 0 auto;
+    }
+    .your-journey {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        // margin-top: 20px;
+        margin-bottom: 30px;
+        > div {
+            text-align: center;
+
+            width: calc(50% - 1px);
+            background-color: rgba(black, 0.6);
+            border-top: 1px solid rgba(white, 0.1);
+            border-bottom: 1px solid rgba(white, 0.1);
+            &:nth-of-type(odd) {
+                border-right: 1px solid rgba(white, 0.1);
+            }
+            h3 {
+                margin-top: 0px;
+            }
+        }
+    }
+}

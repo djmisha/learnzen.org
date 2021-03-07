@@ -1,5 +1,7 @@
 import React from "react";
 // import ZenInfo from "./zenInfo";
+import Unsplash from "./study/unsplash";
+
 import Accordion from "./about/accordion";
 
 class About extends React.Component {
@@ -10,6 +12,7 @@ class About extends React.Component {
                     <h2>About Zen</h2>
                     <Accordion></Accordion>
                 </div>
+                <Unsplash />
             </div>
         );
     }

@@ -68,7 +68,7 @@
 
     form button {
         width: 20%;
-        background-color: rgb(56, 56, 143);
+        background-color: rgb(68, 182, 223);
     }
 
     input {
@@ -86,7 +86,7 @@
         background-color: #282c34; /* Green */
         border: none;
         color: white;
-        padding: 15px 32px;
+        padding: 15px 12px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -137,6 +137,8 @@
         color: white;
         background: #0b93f6;
         align-self: flex-end;
+        text-align: left;
+        // font-size: 16px;
     }
     .received p {
         background: #e5e5ea;

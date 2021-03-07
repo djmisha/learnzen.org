@@ -1,8 +1,8 @@
 import React from "react";
-import dataArray from "../data";
-import NavigationBar from "./study/navPoems";
-import PoemsTable from "./study/PoemsTable";
-import Unsplash from "./study/unsplash";
+import dataArray from "../../data";
+import NavigationBar from "./navPoems";
+import PoemsTable from "./PoemsTable";
+import Unsplash from "./unsplash";
 
 class Study extends React.Component {
     constructor(props) {
@@ -10,7 +10,6 @@ class Study extends React.Component {
         this.state = {
             filterText: "",
             visiblePoem: parseInt(localStorage.currentPoem),
-            logoSpinClass: "spin",
         };
         this.handleSearchFilterTextChange = this.handleSearchFilterTextChange.bind(
             this
@@ -31,8 +30,6 @@ class Study extends React.Component {
     }
     handleRandomPoemChange(visiblePoem) {
         const randNumber = Math.floor(Math.random() * dataArray.length) + 1;
-        const changelogo =
-            this.state.logoSpinClass === "spin" ? "spin-more" : "spin";
 
         // Update Zen Count
         let updatedPoemCount = Number(localStorage.zenCount) - 0.1;
@@ -42,7 +39,6 @@ class Study extends React.Component {
         this.setState({
             visiblePoem: randNumber,
             filterText: "",
-            logoSpinClass: changelogo,
         });
     }
 
@@ -64,13 +60,9 @@ class Study extends React.Component {
         updatedPoemCount = updatedPoemCount.toFixed(2);
         localStorage.setItem("zenCount", updatedPoemCount);
 
-        const changelogo =
-            this.state.logoSpinClass === "spin" ? "spin-more" : "spin";
-
         this.setState({
             visiblePoem: visiblePoem,
             filterText: "",
-            logoSpinClass: changelogo,
         });
     }
 
@@ -81,13 +73,9 @@ class Study extends React.Component {
             visiblePoem = visiblePoem - 1;
         }
 
-        const changelogo =
-            this.state.logoSpinClass === "spin" ? "spin-more" : "spin";
-
         this.setState({
             visiblePoem: visiblePoem,
             filterText: "",
-            logoSpinClass: changelogo,
         });
     }
 

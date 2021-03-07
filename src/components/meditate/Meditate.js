@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 // import logo from './logo.svg';
 // import StyledProgressbar from "./StyledProgressbar";
+// import "react-circular-progressbar/dist/styles.css";
 import Sound from "react-sound";
 import SoundComponent from "./playSound";
 import StyledSlider from "./StyledSlider";
-import "react-circular-progressbar/dist/styles.css";
 import "./meditate.scss";
 
 const playButton = "svg/play.svg";

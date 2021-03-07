@@ -1,7 +1,5 @@
 import React, { useRef, useState } from "react";
 
-// import "./sass/styles.scss";
-
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";

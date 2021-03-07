@@ -14,10 +14,11 @@ class PoemsTable extends React.Component {
 
         dataArray.forEach((poem) => {
             /*Looks for matching Text*/
+            /* Search  */
 
-            if (poem.content.indexOf(filterText) === -1) {
-                return;
-            }
+            // if (poem.content.indexOf(filterText) === -1) {
+            //     return;
+            // }
 
             /*Looks for visible Poem by number*/
 
@@ -42,16 +43,16 @@ class PoemsTable extends React.Component {
                 );
             }
 
-            if (visiblePoem === "all") {
-                poemRows.push(
-                    <SinglePoemRow
-                        number={poem.number}
-                        content={poem.content}
-                        key={poem.number}
-                        className="visiblePoem"
-                    />
-                );
-            }
+            // if (visiblePoem === "all") {
+            //     poemRows.push(
+            //         <SinglePoemRow
+            //             number={poem.number}
+            //             content={poem.content}
+            //             key={poem.number}
+            //             className="visiblePoem"
+            //         />
+            //     );
+            // }
         });
 
         return <ul className="all-poems">{poemRows}</ul>;

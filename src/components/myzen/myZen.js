@@ -1,7 +1,9 @@
 import React from "react";
-import IconBuddah from "../images/icon-buddah.js";
+// import IconBuddah from "../images/icon-buddah.js";
+import Unsplash from "../study/unsplash";
+import "./myZen.scss";
 
-class MyJourney extends React.Component {
+class MyZen extends React.Component {
     render() {
         let username = localStorage.user;
         let zenCount = localStorage.zenCount;
@@ -9,12 +11,10 @@ class MyJourney extends React.Component {
         let meditationCount = localStorage.meditationCount;
 
         return (
-            <div className="info-overlay info-normal">
-                <div className="buddah">
-                    <IconBuddah />
-                </div>
+            <div className="screen-myzen">
+                <div className="buddah">{/* <IconBuddah /> */}</div>
                 <h2>Hello, {username}</h2>
-                <p>Your journey...</p>
+                <p>Your Zen journey...</p>
                 <div className="your-journey">
                     <div>
                         <p>Studying chapter</p>
@@ -30,13 +30,14 @@ class MyJourney extends React.Component {
                     </div>
                     <div>
                         <p>Shares</p>
-                        <h3>soon...</h3>
+                        <h3>Coming soon...</h3>
                     </div>
                 </div>
                 <br />
+                <Unsplash />
             </div>
         );
     }
 }
 
-export default MyJourney;
+export default MyZen;

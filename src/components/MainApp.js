@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import dataArray from "../data";
-import Study from "./Study";
+import Study from "./study/Study";
 import NavBar from "./NavBar";
-import MyJourney from "./myJourney";
+import MyZen from "./myzen/myZen";
 import About from "./about";
 import Practice from "./practice";
 import Chat from "./chat";
 import "../sass/styles.scss";
 
 const TABS = {
-    home: <MyJourney />,
+    home: <MyZen />,
     study: <Study poems={dataArray} />,
     about: <About />,
     meditate: <Practice />,
