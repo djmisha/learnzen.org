@@ -10,6 +10,9 @@
     span {
         display: block;
     }
+    @include media($tablet) {
+        padding-left: 120px;
+    }
 }
 
 .app-screen-meditate {

@@ -13,6 +13,10 @@ ul.all-poems {
     z-index: 1;
     height: calc(100vh - 95px);
     // padding-bottom: 20px;
+    @include media($tablet) {
+        padding-left: 100px;
+        left: 60px;
+    }
 }
 
 .all-poems > li {
@@ -33,7 +37,7 @@ ul.all-poems {
         max-width: 1120px;
         font-size: 25px;
         line-height: 38px;
-        padding: 80px 10px 0px 20px;
+        padding: 80px 10px 0px 120px;
     }
     p,
     span {

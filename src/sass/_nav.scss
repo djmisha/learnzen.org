@@ -16,6 +16,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @include media($tablet) {
+        height: 100vh;
+        flex-direction: column;
+        top: 0;
+        right: auto;
+    }
 }
 
 nav > div {

@@ -188,14 +188,13 @@ class Meditate extends Component {
         ));
 
         // console.log(this.state.seekCurrentPosition);
-        // Update Mediation Count
-        // Update Zen Count in Local Stora ge
+        // Update Mediation Count in Local Stogate - need to fix this!!!
         let updatedMeditation =
             Number(localStorage.meditationCount) +
             this.state.seekCurrentPosition;
         updatedMeditation = updatedMeditation.toFixed(2);
         localStorage.setItem("meditationCount", updatedMeditation);
-        console.log(updatedMeditation);
+        // console.log(updatedMeditation);
 
         return (
             <div className="Meditate">
