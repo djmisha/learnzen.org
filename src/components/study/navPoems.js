@@ -55,8 +55,7 @@ class NavigationBar extends React.Component {
     render() {
         return (
             <div className="navbar">
-                <div className="nav-movearound">
-                    {/* <label>
+                {/* <label>
                         <div
                             className="nav-icon"
                             onClick={this.handleSearchOpen}
@@ -72,43 +71,42 @@ class NavigationBar extends React.Component {
                             className={this.state.searchClass}
                         />
                     </label> */}
-                    {/* <div
+                {/* <div
                         onClick={this.handleShowAllPoemChange}
                         className="nav-all nav-icon"
                     >
                         <NavIconAll />
                         <span>All</span>
                     </div> */}
-                    <div
-                        onClick={this.handleRandomPoemChange}
-                        className="nav-random nav-icon"
-                    >
-                        <NavIconRandom />
-                        <span>Any</span>
-                    </div>
+                <div
+                    onClick={this.handleRandomPoemChange}
+                    className="nav-random nav-icon"
+                >
+                    <NavIconRandom />
+                    <span>Any</span>
+                </div>
 
-                    {/* <div className="current-verse">
+                {/* <div className="current-verse">
                         <NavIconAll />
                         <div className="nav-count">
                             {this.props.visiblePoem}
                         </div>
                     </div> */}
 
-                    <div
-                        onClick={this.handlePrevPoemChange}
-                        className="nav-prev nav-icon"
-                    >
-                        <NavIconPrev />
-                        <span>Prev</span>
-                    </div>
+                <div
+                    onClick={this.handlePrevPoemChange}
+                    className="nav-prev nav-icon"
+                >
+                    <NavIconPrev />
+                    <span>Prev</span>
+                </div>
 
-                    <div
-                        onClick={this.handleNextPoemChange}
-                        className="nav-next nav-icon"
-                    >
-                        <NavIconNext />
-                        <span>Next</span>
-                    </div>
+                <div
+                    onClick={this.handleNextPoemChange}
+                    className="nav-next nav-icon"
+                >
+                    <NavIconNext />
+                    <span>Next</span>
                 </div>
             </div>
         );

@@ -3,7 +3,7 @@
     top: 0px;
     left: 0;
     right: 0;
-    bottom: 50px;
+    bottom: 0px;
     z-index: -1;
     @include media($tablet) {
         bottom: 0;
@@ -28,7 +28,7 @@
     position: absolute;
     bottom: 60px;
     left: 12px;
-    font-size: 8px;
+    font-size: 10px;
     color: #fff;
     @include media($tablet) {
         right: 30px;

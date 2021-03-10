@@ -2,7 +2,6 @@ ul.all-poems {
     list-style: none;
     margin: 0;
     padding: 0;
-    height: calc(100vh - 90px);
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -11,9 +10,9 @@ ul.all-poems {
     overflow-x: scroll;
     background-color: rgba($color: #000, $alpha: 0.5);
     z-index: 1;
-    height: calc(100vh - 95px);
-    // padding-bottom: 20px;
+    height: calc(100vh - 50px);
     @include media($tablet) {
+        height: 100vh;
         padding-left: 100px;
         left: 60px;
     }
