@@ -40,23 +40,37 @@
         display: inline;
         margin-right: 10px;
         position: relative;
-        top: 10px;
+        top: 0px;
     }
     .buddah svg {
         height: 50px;
         margin: 0 auto;
         padding-top: 20px;
         padding-left: 20px;
+        path {fill: white;}
     }
     .unsplash-background {
         opacity: 0.6;
     }
-    iframe {
-        width: calc(100% - 40px);
-        max-width: 640px;
-        margin: 0 auto;
+    .videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        margin: 0 10px;
+    }
+    .videoWrapper iframe {
+        padding: 10px;
         background: white;
-        padding: 20px;
         border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% - 20px);
+        height: 100%;
+      }
+    iframe {
+        // width: calc(100% - 40px);
+        max-width: 640px;
+        // margin: 0 auto;
     }
 }

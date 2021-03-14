@@ -19,10 +19,7 @@ class MyZen extends React.Component {
                     </div>
                     Hello, {username}
                 </h2>
-                <p>
-                    This is your Zen journey so far so you'll see your progress
-                    here.
-                </p>
+                <p>This is your Zen journey, you'll see your progress here.</p>
                 <div className="your-journey">
                     <div>
                         <p>Studying chapter</p>
@@ -47,7 +44,9 @@ class MyZen extends React.Component {
                     Watch this video to get an introduction to Taoism to get an
                     understanding of Tao Te Ching philosophies and teachings.
                 </p>
-                <IntroVideo />
+                <div className="videoWrapper">
+                    <IntroVideo />
+                </div>
                 <Unsplash />
             </div>
         );

@@ -5,12 +5,20 @@ import IconAbout from "../images/icon-about.js";
 import IconMeditate from "../images/icon-meditate.js";
 import IconChat from "../images/icon-chat.js";
 
-function NavBar({ setSelectedScreen, activeClass }) {
+function NavBar({ setSelectedScreen, setActiveClass }) {
+    console.log(setActiveClass);
+    function setActive() {
+        return "active";
+    }
     return (
         <nav>
             <div
-                onClick={() => setSelectedScreen("home")}
-                className={activeClass}
+                onClick={() => {
+                    setSelectedScreen("home");
+                    setActive();
+                    // setActiveClass("item-active");
+                }}
+                // className={""}
             >
                 <div>
                     <IconBuddah />
@@ -19,7 +27,7 @@ function NavBar({ setSelectedScreen, activeClass }) {
             </div>
             <div
                 onClick={() => setSelectedScreen("study")}
-                className={activeClass}
+                className={"item-active"}
             >
                 <div>
                     <IconLogo />
@@ -28,7 +36,7 @@ function NavBar({ setSelectedScreen, activeClass }) {
             </div>
             <div
                 onClick={() => setSelectedScreen("meditate")}
-                className={activeClass}
+                className={"item-active"}
             >
                 <div>
                     <IconMeditate />
@@ -37,7 +45,7 @@ function NavBar({ setSelectedScreen, activeClass }) {
             </div>
             <div
                 onClick={() => setSelectedScreen("about")}
-                className={activeClass}
+                className={"item-active"}
             >
                 <div>
                     <IconAbout />
@@ -46,7 +54,7 @@ function NavBar({ setSelectedScreen, activeClass }) {
             </div>
             <div
                 onClick={() => setSelectedScreen("chat")}
-                className={activeClass}
+                className={"item-active"}
             >
                 <div>
                     <IconChat />
