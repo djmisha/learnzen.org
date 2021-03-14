@@ -21,7 +21,7 @@ class MyZen extends React.Component {
                 </h2>
                 <p>
                     This is your Zen journey so far so you'll see your progress
-                    here.{" "}
+                    here.
                 </p>
                 <div className="your-journey">
                     <div>

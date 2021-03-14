@@ -1,15 +1,9 @@
 .screen-myzen {
-    position: fixed;
-    right: 0;
     bottom: 60px;
-    top: 0;
+    padding-bottom: 100px;
     width: 100%;
-    display: block;
-    border: 1px solid transparent;
-    height: calc(100vh - 50px);
     text-align: left;
     color: white;
-    transition: right 0.5s ease-in-out;
     @media only screen and (min-width: 768px) {
         left: 60px;
     }
@@ -20,6 +14,7 @@
     p {
         font-size: 14px;
         line-height: 1.4em;
+        padding-left: 20px;
     }
     .your-journey {
         display: flex;
@@ -29,13 +24,8 @@
         max-width: 640px;
         > div {
             text-align: center;
-            width: calc(50% - 1px);
+            width: calc(50%);
             background-color: rgba(black, 0.6);
-            border-top: 1px solid rgba(white, 0.1);
-            border-bottom: 1px solid rgba(white, 0.1);
-            &:nth-of-type(odd) {
-                border-right: 1px solid rgba(white, 0.1);
-            }
             h3 {
                 margin-top: 0px;
             }
@@ -62,8 +52,11 @@
         opacity: 0.6;
     }
     iframe {
-        width: 100%;
+        width: calc(100% - 40px);
         max-width: 640px;
         margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
     }
 }
