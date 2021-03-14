@@ -18,13 +18,13 @@ const Screens = {
 
 function MainApp() {
     const [selectedScreen, setSelectedScreen] = useState("study");
-    const [activeClass, setActiveClass] = useState("not-active");
+    // const [activeClass, setActiveClass] = useState("not-active");
 
     return (
         <div>
             <NavBar
                 setSelectedScreen={setSelectedScreen}
-                setActiveClass={setActiveClass}
+                // setActiveClass={setActiveClass}
             />
             {/* this is the main content of the page */}
             {Screens[selectedScreen]}

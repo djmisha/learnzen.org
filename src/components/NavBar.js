@@ -5,17 +5,17 @@ import IconAbout from "../images/icon-about.js";
 import IconMeditate from "../images/icon-meditate.js";
 import IconChat from "../images/icon-chat.js";
 
-function NavBar({ setSelectedScreen, setActiveClass }) {
-    console.log(setActiveClass);
-    function setActive() {
-        return "active";
-    }
+function NavBar({ setSelectedScreen }) {
+    // console.log(setActiveClass);
+    // function setActive() {
+    //     return "active";
+    // }
     return (
         <nav>
             <div
                 onClick={() => {
                     setSelectedScreen("home");
-                    setActive();
+                    // setActive();
                     // setActiveClass("item-active");
                 }}
                 // className={""}
