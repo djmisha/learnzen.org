@@ -1,20 +1,13 @@
 import React from "react";
-// import Hello from "./greetUser.js";
 import IconLogo from "../images/icon-logo.js";
 import IconBuddah from "../images/icon-buddah.js";
 import IconAbout from "../images/icon-about.js";
 import IconMeditate from "../images/icon-meditate.js";
 import IconChat from "../images/icon-chat.js";
 
-// import Logo from "./logo.js";
-// import WelcomeScene from "./welcome";
-
 function NavBar({ setSelectedTab }) {
     return (
         <nav>
-            {/* <div>
-                <Hello />
-            </div> */}
             <div onClick={() => setSelectedTab("home")}>
                 <div>
                     <IconBuddah />
