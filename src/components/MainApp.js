@@ -8,7 +8,7 @@ import Practice from "./practice";
 import Chat from "./chat";
 import "../sass/styles.scss";
 
-const TABS = {
+const Screens = {
     home: <MyZen />,
     study: <Study poems={dataArray} />,
     about: <About />,
@@ -17,13 +17,17 @@ const TABS = {
 };
 
 function MainApp() {
-    const [selectedTab, setSelectedTab] = useState("study");
+    const [selectedScreen, setSelectedScreen] = useState("study");
+    const activeClass = "item-active";
 
     return (
         <div>
-            <NavBar setSelectedTab={setSelectedTab} />
+            <NavBar
+                setSelectedScreen={setSelectedScreen}
+                activeClass={activeClass}
+            />
             {/* this is the main content of the page */}
-            {TABS[selectedTab]}
+            {Screens[selectedScreen]}
         </div>
     );
 }

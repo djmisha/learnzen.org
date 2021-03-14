@@ -5,34 +5,49 @@ import IconAbout from "../images/icon-about.js";
 import IconMeditate from "../images/icon-meditate.js";
 import IconChat from "../images/icon-chat.js";
 
-function NavBar({ setSelectedTab }) {
+function NavBar({ setSelectedScreen, activeClass }) {
     return (
         <nav>
-            <div onClick={() => setSelectedTab("home")}>
+            <div
+                onClick={() => setSelectedScreen("home")}
+                className={activeClass}
+            >
                 <div>
                     <IconBuddah />
                 </div>
                 <div>My Zen</div>
             </div>
-            <div onClick={() => setSelectedTab("study")}>
+            <div
+                onClick={() => setSelectedScreen("study")}
+                className={activeClass}
+            >
                 <div>
                     <IconLogo />
                 </div>
                 <div>Study</div>
             </div>
-            <div onClick={() => setSelectedTab("meditate")}>
+            <div
+                onClick={() => setSelectedScreen("meditate")}
+                className={activeClass}
+            >
                 <div>
                     <IconMeditate />
                 </div>
                 <div>Practice</div>
             </div>
-            <div onClick={() => setSelectedTab("about")}>
+            <div
+                onClick={() => setSelectedScreen("about")}
+                className={activeClass}
+            >
                 <div>
                     <IconAbout />
                 </div>
                 <div>About</div>
             </div>
-            <div onClick={() => setSelectedTab("chat")}>
+            <div
+                onClick={() => setSelectedScreen("chat")}
+                className={activeClass}
+            >
                 <div>
                     <IconChat />
                 </div>

@@ -1,6 +1,7 @@
 import React from "react";
-// import IconBuddah from "../images/icon-buddah.js";
+import IconBuddah from "../../images/icon-buddah.js";
 import Unsplash from "../study/unsplash";
+import IntroVideo from "./youTube.js";
 import "./myZen.scss";
 
 class MyZen extends React.Component {
@@ -12,9 +13,16 @@ class MyZen extends React.Component {
 
         return (
             <div className="screen-myzen">
-                <div className="buddah">{/* <IconBuddah /> */}</div>
-                <h2>Hello, {username}</h2>
-                <p>Your Zen journey...</p>
+                <h2>
+                    <div className="buddah">
+                        <IconBuddah />
+                    </div>
+                    Hello, {username}
+                </h2>
+                <p>
+                    This is your Zen journey so far so you'll see your progress
+                    here.{" "}
+                </p>
                 <div className="your-journey">
                     <div>
                         <p>Studying chapter</p>
@@ -34,6 +42,12 @@ class MyZen extends React.Component {
                     </div>
                 </div>
                 <br />
+                <h2>Introduction to Taoism</h2>
+                <p>
+                    Watch this video to get an introduction to Taoism to get an
+                    understanding of Tao Te Ching philosophies and teachings.
+                </p>
+                <IntroVideo />
                 <Unsplash />
             </div>
         );

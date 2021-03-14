@@ -88,7 +88,7 @@ class Study extends React.Component {
     render() {
         /* reminder: add effeect where zen heart floats up with count +1 */
         // let zenCount = localStorage.zenCount;
-
+        // console.log(this.state.visiblePoem);
         return (
             <div>
                 <NavigationBar

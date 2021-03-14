@@ -12,7 +12,6 @@
     transition: right 0.5s ease-in-out;
     @media only screen and (min-width: 768px) {
         left: 60px;
-        // bottom: 0px;
     }
     h2 {
         padding-top: 40px;
@@ -22,19 +21,14 @@
         font-size: 14px;
         line-height: 1.4em;
     }
-    span,
-    p {
-        padding: 20px 20px;
-        margin: 0 auto;
-    }
     .your-journey {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        max-width: 640px;
         > div {
             text-align: center;
-
             width: calc(50% - 1px);
             background-color: rgba(black, 0.6);
             border-top: 1px solid rgba(white, 0.1);
@@ -45,9 +39,31 @@
             h3 {
                 margin-top: 0px;
             }
+            span,
+            p {
+                padding: 20px 20px;
+                margin: 0 auto;
+            }
         }
+    }
+    .buddah {
+        display: inline;
+        margin-right: 10px;
+        position: relative;
+        top: 10px;
+    }
+    .buddah svg {
+        height: 50px;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-left: 20px;
     }
     .unsplash-background {
         opacity: 0.6;
+    }
+    iframe {
+        width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
     }
 }
