@@ -6,6 +6,7 @@
     color: white;
     @media only screen and (min-width: 768px) {
         left: 60px;
+        padding-left: 100px;
     }
     h2 {
         padding-top: 40px;
@@ -57,6 +58,11 @@
         padding-bottom: 56.25%; /* 16:9 */
         height: 0;
         margin: 0 10px;
+        @media only screen and (min-width: 768px) {
+            width: 640px;
+            height: 360px;
+            padding-bottom: 0;
+        }
     }
     .videoWrapper iframe {
         padding: 10px;
@@ -67,10 +73,6 @@
         left: 0;
         width: calc(100% - 20px);
         height: 100%;
-      }
-    iframe {
-        // width: calc(100% - 40px);
         max-width: 640px;
-        // margin: 0 auto;
     }
 }

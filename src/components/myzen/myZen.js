@@ -1,6 +1,5 @@
 import React from "react";
 import IconBuddah from "../../images/icon-buddah.js";
-import Unsplash from "../study/unsplash";
 import IntroVideo from "./youTube.js";
 import "./myZen.scss";
 
@@ -47,7 +46,6 @@ class MyZen extends React.Component {
                 <div className="videoWrapper">
                     <IntroVideo />
                 </div>
-                <Unsplash />
             </div>
         );
     }

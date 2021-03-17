@@ -34,7 +34,14 @@ function SignIn() {
         const provider = new firebase.auth.GoogleAuthProvider();
         auth.signInWithPopup(provider);
     };
-    return <button onClick={signInWithGoogle}>Sing in with Google</button>;
+    return (
+        <section className="chat-sign-in">
+            <div>
+                <p>To chat join the chat please sign in.</p>
+            </div>
+            <button onClick={signInWithGoogle}>Sing in with Google</button>;
+        </section>
+    )
 }
 
 // function SignOut() {
