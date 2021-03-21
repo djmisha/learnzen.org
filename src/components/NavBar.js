@@ -5,20 +5,20 @@ import IconAbout from "../images/icon-about.js";
 import IconMeditate from "../images/icon-meditate.js";
 import IconChat from "../images/icon-chat.js";
 
-function NavBar({ setSelectedScreen }) {
-    // console.log(setActiveClass);
-    // function setActive() {
-    //     return "active";
+function NavBar({ setSelectedScreen, setActiveClass, activeClass }) {
+    console.log(setSelectedScreen);
+    // function handleClick() {
+    //     console.log(setActiveClass);
     // }
+  
     return (
         <nav>
             <div
                 onClick={() => {
                     setSelectedScreen("home");
-                    // setActive();
-                    // setActiveClass("item-active");
+                    setActiveClass("item-active")
                 }}
-                // className={""}
+                className={activeClass}
             >
                 <div>
                     <IconBuddah />
@@ -27,7 +27,7 @@ function NavBar({ setSelectedScreen }) {
             </div>
             <div
                 onClick={() => setSelectedScreen("study")}
-                className={"item-active"}
+                className={activeClass}
             >
                 <div>
                     <IconLogo />
@@ -36,7 +36,7 @@ function NavBar({ setSelectedScreen }) {
             </div>
             <div
                 onClick={() => setSelectedScreen("meditate")}
-                className={"item-active"}
+                className={activeClass}
             >
                 <div>
                     <IconMeditate />
@@ -45,7 +45,7 @@ function NavBar({ setSelectedScreen }) {
             </div>
             <div
                 onClick={() => setSelectedScreen("about")}
-                className={"item-active"}
+                className={activeClass}
             >
                 <div>
                     <IconAbout />
@@ -54,7 +54,7 @@ function NavBar({ setSelectedScreen }) {
             </div>
             <div
                 onClick={() => setSelectedScreen("chat")}
-                className={"item-active"}
+                className={activeClass}
             >
                 <div>
                     <IconChat />
