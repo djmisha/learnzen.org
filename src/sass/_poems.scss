@@ -15,7 +15,6 @@ ul.all-poems {
     @include media($tablet) {
         height: 100vh;
         padding-left: 100px;
-        left: 60px;
     }
     > li {
         font-family: "Merienda One", cursive;
