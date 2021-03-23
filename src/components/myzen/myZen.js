@@ -8,7 +8,7 @@ class MyZen extends React.Component {
         let username = localStorage.user;
         let zenCount = localStorage.zenCount;
         let currentPoem = localStorage.currentPoem;
-        let meditationCount = localStorage.meditationCount;
+        // let meditationCount = localStorage.meditationCount;
 
         return (
             <div className="screen-myzen">
@@ -24,18 +24,18 @@ class MyZen extends React.Component {
                         <p>Studying chapter</p>
                         <h3>{currentPoem}</h3>
                     </div>
-                    <div>
+                    {/* <div>
                         <p>Zen Meditations</p>
                         <h3>{meditationCount / 20}</h3>
-                    </div>
+                    </div> */}
                     <div>
                         <p>ZenZens</p>
                         <h3> {zenCount} </h3>
                     </div>
-                    <div>
+                    {/* <div>
                         <p>Shares</p>
                         <h3>Coming soon...</h3>
-                    </div>
+                    </div> */}
                 </div>
                 <br />
                 <h2>Introduction to Taoism</h2>

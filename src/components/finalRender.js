@@ -1,7 +1,7 @@
 import React from "react";
 // import dataArray from "./data";
 // import FileteredPoemsTable from "./FileteredPoemsTable";
-import MainApp from "./MainApp";
+import Tabs from "./Tabs";
 import SignIn from "./localStorage";
 import ZenInfo from "./zenInfo";
 
@@ -14,7 +14,7 @@ class FinalRender extends React.Component {
         if (localStorage.currentPoem) {
             return (
                 <div>
-                    <MainApp />
+                    <Tabs />
                 </div>
             );
         } else {
@@ -22,7 +22,7 @@ class FinalRender extends React.Component {
                 <div className="onboarding">
                     <p>
                         <strong>
-                            Welcome student, <br /> Discover your Zen State of
+                            Welcome student, <br /> discover your Zen State of
                             Mind.
                         </strong>
                     </p>

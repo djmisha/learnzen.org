@@ -1,6 +1,6 @@
 /* Navigation */
 
-nav {
+.tab-list {
     background: white;
     height: 50px;
     position: fixed;
@@ -23,7 +23,7 @@ nav {
         top: 0;
         right: auto;
     }
-    .item-active {
+    .active {
         > div {
             color: $priAlt !important;
         }
@@ -33,9 +33,12 @@ nav {
             }
         }
     }
+    button {
+        padding: 0;
+    }
 }
 
-nav > div {
+.tab-list > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,7 +52,7 @@ nav > div {
     }
 }
 
-nav svg {
+.tab-list svg {
     color: #ccc;
     width: 27px;
     height: 27px;

@@ -39,7 +39,7 @@ function SignIn() {
             <div>
                 <p>To chat join the chat please sign in.</p>
             </div>
-            <button onClick={signInWithGoogle}>Sing in with Google</button>;
+            <button onClick={signInWithGoogle}>Sing in with Google</button>
         </section>
     )
 }
