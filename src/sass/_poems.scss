@@ -10,7 +10,6 @@ ul.all-poems {
     overflow-x: scroll;
     background-color: rgba($color: #000, $alpha: 0.5);
     z-index: 1;
-    // height: calc(100vh - 50px);
     height: 100vh;
     @include media($tablet) {
         height: 100vh;

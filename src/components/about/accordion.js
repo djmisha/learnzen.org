@@ -3,14 +3,14 @@ import "./accordion.scss";
 
 const data = [
     {
-        title: "道德经 Tao Te Ching ",
+        title: "What is the Tao Te Ching?",
         paragraph:
             "The Tao Te Ching is traditionally credited to the 6th-century BC sage Laozi, it is the fundamental text for philosophical Taoism.",
     },
     {
         title: "What is Zen?",
         paragraph:
-            " Zen is something we are, our true nature expressing itself moment by moment. Zen is also something we do, a disciplined practice through which we can realize the joy of being.",
+            "Zen is something we are, our true nature expressing itself moment by moment. Zen is also something we do, a disciplined practice through which we can realize the joy of being.",
     },
     {
         title: "What is the practice of Zen?",
@@ -25,12 +25,12 @@ const data = [
     {
         title: "How do I find my Zen?",
         paragraph:
-            " First, breathe in with full awareness. Appreciate it fully. Then breathe out, slowly, with equal appreciation. Hold onto nothing, give it all away. Breathe in with gratitude; breathe out with love. Receiving and offering is what we are doing each time we inhale and exhale. To do so with conscious awareness, on a regular basis, is the transformative practice we call Zen Meditaion.",
+            "First, breathe in with full awareness. Appreciate it fully. Then breathe out, slowly, with equal appreciation. Hold onto nothing, give it all away. Breathe in with gratitude; breathe out with love. Receiving and offering is what we are doing each time we inhale and exhale. To do so with conscious awareness, on a regular basis, is the transformative practice we call Zen Meditaion.",
     },
     {
         title: "What Zen is Not",
         paragraph:
-            "  There are many common misconceptions about Zen. It is important to know that Zen practice is not religion, is not a belief system, is not a dogma or doctrine. One does not have to be buddist to achieve a zen state of mind.",
+            "There are many common misconceptions about Zen. Zen practice is not religion, is not a belief system, is not a dogma or doctrine. One does not have to be buddist to achieve a zen state of mind.",
     },
 ];
 
