@@ -34,41 +34,33 @@ export default () => (
         <div className="tabs">
             <div className="tab-list">
                 <Tab>
-                    <div>
-                        <IconBuddah />
-                    </div>
-                    <div>My Zen</div>
+                    <IconBuddah />
+                    <span>My Zen</span>
                 </Tab>
 
                 <Tab>
-                    <div>
-                        <IconLogo />
-                    </div>
-                    <div>Study</div>
+                    <IconLogo />
+                    <span>Study</span>
                 </Tab>
 
                 <Tab>
-                    <div>
-                        <IconMeditate />
-                    </div>
-                    <div>Practice</div>
+                    <IconMeditate />
+                    <span>Practice</span>
                 </Tab>
 
                 <Tab>
-                    <div>
-                        <IconAbout />
-                    </div>
-                    <div>About</div>
+                    <IconAbout />
+                    <span>About</span>
                 </Tab>
 
                 <Tab>
-                    <div>
-                        <IconChat />
-                    </div>
-                    <div>Chat</div>
+                    <IconChat />
+                    <span>Chat</span>
                 </Tab>
             </div>
+            
             <div className="tab-progress" />
+
             <Panel>
                 <MyZen />
             </Panel>
