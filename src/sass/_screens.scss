@@ -1,5 +1,5 @@
 .app-screen {
-    padding: 40px 20px;
+    padding: 40px 10px;
     text-align: center;
     color: white;
     font-family: "Merienda One", cursive;
@@ -7,11 +7,15 @@
     margin: 0 auto;
     padding-bottom: 80px;
     text-align: left;
+    @include media($tablet) {
+        padding-left: 120px;
+    }
     span {
         display: block;
     }
-    @include media($tablet) {
-        padding-left: 120px;
+    p {
+        font-size: 14px;
+        line-height: 1.4em;
     }
 }
 

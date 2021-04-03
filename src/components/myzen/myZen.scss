@@ -1,21 +1,7 @@
 .screen-myzen {
-    bottom: 60px;
-    padding-bottom: 100px;
-    width: 100%;
-    text-align: left;
-    color: white;
     @media only screen and (min-width: 768px) {
         left: 60px;
         padding-left: 100px;
-    }
-    h2 {
-        padding-top: 40px;
-        padding-left: 20px;
-    }
-    p {
-        font-size: 14px;
-        line-height: 1.4em;
-        padding-left: 20px;
     }
     .your-journey {
         display: flex;
@@ -32,6 +18,7 @@
             }
             span,
             p {
+                font-size: 16px;
                 padding: 20px 20px;
                 margin: 0 auto;
             }
@@ -48,10 +35,9 @@
         margin: 0 auto;
         padding-top: 20px;
         padding-left: 20px;
-        path {fill: white;}
-    }
-    .unsplash-background {
-        opacity: 0.6;
+        path {
+            fill: white;
+        }
     }
     .videoWrapper {
         position: relative;

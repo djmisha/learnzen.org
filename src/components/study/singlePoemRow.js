@@ -1,5 +1,5 @@
 import React from "react";
-import Delayed from "../delayDisplay";
+// import Delayed from "../delayDisplay";
 
 class SinglePoemRow extends React.Component {
     constructor(props) {
@@ -16,9 +16,9 @@ class SinglePoemRow extends React.Component {
         let content = this.props.content;
 
         content = content.split("\n").map((str, index) => (
-            <Delayed waitBeforeShow={1400 * index} key={index}>
-                <p>{str}</p>
-            </Delayed>
+            // <Delayed waitBeforeShow={1400 * index} key={index}>
+            <p key={index}>{str}</p>
+            // </Delayed>
         ));
 
         return (

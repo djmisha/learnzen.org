@@ -59,7 +59,7 @@ const Unsplash = () => {
     }, []);
 
     if (data === null) {
-        return <div>Loading...</div>;
+        return <div>Loading Unsplash Image...</div>;
     } else if (data.errors) {
         return (
             <div>

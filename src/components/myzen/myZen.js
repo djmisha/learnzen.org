@@ -1,5 +1,5 @@
 import React from "react";
-import IconBuddah from "../../images/icon-buddah.js";
+// import IconBuddah from "../../images/icon-buddah.js";
 import IntroVideo from "./youTube.js";
 import "./myZen.scss";
 
@@ -11,11 +11,11 @@ class MyZen extends React.Component {
         // let meditationCount = localStorage.meditationCount;
 
         return (
-            <div className="screen-myzen">
+            <div className="screen-myzen app-screen">
                 <h2>
-                    <div className="buddah">
+                    {/* <div className="buddah">
                         <IconBuddah />
-                    </div>
+                    </div> */}
                     Hello, {username}
                 </h2>
                 <p>This is your Zen journey, you'll see your progress here.</p>
