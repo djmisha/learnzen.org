@@ -1,5 +1,4 @@
 import React from "react";
-// import ZenInfo from "./zenInfo";
 import Unsplash from "./study/unsplash";
 
 import Accordion from "./about/accordion";

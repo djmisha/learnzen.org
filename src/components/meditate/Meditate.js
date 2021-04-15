@@ -130,8 +130,8 @@ class Meditate extends Component {
                 this.state.mute || value === 0
                     ? noVolumeIcon
                     : value <= 50
-                    ? quietVolumeIcon
-                    : loudVolumeIcon,
+                        ? quietVolumeIcon
+                        : loudVolumeIcon,
         });
     };
 
@@ -140,8 +140,8 @@ class Meditate extends Component {
             volumeIcon: !this.state.mute
                 ? noVolumeIcon
                 : this.state.volume <= 50
-                ? quietVolumeIcon
-                : loudVolumeIcon,
+                    ? quietVolumeIcon
+                    : loudVolumeIcon,
             mute: !this.state.mute,
         });
     }
@@ -155,7 +155,7 @@ class Meditate extends Component {
                 // onMouseLeave={this.handleTimeHover.bind(this)}
                 className={
                     !this.state.timeHovered &&
-                    duration === this.state.desiredTime
+                        duration === this.state.desiredTime
                         ? "active"
                         : ""
                 }
@@ -174,7 +174,7 @@ class Meditate extends Component {
                 // onMouseLeave={this.handleAudioHover.bind(this)}
                 className={
                     !this.state.audioHovered &&
-                    this.state.audioUrl ===
+                        this.state.audioUrl ===
                         "audio/" + audioName.toLowerCase() + ".mp3"
                         ? "active"
                         : ""

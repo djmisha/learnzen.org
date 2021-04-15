@@ -87,7 +87,7 @@ class Study extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="app-screen">
                 <NavigationBar
                     visiblePoem={this.state.visiblePoem}
                     filterText={this.state.filterText}
