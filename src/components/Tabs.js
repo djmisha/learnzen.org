@@ -33,10 +33,6 @@ export default () => (
     <Tabs>
         <div className="tabs">
             <div className="tab-list">
-                <Tab>
-                    <IconBuddah />
-                    <span>My Zen</span>
-                </Tab>
 
                 <Tab>
                     <IconLogo />
@@ -57,13 +53,14 @@ export default () => (
                     <IconChat />
                     <span>Chat</span>
                 </Tab>
-            </div>
-            
-            <div className="tab-progress" />
 
-            <Panel>
-                <MyZen />
-            </Panel>
+                <Tab>
+                    <IconBuddah />
+                    <span>My Zen</span>
+                </Tab>
+            </div>
+
+            <div className="tab-progress" />
 
             <Panel>
                 <Study poems={dataArray} />
@@ -79,6 +76,10 @@ export default () => (
 
             <Panel>
                 <Chat />
+            </Panel>
+
+            <Panel>
+                <MyZen />
             </Panel>
         </div>
     </Tabs>
