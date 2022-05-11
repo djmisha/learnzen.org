@@ -53,7 +53,7 @@ class Meditate extends Component {
     }
 
     playPause() {
-        console.log("plaPayse");
+        // console.log("plaPayse");
         if (this.state.pbuttonUrl === playButton) {
             this.setState({
                 pbuttonUrl: pauseButton,
@@ -147,7 +147,7 @@ class Meditate extends Component {
     }
 
     render() {
-        console.log(this.state.timeBtnClass);
+        // console.log(this.state.timeBtnClass);
         const timeOptions = this.state.timeValues.map((duration) => (
             <button
                 key={duration}

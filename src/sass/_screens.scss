@@ -1,67 +1,76 @@
 .app-screen {
-    padding: 40px 10px;
-    text-align: center;
-    color: white;
-    font-family: "Merienda One", cursive;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-bottom: 80px;
-    text-align: left;
-    @include media($tablet) {
-        padding-left: 120px;
-    }
-    span {
-        display: block;
-    }
-    p {
-        font-size: 14px;
-        line-height: 1.4em;
-    }
+  padding: 40px 10px;
+  text-align: center;
+  color: white;
+  font-family: "Merienda One", cursive;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  text-align: left;
+
+  @include media($tablet) {
+    padding-left: 120px;
+  }
+
+  span {
+    display: block;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.4em;
+  }
 }
 
 .app-screen-meditate {
-    padding-top: 40px;
-    text-align: center;
-    color: white;
+  padding-top: 40px;
+  text-align: center;
+  color: white;
 }
 
 /* What is your Name? Form */
 
 form.call-by-name {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    label {
-        height: 40px;
-    }
-    input {
-        color: black !important;
-    }
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  label {
+    height: 40px;
+  }
+
+  input {
+    color: black !important;
+  }
 }
 
 .onboarding {
-    padding-top: 80px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: white;
-    padding-bottom: 100px;
-    background-color: rgb(161, 247, 246);
-    padding-left: 20px;
-    padding-right: 20px;
-    h1,
-    h2,
-    h3 {
-        padding-top: 40px;
-    }
-    p {
-        font-family: "Merienda One", cursive;
-    }
-    input {
-        border: 1px solid black;
-    }
-    button {
-        border: 1px solid black;
-        margin-top: 20px;
-    }
+  padding-top: 80px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  padding-bottom: 100px;
+  background-color: rgb(161, 247, 246);
+  padding-left: 20px;
+  padding-right: 20px;
+
+  h1,
+  h2,
+  h3 {
+    padding-top: 40px;
+  }
+
+  p {
+    font-family: "Merienda One", cursive;
+  }
+
+  input {
+    border: 1px solid black;
+  }
+
+  button {
+    border: 1px solid black;
+    margin-top: 20px;
+  }
 }

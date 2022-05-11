@@ -6,7 +6,7 @@ class Practice extends React.Component {
         return (
             <div className="app-screen-meditate">
                 <div>
-                    <h2>Zen Meditation</h2>
+                    <h2>Practice Zen Meditation</h2>
                     <Meditate />
                 </div>
             </div>

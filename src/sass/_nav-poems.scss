@@ -1,148 +1,149 @@
 /*Navigation*/
 
 .all-navigation-row {
-    position: absolute;
-    width: 60px;
-    height: 100px;
-    border: 1px solid red;
-    bottom: 60px;
-    display: flex;
-    align-items: center;
-    overflow: scroll;
-    background: #000;
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  border: 1px solid red;
+  bottom: 60px;
+  display: flex;
+  align-items: center;
+  overflow: scroll;
+  background: #000;
 }
 
 .all-navigation-row div {
-    padding: 5px;
+  padding: 5px;
 }
 
 .navbar {
-    position: fixed;
-    bottom: calc(50% - 55px);
-    right: 0;
-    left: auto;
-    width: 50px;
-    height: 160px;
-    background: rgb(255, 255, 255);
-    border-radius: 10px;
-    margin: 0 !important;
-    color: #000;
-    line-height: 0;
-    z-index: 2;
-    text-align: center;
+  position: fixed;
+  bottom: calc(50% - 55px);
+  right: 0;
+  left: auto;
+  width: 50px;
+  height: 160px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin: 0 !important;
+  color: #000;
+  line-height: 0;
+  z-index: 2;
+  text-align: center;
 }
 
 .nav-icon {
-    margin: 10px 0;
-    height: 40px;
+  margin: 10px 0;
+  height: 40px;
 }
 
 .navbar label {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .nav-search {
-    position: fixed;
-    font-family: "Source Serif Pro", serif;
-    top: 30px;
-    width: 180px;
-    color: #888;
-    font-size: 18px;
-    font-weight: normal;
-    transition: all 0.25s ease-in-out;
+  position: fixed;
+  font-family: "Source Serif Pro", serif;
+  top: 30px;
+  width: 180px;
+  color: #888;
+  font-size: 18px;
+  font-weight: normal;
+  transition: all 0.25s ease-in-out;
 }
 
 .nav-search.nav-visible {
-    left: 150px;
+  left: 150px;
 }
 
 .nav-search.nav-hidden {
-    left: -190px;
+  left: -190px;
 }
 
 .navbar label {
-    position: relative;
+  position: relative;
 }
 
 .navbar label span {
-    position: absolute;
-    font-size: 10px;
-    bottom: -10px;
-    right: calc(50% - 15px);
-    color: #000;
-    font-weight: normal;
+  position: absolute;
+  font-size: 10px;
+  bottom: -10px;
+  right: calc(50% - 15px);
+  color: #000;
+  font-weight: normal;
 }
 
 @media (min-width: 750px) {
-    .navbar label {
-        display: block;
-    }
+  .navbar label {
+    display: block;
+  }
 }
 
 .nav-icon svg {
-    width: 25px;
-    height: 25px;
-    fill: #000;
-    transition: all 0.06s ease-in;
-    position: relative;
-    bottom: 0px;
+  width: 25px;
+  height: 25px;
+  fill: #000;
+  transition: all 0.06s ease-in;
+  position: relative;
+  bottom: 0px;
 }
 
 .nav-icon svg:active {
-    fill: pink;
-    bottom: -2px;
+  fill: pink;
+  bottom: -2px;
 }
 
 .nav-random,
 .nav-all {
-    position: relative;
+  position: relative;
 }
 
 .current-verse span,
 .nav-icon span {
-    // display: none;
-    display: block;
-    font-size: 10px;
-    top: 6px;
-    // text-transform: uppercase;
-    position: relative;
-    text-align: center;
+  // display: none;
+  display: block;
+  font-size: 10px;
+  top: 6px;
+  // text-transform: uppercase;
+  position: relative;
+  text-align: center;
 }
 
 .current-verse {
-    text-align: center;
-    font-size: 12px;
-    position: relative;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
 }
 
 .nav-count {
-    position: relative;
-    top: 10px;
+  position: relative;
+  top: 10px;
 }
 
 .current-verse svg {
-    display: none;
-    border: 1px solid pink;
-    width: 30px;
-    height: 25px;
-    path {
-        fill: #fff;
-    }
+  display: none;
+  border: 1px solid pink;
+  width: 30px;
+  height: 25px;
+
+  path {
+    fill: #fff;
+  }
 }
 
 .nav-count {
-    font-family: "Source Serif Pro", serif;
-    position: relative;
-    width: 40px;
-    font-size: 20px;
-    font-style: italic;
-    text-transform: uppercase;
+  font-family: "Source Serif Pro", serif;
+  position: relative;
+  width: 40px;
+  font-size: 20px;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 .nav-next svg {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .nav-prev svg {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }

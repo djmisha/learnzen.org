@@ -9,7 +9,7 @@ class Study extends React.Component {
         super(props);
         this.state = {
             filterText: "",
-            visiblePoem: parseInt(localStorage.currentPoem),
+            visiblePoem: parseInt(localStorage.currentPoem) || 1,
         };
         this.handleSearchFilterTextChange = this.handleSearchFilterTextChange.bind(
             this

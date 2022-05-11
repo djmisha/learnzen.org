@@ -1,39 +1,42 @@
 .unsplash-feed {
-    position: fixed;
-    top: 0px;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    z-index: -1;
-    @include media($tablet) {
-        bottom: 0;
-    }
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  z-index: -1;
+
+  @include media($tablet) {
+    bottom: 0;
+  }
 }
 
 .unsplash-background {
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    transition: all 0.5s ease;
-    @include media($tablet) {
-        height: calc(100vh);
-        bottom: 0;
-    }
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
+
+  @include media($tablet) {
+    height: calc(100vh);
+    bottom: 0;
+  }
 }
 
 .unsplash-credit {
-    position: absolute;
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  font-size: 10px;
+  color: #fff;
+
+  @include media($tablet) {
+    right: 30px;
+    left: auto;
     bottom: 10px;
-    left: 12px;
-    font-size: 10px;
-    color: #fff;
-    @include media($tablet) {
-        right: 30px;
-        left: auto;
-        bottom: 10px;
-        font-size: 12px;
-    }
+    font-size: 12px;
+  }
 }

@@ -20,8 +20,6 @@ const cn = (...args) => args.filter(Boolean).join(" ");
 const Tab = ({ children }) => {
     const { isActive, onClick } = useTabState("inactive");
 
-    console.log(isActive);
-
     return (
         <button className={cn("tab", isActive && "active")} onClick={onClick}>
             {children}
@@ -33,54 +31,48 @@ export default () => (
     <Tabs>
         <div className="tabs">
             <div className="tab-list">
-
-                <Tab>
-                    <IconLogo />
-                    <span>Study</span>
-                </Tab>
-
-                <Tab>
-                    <IconMeditate />
-                    <span>Practice</span>
-                </Tab>
-
-                <Tab>
-                    <IconAbout />
-                    <span>About</span>
-                </Tab>
-
-                <Tab>
-                    <IconChat />
-                    <span>Chat</span>
-                </Tab>
-
-                <Tab>
-                    <IconBuddah />
-                    <span>My Zen</span>
-                </Tab>
+              <Tab>
+                  <IconLogo />
+                  <span>Study</span>
+              </Tab>
+              <Tab>
+                  <IconMeditate />
+                  <span>Practice</span>
+              </Tab>
+              <Tab>
+                  <IconAbout />
+                  <span>About</span>
+              </Tab>
+              <Tab>
+                  <IconChat />
+                  <span>Chat</span>
+              </Tab>
+              <Tab>
+                  <IconBuddah />
+                  <span>My Zen</span>
+              </Tab>
             </div>
 
             <div className="tab-progress" />
+              <Panel>
+                  <Study poems={dataArray} />
+              </Panel>
 
-            <Panel>
-                <Study poems={dataArray} />
-            </Panel>
+              <Panel>
+                  <Practice />
+              </Panel>
 
-            <Panel>
-                <Practice />
-            </Panel>
+              <Panel>
+                  <About />
+              </Panel>
 
-            <Panel>
-                <About />
-            </Panel>
+              <Panel>
+                  <Chat />
+              </Panel>
 
-            <Panel>
-                <Chat />
-            </Panel>
-
-            <Panel>
-                <MyZen />
-            </Panel>
-        </div>
+              <Panel>
+                  <MyZen />
+              </Panel>
+            </div>
     </Tabs>
 );

@@ -2,7 +2,7 @@ import React from "react";
 import IconLogo from "../../images/icon-logo.js";
 
 class Logo extends React.Component {
-    // let spinTheLogo = this.props.logoSpinClass;
+
     constructor(props) {
         super(props);
         this.state = {
@@ -12,6 +12,7 @@ class Logo extends React.Component {
         };
         this.handleLogoChange = this.handleLogoChange.bind(this);
     }
+
     handleLogoChange() {
         const changelogo =
             this.state.logoClass === "the-logo logo-normal"
@@ -29,6 +30,7 @@ class Logo extends React.Component {
             logoAuthor: changeAuthor,
         });
     }
+
     render() {
         return (
             <div

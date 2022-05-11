@@ -11,33 +11,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Merienda+One&display=swap");
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background: rgb(41, 43, 45);
+  background: rgb(41, 43, 45);
 }
+
 .App {
-    position: relative;
-    margin-top: 50px;
-    @include media($tablet) {
-        margin-top: 0;
-    }
+  position: relative;
+  margin-top: 0px;
 }
+
 button,
 .button {
-    border: none;
-    background-color: white;
-    border-radius: 20px;
-    padding: 10px 20px;
-    display: inline;
-    color: black;
-    font-family: "Merienda One", cursive;
+  border: none;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: inline;
+  color: black;
+  font-family: "Merienda One", cursive;
 }
 
 input {
-    display: block;
-    font-family: "Merienda One", cursive;
-    padding: 5px 10px;
-    font-size: 20px;
+  display: block;
+  font-family: "Merienda One", cursive;
+  padding: 5px 10px;
+  font-size: 20px;
 }
