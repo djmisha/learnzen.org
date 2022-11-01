@@ -26,13 +26,12 @@ const PhotoComp = ({ photo }) => {
                 >
                     {user.name}
                 </a>{" "}
-                from
+                from {" "}
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href={`https://unsplash.com/`}
                 >
-                    {" "}
                     Unsplash
                 </a>
             </div>
